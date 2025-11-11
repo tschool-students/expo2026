@@ -1,0 +1,344 @@
+i {
+    font-size: 30px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    color: #4A90E2;
+}
+
+/* --- 基本樣式 --- */
+body {
+    font-family: 'GenWanMin', sans-serif;
+    background-color: #FEFBF3;
+    margin: 0;
+    padding: 20px;
+    padding-bottom: 60px; /* 增加底部空間以容納頁尾 */
+}
+
+/* --- 【優化】Header 樣式 --- */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    flex-wrap: wrap; 
+    gap: 20px; /* 在換行時增加間距 */
+}
+
+.logo-img {
+    height: 80px; /* 稍微調整Logo大小 */
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap; 
+    gap: 10px; /* 導覽按鈕間的間距 */
+}
+
+.btn-orange {
+    background-color: #FFB347;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    border: none;
+    box-shadow: 0 4px 10px rgba(255, 179, 71, 0.3);
+}
+
+.btn-orange:hover {
+    background-color: #FFA000;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 12px rgba(255, 160, 0, 0.4);
+}
+
+.social-links {
+    display: flex;
+    margin-left: 15px;
+}
+
+.social-circle {
+    background-color: #FFD700;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.social-circle:hover {
+    background-color: #FFC700;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.social-circle img {
+    width: 24px;
+    height: 24px;
+}
+
+/* --- 【優化】通用區塊樣式 --- */
+section {
+    margin-bottom: 40px;
+}
+
+section h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    display: flex; /* 讓 icon 和文字對齊 */
+    align-items: center;
+    gap: 10px;
+}
+
+/* 為每個標題前加上一個裝飾性的 icon */
+.introduction h3 { color: #ffa83f; }
+
+.toolbox h3 { color: #4A90E2; }
+
+.announcements h3 { color: #FF6B6B; }
+
+.history h3 { color: #569d4b; }
+
+
+.content-box {
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    overflow: auto;
+}
+
+.content-box img {
+    float: right; 
+    margin-left: 30px;
+    height: auto; 
+    max-width: 50%;
+    width: 200px;
+}
+
+/* --- Introduction Section --- */
+#introduction {
+    background: linear-gradient(135deg, #fff3e1, #ffedd1);
+    color: #5a4119;
+}
+
+#introduction ul {
+    list-style: none;
+    padding-left: 20px;
+}
+
+#introduction ul li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 10px;
+}
+/* 用 CSS 偽元素自訂列表標記 */
+#introduction ul li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #ffa83f;
+    font-weight: bold;
+}
+
+/* --- ToolBox Section --- */
+#toolbox-content {
+    background: linear-gradient(135deg, #e3f2fd, #d4e6f1);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.toolbox-item {
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+    text-decoration: none;
+    color: inherit;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.toolbox-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.toolbox-item img {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 10px;
+}
+
+.toolbox-item h4 { margin: 0 0 5px 0; color: #333; }
+.toolbox-item p { margin: 0; color: #666; font-size: 14px; }
+
+/* --- Announcements Section --- */
+#announcements-list {
+    background: linear-gradient(135deg, #ffebee, #ffdde1);
+    padding: 20px;
+}
+
+.announcement-item {
+    background-color: white;
+    padding: 15px 20px;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-left: 5px solid #ffb2b2; /* 【優化】新增左側裝飾線 */
+}
+
+.announcement-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.08);
+    border-left-color: #FF6B6B;
+}
+
+.announcement-item h4 { margin: 0 0 5px 0; color: #333; }
+.announcement-item p { margin: 0; color: #666; font-size: 14px; }
+
+
+#pagination-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.pagination-btn {
+    background-color: #FFB347;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    margin: 0 5px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    font-family: 'GenWanMin', sans-serif;
+}
+
+.pagination-btn:hover { background-color: #ff9a00; }
+.pagination-btn.active { background-color: #FF6B6B; color: white; }
+
+/* --- 【優化】History Timeline --- */
+.timeline {
+    position: relative;
+    padding: 20px 0;
+    list-style: none;
+}
+/* 中間的時間線 */
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 20px;
+    height: 100%;
+    width: 4px;
+    background: #dcedc8; /* 淺綠色線 */
+    border-radius: 2px;
+}
+
+.timeline-item {
+    margin-bottom: 30px;
+    position: relative;
+    padding-left: 50px; /* 為圓點和線留出空間 */
+}
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+/* 時間軸上的圓點 */
+.timeline-dot {
+    content: '';
+    position: absolute;
+    left: 12px;
+    top: 5px;
+    height: 16px;
+    width: 16px;
+    background: white;
+    border: 4px solid #81c784; /* 綠色圓點 */
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.timeline-content {
+    background-color: #e8f5e9;
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid #dcedc8;
+}
+
+.timeline-content h4 {
+    margin: 0 0 10px 0;
+    color: #388e3c;
+    font-weight: bold;
+}
+
+.timeline-content p {
+    margin: 0;
+    color: #2e7d32;
+    line-height: 1.6;
+}
+
+
+/* --- Modal Styles --- */
+.modal { display: none; position: fixed; z-index: 1; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.5); }
+.modal-content { background-color: #fefefe; margin: 10% auto; padding: 25px; border: 1px solid #888; width: 90%; max-width: 600px; border-radius: 10px; position: relative; animation: fadeIn 0.4s ease-out; }
+@keyframes fadeIn { from {opacity: 0; transform: scale(0.95) translateY(10px);} to {opacity: 1; transform: scale(1) translateY(0);} }
+.close-button { color: #aaa; float: right; font-size: 28px; font-weight: bold; }
+.close-button:hover, .close-button:focus { color: black; text-decoration: none; cursor: pointer; }
+#modal-date { color: #888; font-size: 14px; margin-bottom: 15px; }
+
+/* --- 【新增】Footer --- */
+footer {
+    text-align: center;
+    margin-top: 50px;
+    padding: 20px;
+    border-top: 1px solid #e0e0e0;
+}
+footer p {
+    margin: 0;
+    color: #999;
+    font-size: 14px;
+}
+
+/* --- RWD (響應式網頁設計) --- */
+@media (max-width: 820px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+    .header-title {
+        text-align: center;
+        flex-direction: column;
+    }
+    nav {
+        justify-content: center;
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    body { padding: 15px; }
+    .content-box, .timeline-content { padding: 20px; }
+    .btn-orange { width: 100%; text-align: center; }
+    .nav { flex-direction: column; width: 100%; }
+    .modal-content { margin: 20% auto; }
+}
+
+@media (max-width: 480px) {
+    .header-title h1 { font-size: 18px; }
+    .header-title h2 { font-size: 14px; }
+    #toolbox-content { grid-template-columns: 1fr; }
+    .timeline::before { left: 15px; }
+    .timeline-item { padding-left: 40px; }
+    .timeline-dot { left: 8px; }
+    .modal-content { margin-top: 25%; }
+}
