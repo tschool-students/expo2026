@@ -159,12 +159,13 @@
         /* Middle Content Section */
         .middle-section {
             width: 100%;
-            margin: 0;
+            max-width: 1440px;
+            margin: 0 auto;
+            margin-top: 720px;
             position: relative;
             min-height: 655px;
             padding-bottom: 0;
             z-index: 2;
-            margin-top: 720px;
             overflow: visible;
         }
 
@@ -173,8 +174,8 @@
             box-sizing: border-box;
             position: absolute;
             height: 335px;
-            left: 0px;
-            width: 71.67%;
+            left: calc((100vw - 100%) / -2);
+            width: calc(71.67% + (100vw - 100%) / 2);
             top: 0px;
             background: #F2F1F1;
             border-right: 1px solid #000000;
@@ -183,28 +184,17 @@
             justify-content: center;
         }
 
-        /* Main Title */
+        /* Main Title - Pixel SVG */
         .main-title {
             position: absolute;
-            left: 0;
+            left: 35.835%;
             top: 167.5px;
-            transform: translateY(-50%);
-            width: 71.67%;
-            font-family: 'Cubic 11', 'Inter', 'Arial Black', sans-serif;
-            font-style: normal;
-            font-weight: 400;
-            font-size: 96px;
-            line-height: 112px;
-            text-align: center;
-            color: #000000;
-            margin: 0;
-            padding: 0 20px;
+            transform: translate(-50%, -50%);
+            max-width: calc(71.67% - 40px);
+            width: auto;
+            height: auto;
+            display: block;
             z-index: 1;
-        }
-
-        .main-title .times {
-            margin: 0 20px;
-            color: #E1801F;
         }
 
         /* Info Card */
@@ -216,6 +206,16 @@
             min-height: 276px;
             padding: 30px;
             background: transparent;
+        }
+
+        .info-card-desktop {
+            position: absolute;
+            left: 71.67%;
+            top: 15px;
+            right: auto;
+            width: auto;
+            max-width: calc(28.33% - 40px);
+            padding: 30px 20px;
         }
 
         .info-card h2 {
@@ -240,10 +240,22 @@
             display: block;
         }
 
-        /* Time Info */
+        /* 垂直分隔線 - 在 58.75% 位置 */
+        .time-location-wrapper::before {
+            content: '';
+            position: absolute;
+            left: 58.75%;
+            top: -75px;
+            width: 1px;
+            height: 280px;
+            background: #000000;
+        }
+
+        /* Time Info - 居中在垂直線左側區域 (0 到 58.75%) 的中心點 29.375% */
         .time-info {
             position: absolute;
-            left: 115px;
+            left: 29.375%;
+            transform: translateX(-50%);
             top: 0;
             width: 589px;
             height: 121px;
@@ -286,10 +298,11 @@
             margin-top: 34px;
         }
 
-        /* Location Info */
+        /* Location Info - 居中在垂直線右側區域 (58.75% 到 100%) 的中心點 79.375% */
         .location-info {
             position: absolute;
-            right: 112px;
+            left: 79.375%;
+            transform: translateX(-50%);
             top: 1px;
             width: 405px;
             min-height: 184px;
@@ -307,7 +320,7 @@
         /* More Buttons */
         .more-btn {
             position: absolute;
-            bottom: 0;
+            bottom: 20px;
             width: 67px;
             height: 29px;
             background: transparent;
@@ -332,28 +345,29 @@
         }
 
         .more-btn.left {
-            left: 746px;
+            left: calc(58.75% - 117px);
         }
 
         .more-btn.right {
-            right: 147px;
+            right: 50px;
         }
 
         /* Decorative Section - Lines */
         .decorative-section {
             position: absolute;
-            width: 100%;
-            height: 1255px;
-            left: 0;
-            top: 820px;
+            width: 100vw;
+            height: 1px;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 1155px;
+            border-top: 1px solid #000000;
             pointer-events: none;
             z-index: 1;
         }
 
+
         .decorative-section .lines-bg {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
+            display: none;
         }
 
         .decorative-section .frame-decoration {
@@ -770,31 +784,16 @@
                 transform: matrix(1, 0, 0, -1, 0, 0);
             }
 
-            /* 學習 × 移動 × 影響 */
+            /* 學習 × 移動 × 影響 - Pixel SVG */
             .main-title {
                 position: absolute;
-                height: 42px;
-                left: 41px;
-                right: 41px;
-                top: 324px;
+                left: 50%;
+                top: 345px;
+                transform: translate(-50%, -50%);
+                max-width: calc(100% - 82px);
                 width: auto;
-                transform: none;
-                font-family: 'Cubic 11';
-                font-style: normal;
-                font-weight: 400;
-                font-size: 36px;
-                line-height: 42px;
-                display: flex;
-                align-items: center;
-                text-align: center;
-                justify-content: center;
-                color: #000000;
-                padding: 0;
-            }
-
-            .main-title .times {
-                color: #E1801F;
-                margin: 0 10px;
+                height: auto;
+                display: block;
             }
 
             /* 臺北市數位實驗高級中等學校 學習分享會 T-SCHOOL STUDENTS EXPO'26 */
@@ -842,6 +841,8 @@
                 right: 101px;
                 top: 594px;
                 width: auto;
+                margin-left: 0;
+                transform: none;
                 background: url('images/Time_info.png') center/contain no-repeat;
             }
 
@@ -874,6 +875,8 @@
                 top: 736px;
                 width: auto;
                 min-height: auto;
+                margin-left: 0;
+                transform: none;
                 font-family: 'Noto Sans TC';
                 font-style: normal;
                 font-weight: 400;
@@ -898,8 +901,23 @@
                 top: 655px;
                 background: transparent;
                 border: none;
+                font-family: 'Noto Sans TC', sans-serif;
+                font-size: 20px;
+                font-weight: 400;
+                line-height: 1.2;
+                color: #000000;
                 cursor: pointer;
                 padding: 0;
+                text-align: center;
+                transition: opacity 0.3s;
+            }
+
+            .more-btn-1:hover {
+                opacity: 0.6;
+            }
+
+            .more-btn-1 .arrow {
+                font-family: 'Cubic 11', sans-serif;
             }
 
             /* Component 3 */
@@ -911,85 +929,23 @@
                 top: 826px;
                 background: transparent;
                 border: none;
+                font-family: 'Noto Sans TC', sans-serif;
+                font-size: 20px;
+                font-weight: 400;
+                line-height: 1.2;
+                color: #000000;
                 cursor: pointer;
                 padding: 0;
-            }
-
-            /* More */
-            .more-text {
-                position: absolute;
-                left: 0%;
-                right: 29.85%;
-                top: 6.9%;
-                bottom: 10.34%;
-                font-family: 'Noto Sans TC';
-                font-style: normal;
-                font-weight: 400;
-                font-size: 20px;
-                line-height: 24px;
-                display: flex;
-                align-items: center;
                 text-align: center;
-                color: #000000;
+                transition: opacity 0.3s;
             }
 
-            /* Arrow */
-            .arrow {
-                position: absolute;
-                left: 85.07%;
-                right: 0%;
-                top: 27.59%;
-                bottom: 20.69%;
+            .more-btn-2:hover {
+                opacity: 0.6;
             }
 
-            /* Rectangle 102 */
-            .rect-102 {
-                position: absolute;
-                left: 85.07%;
-                right: 9.95%;
-                top: 27.59%;
-                bottom: 62.07%;
-                background: #000000;
-            }
-
-            /* Rectangle 103 */
-            .rect-103 {
-                position: absolute;
-                left: 90.05%;
-                right: 4.98%;
-                top: 37.93%;
-                bottom: 51.72%;
-                background: #000000;
-            }
-
-            /* Rectangle 104 */
-            .rect-104 {
-                position: absolute;
-                left: 95.03%;
-                right: 0%;
-                top: 48.28%;
-                bottom: 41.38%;
-                background: #000000;
-            }
-
-            /* Rectangle 105 */
-            .rect-105 {
-                position: absolute;
-                left: 90.05%;
-                right: 4.98%;
-                top: 58.62%;
-                bottom: 31.03%;
-                background: #000000;
-            }
-
-            /* Rectangle 106 */
-            .rect-106 {
-                position: absolute;
-                left: 85.07%;
-                right: 9.95%;
-                top: 68.97%;
-                bottom: 20.69%;
-                background: #000000;
+            .more-btn-2 .arrow {
+                font-family: 'Cubic 11', sans-serif;
             }
 
             /* Rectangle 157 & Frame 63 - Map Section */
@@ -1176,7 +1132,7 @@
         <div class="title-bg-block"></div>
 
         <!-- Main Title -->
-        <h1 class="main-title">學習<span class="times">×</span>移動<span class="times">×</span>影響</h1>
+        <img src="images/title-pixel.svg" alt="學習×移動×影響" class="main-title">
 
         <!-- Info Card - Desktop -->
         <div class="info-card info-card-desktop">
@@ -1239,28 +1195,10 @@ T-SCHOOL STUDENTS EXPO'26</h2>
     </div>
 
     <!-- Component 2 - More Button (Mobile) -->
-    <button class="more-btn-1">
-        <span class="more-text">More</span>
-        <div class="arrow">
-            <div class="rect-102"></div>
-            <div class="rect-103"></div>
-            <div class="rect-104"></div>
-            <div class="rect-105"></div>
-            <div class="rect-106"></div>
-        </div>
-    </button>
+    <button class="more-btn-1">More <span class="arrow">></span></button>
 
     <!-- Component 3 - More Button (Mobile) -->
-    <button class="more-btn-2">
-        <span class="more-text">More</span>
-        <div class="arrow">
-            <div class="rect-102"></div>
-            <div class="rect-103"></div>
-            <div class="rect-104"></div>
-            <div class="rect-105"></div>
-            <div class="rect-106"></div>
-        </div>
-    </button>
+    <button class="more-btn-2">More <span class="arrow">></span></button>
 
     <!-- Decorative Section (Desktop) -->
     <section class="decorative-section">
@@ -1334,6 +1272,38 @@ T-SCHOOL STUDENTS EXPO'26</h2>
                         header.classList.remove('menu-open');
                     }
                 }
+            });
+        }
+
+        // More buttons navigation - Desktop
+        const moreBtnLeft = document.querySelector('.more-btn.left');
+        const moreBtnRight = document.querySelector('.more-btn.right');
+
+        if (moreBtnLeft) {
+            moreBtnLeft.addEventListener('click', () => {
+                window.location.href = 'agenda.html';
+            });
+        }
+
+        if (moreBtnRight) {
+            moreBtnRight.addEventListener('click', () => {
+                window.location.href = 'map.html';
+            });
+        }
+
+        // More buttons navigation - Mobile
+        const moreBtn1 = document.querySelector('.more-btn-1');
+        const moreBtn2 = document.querySelector('.more-btn-2');
+
+        if (moreBtn1) {
+            moreBtn1.addEventListener('click', () => {
+                window.location.href = 'agenda.html';
+            });
+        }
+
+        if (moreBtn2) {
+            moreBtn2.addEventListener('click', () => {
+                window.location.href = 'map.html';
             });
         }
     </script>
