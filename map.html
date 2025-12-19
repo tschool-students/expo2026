@@ -993,7 +993,7 @@
                 height: 28px;
                 left: 186px;
                 right: 40px;
-                top: 44px;
+                top: 37px;
                 width: auto;
                 font-family: 'Cubic 11';
                 font-style: normal;
@@ -1012,7 +1012,7 @@
                 max-width: 100%;
                 height: 243px;
                 left: 0;
-                top: 99px;
+                top: 158px;
                 transform: none;
                 border: none;
                 overflow: hidden;
@@ -1047,7 +1047,7 @@
                 max-width: 100%;
                 height: 58.82px;
                 left: 0;
-                top: 342px;
+                top: 99px;
                 transform: none;
                 background: #FFFFFF;
                 box-sizing: border-box;
@@ -1115,7 +1115,7 @@
                 height: auto;
                 min-height: 3000px;
                 left: 0;
-                top: 401px;
+                top: 459.82px;
                 transform: none;
                 background: #F2F1F1;
                 overflow: visible;
@@ -1245,25 +1245,30 @@
                 max-width: 100%;
                 height: 58.82px;
                 left: 0;
-                top: 414px;
+                top: 401px;
                 transform: none;
-                background: transparent;
-                border: none;
+                background: #FFFFFF;
+                box-sizing: border-box;
+                border-width: 1px 0px;
+                border-style: solid;
+                border-color: #000000;
             }
 
             .poster-nav-buttons {
                 position: absolute;
                 width: 338.62px;
-                height: 36px;
+                height: 40px;
                 left: 50%;
                 top: 50%;
                 transform: translate(-50%, -50%);
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
+                margin-top: 0px;
             }
 
             .poster-nav-btn {
+                height: 36px;
                 font-family: 'Noto Sans TC';
                 font-style: normal;
                 font-weight: 400;
@@ -1720,7 +1725,7 @@
         // Poster slider
         let currentPosterPage = 0; // 0-5 for pages 1-6
         const posterSlider = document.getElementById('posterSlider');
-        const posterNavBtns = document.querySelectorAll('.poster-nav-btn');
+        const posterNavBtns = document.querySelectorAll('.poster-nav .poster-nav-btn');
         const arrowLeftPoster = document.querySelector('.arrow-left-poster');
         const arrowRightPoster = document.querySelector('.arrow-right-poster');
         const pageClasses = ['show-page1', 'show-page2', 'show-page3', 'show-page4', 'show-page5', 'show-page6'];
@@ -1868,6 +1873,7 @@
                 }
             });
         }
+
     </script>
 </body>
 </html>
