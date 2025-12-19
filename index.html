@@ -1,104 +1,1341 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
 <head>
-    <link rel="icon" href="favicon.ico" >
-    <link rel="shortcut icon" href="favicon.ico" >
-    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- 網頁標題 -->
-    <title>2026學習分享會</title>
-
-    <script type="application/ld+json">
-        {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "name": "臺北市數位實驗高中學生自治會",
-        "url": "https://tschool-students.github.io"
-        }
-    </script>
-    
-    <meta name="description" content="2026學習分享會的首頁">
-    
-    <meta name="keywords" content="2026學習分享會,臺北市數位實驗高級中等學校,學生自治會,臺北市數位實驗高中,數位實驗高中,臺北市數位實中,數位實中,數實,學生會,首頁">
-    <meta name="author" content="臺北市數位實驗高級中等學校學生自治會">
-    
-    <!-- Open Graph (OG) 標籤 (讓網頁在社群媒體分享時有更好的預覽效果) -->
-    <meta property="og:title" content="2026學習分享會">
-    <meta property="og:description" content="2026學習分享會的首頁">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://tschool-students.github.io/expo2026">
-    <meta property="og:site_name" content="2026學習分享會" />
-    
-    <meta name="twitter:title" content="2026學習分享會">
-    <meta name="twitter:description" content="2026學習分享會的首頁">
-    <link rel="stylesheet" href="style-temporary.css">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
-
+    <title>T-SCHOOL STUDENTS EXPO'26 - 臺北市數位實驗高級中等學校學習分享會</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        h2 {
-            text-align: center;
-            color: rgb(255, 128, 128);
-            margin-top: 80px;
-            margin-bottom: 80px;
+        /* Cubic 11 Font */
+        @font-face {
+            font-family: 'Cubic 11';
+            src: url('Cubic-11-1.430/fonts/web/Cubic_11.woff2') format('woff2'),
+                 url('Cubic-11-1.430/fonts/web/Cubic_11.woff') format('woff');
+            font-weight: 400;
+            font-style: normal;
+            font-display: swap;
         }
-    </style>
 
-    <script type="application/ld+json">
-        {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "name": "臺北市數位實驗高中學生自治會",
-        "url": "https://tschool-students.github.io"
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-    </script>
+
+        html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+        }
+
+        :root {
+            --bg-primary: #E3DFDC;
+            --bg-secondary: #F2F1F1;
+            --text-primary: #000000;
+            --border-color: #666;
+        }
+
+        /* ====================================
+           Desktop Styles (Default)
+           ==================================== */
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            overflow-x: hidden;
+            line-height: 1.6;
+            position: relative;
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+        }
+
+        main {
+            animation: fadeIn 1s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Hide mobile-only elements on desktop */
+        .header-bg,
+        .title-section-bg,
+        .title-section-border,
+        .divider-155,
+        .divider-156,
+        .more-btn-1,
+        .more-btn-2,
+        .info-card-mobile {
+            display: none;
+        }
+
+        /* Header */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background-color: #F2F1F1;
+            border-bottom: 1px solid #000000;
+            height: 100px;
+            width: 100%;
+        }
+
+        .header-content {
+            max-width: 1440px;
+            margin: 0 auto;
+            height: 100%;
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            position: absolute;
+            left: 31px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 126px;
+            height: 58px;
+        }
+
+        .logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        nav {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 80px;
+            align-items: center;
+        }
+
+        nav a {
+            color: #000000;
+            text-decoration: none;
+            font-size: 24px;
+            font-weight: 400;
+            font-family: 'Noto Sans TC', sans-serif;
+            text-align: center;
+            line-height: 1.2;
+            transition: opacity 0.3s;
+            display: inline-block;
+            height: 35px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        nav a:hover {
+            color: #E1801F;
+        }
+
+        .menu-toggle {
+            display: none;
+        }
+
+        /* Hero Image */
+        .hero-image {
+            position: absolute;
+            height: 720px;
+            left: 0px;
+            right: 0px;
+            top: 100px;
+            background: url('images/Video.png') center/cover no-repeat;
+        }
+
+        /* Middle Content Section */
+        .middle-section {
+            width: 100%;
+            margin: 0;
+            position: relative;
+            min-height: 655px;
+            padding-bottom: 0;
+            z-index: 2;
+            margin-top: 720px;
+            overflow: visible;
+        }
+
+        /* Rectangle 34 - Title Background Block */
+        .title-bg-block {
+            box-sizing: border-box;
+            position: absolute;
+            height: 335px;
+            left: 0px;
+            width: 71.67%;
+            top: 0px;
+            background: #F2F1F1;
+            border-right: 1px solid #000000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Main Title */
+        .main-title {
+            position: absolute;
+            left: 0;
+            top: 167.5px;
+            transform: translateY(-50%);
+            width: 71.67%;
+            font-family: 'Cubic 11', 'Inter', 'Arial Black', sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 96px;
+            line-height: 112px;
+            text-align: center;
+            color: #000000;
+            margin: 0;
+            padding: 0 20px;
+            z-index: 1;
+        }
+
+        .main-title .times {
+            margin: 0 20px;
+            color: #E1801F;
+        }
+
+        /* Info Card */
+        .info-card {
+            position: absolute;
+            right: 20px;
+            top: 15px;
+            width: 420px;
+            min-height: 276px;
+            padding: 30px;
+            background: transparent;
+        }
+
+        .info-card h2 {
+            font-family: 'Noto Sans TC', sans-serif;
+            font-size: 32px;
+            font-weight: 700;
+            line-height: 1.448;
+            color: #000000;
+            margin-bottom: 0;
+            white-space: pre-line;
+            word-break: keep-all;
+            overflow-wrap: normal;
+        }
+
+        /* Time and Location Container */
+        .time-location-wrapper {
+            position: absolute;
+            left: 0;
+            top: 430px;
+            width: 100%;
+            height: 225px;
+            display: block;
+        }
+
+        /* Time Info */
+        .time-info {
+            position: absolute;
+            left: 115px;
+            top: 0;
+            width: 589px;
+            height: 121px;
+        }
+
+        .time-row {
+            display: flex;
+            align-items: flex-start;
+            gap: 13px;
+        }
+
+        .time-item {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+
+        .time-date {
+            font-family: 'Cubic 11', 'Inter', 'Arial Black', sans-serif;
+            font-size: 64px;
+            font-weight: 400;
+            line-height: 1.167;
+            color: #000000;
+            margin-bottom: 0;
+        }
+
+        .time-day {
+            font-family: 'Noto Sans TC', sans-serif;
+            font-size: 32px;
+            font-weight: 400;
+            line-height: 1.2;
+            color: #000000;
+        }
+
+        .time-separator {
+            width: 141px;
+            height: 6px;
+            background: #000000;
+            align-self: center;
+            margin-top: 34px;
+        }
+
+        /* Location Info */
+        .location-info {
+            position: absolute;
+            right: 112px;
+            top: 1px;
+            width: 405px;
+            min-height: 184px;
+        }
+
+        .location-info h3 {
+            font-family: 'Noto Sans TC', sans-serif;
+            font-size: 32px;
+            font-weight: 400;
+            line-height: 1.2;
+            color: #000000;
+            white-space: pre-line;
+        }
+
+        /* More Buttons */
+        .more-btn {
+            position: absolute;
+            bottom: 0;
+            width: 67px;
+            height: 29px;
+            background: transparent;
+            border: none;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 1.2;
+            color: #000000;
+            cursor: pointer;
+            padding: 0;
+            text-align: center;
+            transition: opacity 0.3s;
+        }
+
+        .more-btn:hover {
+            opacity: 0.6;
+        }
+
+        .more-btn .arrow {
+            font-family: 'Cubic 11', sans-serif;
+        }
+
+        .more-btn.left {
+            left: 746px;
+        }
+
+        .more-btn.right {
+            right: 147px;
+        }
+
+        /* Decorative Section - Lines */
+        .decorative-section {
+            position: absolute;
+            width: 100%;
+            height: 1255px;
+            left: 0;
+            top: 820px;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .decorative-section .lines-bg {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .decorative-section .frame-decoration {
+            display: none;
+        }
+
+        /* Map Section */
+        .map-section {
+            width: 100%;
+            margin: 0;
+            margin-top: 0;
+            position: relative;
+            z-index: 2;
+            border-top: 1px solid #000000;
+            border-bottom: 1px solid #000000;
+        }
+
+        .map-section img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Footer */
+        .footer-container {
+            position: relative;
+            width: 100%;
+            max-width: 1440px;
+            background: var(--bg-primary);
+            padding: 60px 0px 40px;
+            margin: 0 auto;
+            z-index: 2;
+        }
+
+        .footer-content {
+            position: relative;
+            width: 900px;
+            height: 220px;
+            margin-left: 188px;
+        }
+
+        /* Hide mobile footer elements on desktop */
+        body > .footer-label-1,
+        body > .footer-label-2,
+        body > .footer-label-3,
+        body > .footer-content-1,
+        body > .footer-content-2,
+        body > .footer-address {
+            display: none;
+        }
+
+        /* 主辦單位 */
+        .footer-title-organizer {
+            position: absolute;
+            height: 29px;
+            left: 0px;
+            top: 0px;
+            font-family: 'Noto Sans TC';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 24px;
+            color: #000000;
+            margin: 0;
+        }
+
+        /* 臺北市數位實驗高中學生 */
+        .footer-text-organizer {
+            position: absolute;
+            height: 29px;
+            left: 219px;
+            top: 0px;
+            font-family: 'Noto Sans TC';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 24px;
+            color: #000000;
+            margin: 0;
+        }
+
+        /* 聯絡方式 */
+        .footer-title-contact {
+            position: absolute;
+            height: 29px;
+            left: 0px;
+            top: 59px;
+            font-family: 'Noto Sans TC';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 24px;
+            color: #000000;
+            margin: 0;
+        }
+
+        /* 聯絡方式內容 */
+        .footer-text-contact {
+            position: absolute;
+            left: 219px;
+            top: 59px;
+            font-family: 'Noto Sans TC';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 28px;
+            color: #000000;
+            margin: 0;
+        }
+
+        .footer-text-contact a {
+            color: #000000;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-text-contact a:hover {
+            color: #E1801F;
+        }
+
+        /* 學校地址標題 */
+        .footer-title-address {
+            position: absolute;
+            height: 29px;
+            left: 0px;
+            top: 191px;
+            font-family: 'Noto Sans TC';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 24px;
+            color: #000000;
+            margin: 0;
+        }
+
+        /* 學校地址內容 */
+        .footer-address {
+            position: absolute;
+            height: 29px;
+            left: 219px;
+            top: 191px;
+            font-family: 'Noto Sans TC';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 24px;
+            color: #000000;
+            margin: 0;
+        }
+
+        .footer-address a {
+            color: #000000;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-address a:hover {
+            color: #E1801F;
+        }
+
+        /* ====================================
+           Mobile Styles - 直接從 index_mobile.html 複製
+           ==================================== */
+        @media (max-width: 1024px) {
+            /* Android Compact - 1 */
+            body {
+                position: relative;
+                width: 100%;
+                max-width: 412px;
+                height: auto;
+                min-height: 1423px;
+                background: #E3DFDC;
+                margin: 0 auto;
+            }
+
+            /* Show mobile-only elements */
+            .header-bg,
+            .title-section-bg,
+            .title-section-border,
+            .divider-155,
+            .divider-156,
+            .more-btn-1,
+            .more-btn-2,
+            .info-card-mobile {
+                display: block;
+            }
+
+            /* Hide desktop info card */
+            .info-card-desktop {
+                display: none;
+            }
+
+            .time-location-wrapper {
+                display: none;
+            }
+
+            /* Hide desktop elements */
+            nav {
+                display: none;
+            }
+
+            .title-bg-block,
+            .decorative-section,
+            .more-btn,
+            .footer-title-organizer,
+            .footer-title-contact,
+            .footer-title-address,
+            .footer-text-organizer,
+            .footer-text-contact {
+                display: none !important;
+            }
+
+            body > .footer-label-1,
+            body > .footer-label-2,
+            body > .footer-label-3,
+            body > .footer-content-1,
+            body > .footer-content-2,
+            body > .footer-address {
+                display: block !important;
+            }
+
+            /* Header */
+            header {
+                position: absolute;
+                width: 100%;
+                height: 72px;
+                left: 0px;
+                top: 0px;
+            }
+
+            /* Rectangle 34 */
+            .header-bg {
+                box-sizing: border-box;
+                position: absolute;
+                height: 72px;
+                left: 0px;
+                right: 0px;
+                top: 0px;
+                background: #F2F1F1;
+                border-bottom: 0.5px solid #000000;
+            }
+
+            /* Group 45 - Logo */
+            .logo {
+                position: absolute;
+                width: 76.84px;
+                height: 35.35px;
+                left: 20px;
+                top: 18px;
+                transform: none;
+            }
+
+            .logo img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+
+            /* dehaze - Menu Icon */
+            .menu-toggle {
+                display: block;
+                position: absolute;
+                width: 40px;
+                height: 40px;
+                left: auto;
+                right: 20px;
+                top: 16px;
+                background: #F2F1F1;
+                border: none;
+                cursor: pointer;
+                padding: 0;
+                transform: none;
+                z-index: 1001;
+            }
+
+            /* dehaze icon - 三條線 */
+            .menu-toggle::before {
+                content: '';
+                position: absolute;
+                height: 2px;
+                left: 5px;
+                right: 5px;
+                top: calc(50% - 8px);
+                background: #1C1B1F;
+            }
+
+            .menu-toggle::after {
+                content: '';
+                position: absolute;
+                height: 2px;
+                left: 5px;
+                right: 5px;
+                top: calc(50% + 8px);
+                background: #1C1B1F;
+            }
+
+            .menu-icon {
+                position: absolute;
+                height: 2px;
+                left: 5px;
+                right: 5px;
+                top: 50%;
+                transform: translateY(-50%);
+                background: #1C1B1F;
+                transition: all 0.3s ease;
+            }
+
+            /* Menu Expanded State */
+            header.menu-open {
+                height: 395px;
+            }
+
+            header.menu-open .header-bg {
+                height: 395px;
+            }
+
+            /* close icon - X形狀 */
+            header.menu-open .menu-toggle::before {
+                top: 50%;
+                transform: translateY(-50%) rotate(45deg);
+            }
+
+            header.menu-open .menu-toggle::after {
+                top: 50%;
+                transform: translateY(-50%) rotate(-45deg);
+            }
+
+            header.menu-open .menu-icon {
+                opacity: 0;
+            }
+
+            header.menu-open nav {
+                display: block;
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                transform: none;
+            }
+
+            header.menu-open nav a {
+                position: absolute;
+                display: flex;
+                left: 20px;
+                font-family: 'Noto Sans TC';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 24px;
+                align-items: center;
+                color: #000000;
+                height: 35px;
+            }
+
+            header.menu-open nav a:nth-child(1) {
+                width: 96px;
+                top: 86px;
+            }
+
+            header.menu-open nav a:nth-child(2) {
+                width: 96px;
+                top: 142px;
+            }
+
+            header.menu-open nav a:nth-child(3) {
+                width: 48px;
+                top: 198px;
+            }
+
+            header.menu-open nav a:nth-child(4) {
+                width: 48px;
+                top: 254px;
+            }
+
+            /* Video */
+            .hero-image {
+                position: absolute;
+                height: 222.7px;
+                left: 0px;
+                right: 0px;
+                top: 72px;
+                background: url('images/Video.png') center/cover no-repeat;
+            }
+
+            /* Middle Section */
+            .middle-section {
+                position: relative;
+                margin-top: 0;
+                min-height: auto;
+            }
+
+            /* Rectangle 153 */
+            .title-section-bg {
+                position: absolute;
+                height: 100px;
+                left: 0px;
+                right: 0px;
+                top: 295px;
+                background: #F2F1F1;
+            }
+
+            /* Rectangle 154 */
+            .title-section-border {
+                box-sizing: border-box;
+                position: absolute;
+                height: 100px;
+                left: 0px;
+                right: 0px;
+                top: 295px;
+                border-width: 0.5px 0px;
+                border-style: solid;
+                border-color: #000000;
+                transform: matrix(1, 0, 0, -1, 0, 0);
+            }
+
+            /* 學習 × 移動 × 影響 */
+            .main-title {
+                position: absolute;
+                height: 42px;
+                left: 41px;
+                right: 41px;
+                top: 324px;
+                width: auto;
+                transform: none;
+                font-family: 'Cubic 11';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 36px;
+                line-height: 42px;
+                display: flex;
+                align-items: center;
+                text-align: center;
+                justify-content: center;
+                color: #000000;
+                padding: 0;
+            }
+
+            .main-title .times {
+                color: #E1801F;
+                margin: 0 10px;
+            }
+
+            /* 臺北市數位實驗高級中等學校 學習分享會 T-SCHOOL STUDENTS EXPO'26 */
+            .info-card {
+                position: absolute;
+                height: 87px;
+                left: 20px;
+                right: 20px;
+                top: 431px;
+                width: auto;
+                min-height: auto;
+                padding: 0;
+                font-family: 'Noto Sans TC';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 20px;
+                line-height: 24px;
+                color: #000000;
+            }
+
+            .info-card h2 {
+                font-size: 20px;
+                line-height: 24px;
+                font-weight: 700;
+                white-space: pre-line;
+            }
+
+            /* Rectangle 155 */
+            .divider-155 {
+                box-sizing: border-box;
+                position: absolute;
+                height: 140px;
+                left: 20px;
+                right: 20px;
+                top: 554px;
+                border-bottom: 0.5px solid #000000;
+                transform: matrix(1, 0, 0, -1, 0, 0);
+            }
+
+            /* Time_info 1 */
+            .time-info {
+                position: absolute;
+                height: 60px;
+                left: 21px;
+                right: 101px;
+                top: 594px;
+                width: auto;
+                background: url('images/Time_info.png') center/contain no-repeat;
+            }
+
+            .time-row,
+            .time-item,
+            .time-date,
+            .time-day,
+            .time-separator {
+                display: none;
+            }
+
+            /* Rectangle 156 */
+            .divider-156 {
+                box-sizing: border-box;
+                position: absolute;
+                height: 140px;
+                left: 19px;
+                right: 21px;
+                top: 694px;
+                border-bottom: 0.5px solid #000000;
+                transform: matrix(1, 0, 0, -1, 0, 0);
+            }
+
+            /* 臺北市數位實驗高級中等學校 吉林學習基地 臺北市中山區吉林路110號4、5樓 */
+            .location-info {
+                position: absolute;
+                height: 78px;
+                left: 21px;
+                right: 19px;
+                top: 736px;
+                width: auto;
+                min-height: auto;
+                font-family: 'Noto Sans TC';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 22px;
+                color: #000000;
+            }
+
+            .location-info h3 {
+                font-size: 18px;
+                line-height: 22px;
+                font-weight: 400;
+                white-space: normal;
+            }
+
+            /* Component 2 */
+            .more-btn-1 {
+                position: absolute;
+                width: 67px;
+                height: 29px;
+                left: 326px;
+                top: 655px;
+                background: transparent;
+                border: none;
+                cursor: pointer;
+                padding: 0;
+            }
+
+            /* Component 3 */
+            .more-btn-2 {
+                position: absolute;
+                width: 67px;
+                height: 29px;
+                left: 325px;
+                top: 826px;
+                background: transparent;
+                border: none;
+                cursor: pointer;
+                padding: 0;
+            }
+
+            /* More */
+            .more-text {
+                position: absolute;
+                left: 0%;
+                right: 29.85%;
+                top: 6.9%;
+                bottom: 10.34%;
+                font-family: 'Noto Sans TC';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 24px;
+                display: flex;
+                align-items: center;
+                text-align: center;
+                color: #000000;
+            }
+
+            /* Arrow */
+            .arrow {
+                position: absolute;
+                left: 85.07%;
+                right: 0%;
+                top: 27.59%;
+                bottom: 20.69%;
+            }
+
+            /* Rectangle 102 */
+            .rect-102 {
+                position: absolute;
+                left: 85.07%;
+                right: 9.95%;
+                top: 27.59%;
+                bottom: 62.07%;
+                background: #000000;
+            }
+
+            /* Rectangle 103 */
+            .rect-103 {
+                position: absolute;
+                left: 90.05%;
+                right: 4.98%;
+                top: 37.93%;
+                bottom: 51.72%;
+                background: #000000;
+            }
+
+            /* Rectangle 104 */
+            .rect-104 {
+                position: absolute;
+                left: 95.03%;
+                right: 0%;
+                top: 48.28%;
+                bottom: 41.38%;
+                background: #000000;
+            }
+
+            /* Rectangle 105 */
+            .rect-105 {
+                position: absolute;
+                left: 90.05%;
+                right: 4.98%;
+                top: 58.62%;
+                bottom: 31.03%;
+                background: #000000;
+            }
+
+            /* Rectangle 106 */
+            .rect-106 {
+                position: absolute;
+                left: 85.07%;
+                right: 9.95%;
+                top: 68.97%;
+                bottom: 20.69%;
+                background: #000000;
+            }
+
+            /* Rectangle 157 & Frame 63 - Map Section */
+            .map-section {
+                box-sizing: border-box;
+                position: absolute;
+                width: 100%;
+                height: 300px;
+                left: 0;
+                top: 865px;
+                margin: 0;
+                border-width: 0.5px 0px;
+                border-style: solid;
+                border-color: #000000;
+                transform: matrix(1, 0, 0, -1, 0, 0);
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                padding: 0;
+            }
+
+            .map-section img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            /* Footer */
+            .footer-container {
+                display: none;
+            }
+
+            footer {
+                position: absolute;
+                width: 368px;
+                height: 158px;
+                left: 20px;
+                top: 1215px;
+            }
+
+            /* 主辦單位 */
+            .footer-label-1 {
+                position: absolute;
+                height: 26px;
+                left: 20px;
+                right: 153.15px;
+                top: 1215px;
+                font-family: 'Noto Sans TC';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 18px;
+                line-height: 22px;
+                color: #000000;
+            }
+
+            /* 聯絡方式 */
+            .footer-label-2 {
+                position: absolute;
+                height: 26px;
+                left: 20px;
+                right: 153.15px;
+                top: 1271px;
+                font-family: 'Noto Sans TC';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 18px;
+                line-height: 22px;
+                color: #000000;
+            }
+
+            /* 學校地址 */
+            .footer-label-3 {
+                position: absolute;
+                height: 26px;
+                left: 20px;
+                right: 153.15px;
+                top: 1430px;
+                font-family: 'Noto Sans TC';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 18px;
+                line-height: 22px;
+                color: #000000;
+            }
+
+            /* 臺北市數位實驗高中學生 - 主辦單位 */
+            .footer-content-1 {
+                position: absolute;
+                height: 26px;
+                left: 149.15px;
+                right: 24px;
+                top: 1215px;
+                font-family: 'Noto Sans TC';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 22px;
+                color: #000000;
+            }
+
+            /* 聯絡方式內容 */
+            .footer-content-2 {
+                position: absolute;
+                height: auto;
+                left: 149.15px;
+                right: 24px;
+                top: 1271px;
+                font-family: 'Noto Sans TC';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 26px;
+                color: #000000;
+            }
+
+            .footer-content-2 a {
+                color: #000000;
+                text-decoration: none;
+                transition: color 0.3s;
+            }
+
+            .footer-content-2 a:hover {
+                color: #E1801F;
+            }
+
+            /* 學校地址內容 */
+            .footer-address {
+                position: absolute;
+                height: 46px;
+                left: 149.15px;
+                right: 24px;
+                top: 1460px;
+                font-family: 'Noto Sans TC';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 19px;
+                color: #000000;
+            }
+
+            .footer-address a {
+                color: #000000;
+                text-decoration: none;
+                transition: color 0.3s;
+            }
+
+            .footer-address a:hover {
+                color: #E1801F;
+            }
+        }
+
+    </style>
 </head>
 <body>
+    <!-- Header -->
     <header>
-        <!-- 【優化】將 Logo 與標題放在一起 -->
-        <div class="header-title">
-            <img class="logo-img" src="logo.png" alt="Logo">
+        <div class="header-bg"></div>
+        <div class="header-content">
+            <a href="#" class="logo">
+                <img src="images/header-logo.svg" alt="T-School Logo">
+            </a>
+            <nav id="mainNav">
+                <a href="#about">關於我們</a>
+                <a href="map.html">展區資訊</a>
+                <a href="agenda.html">議程</a>
+                <a href="vision.html">理念</a>
+            </nav>
+            <button class="menu-toggle" id="menuToggle" aria-label="開啟選單">
+                <span class="menu-icon"></span>
+            </button>
         </div>
-        <nav>
-            <a href="https://tschool-students.github.io" class="btn-orange">學生自治會官網</a>
-            <div class="social-links">
-                <a href="https://www.facebook.com/people/%E6%95%B8%E4%BD%8D%E5%AF%A6%E4%B8%AD%E5%AD%B8%E7%94%9F%E6%9C%83/61579395212418/" target="_blank" class="social-circle">
-                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/04/Facebook_f_logo_%282021%29.svg/2048px-Facebook_f_logo_%282021%29.svg.png" alt="Facebook">
-                </a>
-                <a href="https://www.instagram.com/tschool_student_council" target="_blank" class="social-circle">
-                    <img src="https://static.vecteezy.com/system/resources/previews/042/127/160/non_2x/instagram-logo-on-circle-style-with-transparent-background-free-png.png" alt="Instagram">
-                </a>
-                <a href="mailto:studentcouncil@tschool.tp.edu.tw" target="_blank" class="social-circle">
-                    <img src="https://static.vecteezy.com/system/resources/thumbnails/014/440/980/small_2x/email-message-icon-design-in-blue-circle-png.png" alt="Email">
-                </a>
-            </div>
-        </nav>
     </header>
-    <main>
-        <h2>這是臨時網站！敬請期待2026學習分享會網站開發完畢！</h2>
-        <section class="introduction">
-            <h3>2026學習分享會將於2026年1月開展！</h3>
-            <div id="introduction" class="content-box">
-                <img src="expo2026.png" alt="學習分享會主題「拓邊」">
-                <p>「學習分享會」是由數位實驗高中師長與學生一同舉辦的展覽，在今年的主題「拓邊」中，將有以下諸多課程、學生經驗的展覽與分享，圍繞著這幾個主題：</p>
-                <!-- 【優化】改用 ul 列表呈現宗旨 -->
-                <ul>
-                    <li>學習力：展現學生對於各種知識、事務、經驗的學習！</li>
-                    <li>影響力：展現學生對於無論自己、他人、社會、環境到世界的影響！</li>
-                    <li>移動力：不僅體現學生在地圖上的移動，更是展現學習的彈性，拓展邊界！</li>
-                </ul>
-                <p>展覽時間：2026/1/18-1/19</p>
-                <p>展覽地點：臺北市數位實驗高中 吉林學習基地（4F-5F）</p>
-            </div>
-        </section>
-    </main>
 
-    <!-- 【新增】頁尾 -->
-    <footer>
-        <p>&copy; 2025 臺北市數位實驗高級中等學校學生自治會. All Rights Reserved.</p>
+    <!-- Hero Image -->
+    <section class="hero-image"></section>
+
+    <!-- Middle Section -->
+    <section class="middle-section">
+        <!-- Title Section (Mobile) -->
+        <div class="title-section-bg"></div>
+        <div class="title-section-border"></div>
+
+        <!-- Title Background Block (Desktop) -->
+        <div class="title-bg-block"></div>
+
+        <!-- Main Title -->
+        <h1 class="main-title">學習<span class="times">×</span>移動<span class="times">×</span>影響</h1>
+
+        <!-- Info Card - Desktop -->
+        <div class="info-card info-card-desktop">
+            <h2>臺北市數位實驗
+高級中等學校
+學習分享會
+T-SCHOOL STUDENTS EXPO'26</h2>
+        </div>
+
+        <!-- Info Card - Mobile -->
+        <div class="info-card info-card-mobile">
+            <h2>臺北市數位實驗高級中等學校
+學習分享會
+T-SCHOOL STUDENTS EXPO'26</h2>
+        </div>
+
+        <!-- Divider 155 (Mobile) -->
+        <div class="divider-155"></div>
+
+        <!-- Time and Location Wrapper (Desktop) -->
+        <div class="time-location-wrapper">
+            <!-- Time Info (Desktop) -->
+            <div class="time-info">
+                <div class="time-row">
+                    <div class="time-item">
+                        <div class="time-date">2026.1.18</div>
+                        <div class="time-day">週日</div>
+                    </div>
+                    <div class="time-separator"></div>
+                    <div class="time-item">
+                        <div class="time-date">1.19</div>
+                        <div class="time-day">週一</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Location Info (Desktop) -->
+            <div class="location-info">
+                <h3>臺北市數位實驗高級中等學校吉林學習基地
+臺北市中山區吉林路110號4、5樓</h3>
+            </div>
+
+            <!-- More Buttons (Desktop) -->
+            <button class="more-btn left">More <span class="arrow">></span></button>
+            <button class="more-btn right">More <span class="arrow">></span></button>
+        </div>
+    </section>
+
+    <!-- Time Info (Mobile) -->
+    <div class="time-info"></div>
+
+    <!-- Divider 156 (Mobile) -->
+    <div class="divider-156"></div>
+
+    <!-- Location Info (Mobile) -->
+    <div class="location-info">
+        臺北市數位實驗高級中等學校<br>
+        吉林學習基地<br>
+        臺北市中山區吉林路110號4、5樓
+    </div>
+
+    <!-- Component 2 - More Button (Mobile) -->
+    <button class="more-btn-1">
+        <span class="more-text">More</span>
+        <div class="arrow">
+            <div class="rect-102"></div>
+            <div class="rect-103"></div>
+            <div class="rect-104"></div>
+            <div class="rect-105"></div>
+            <div class="rect-106"></div>
+        </div>
+    </button>
+
+    <!-- Component 3 - More Button (Mobile) -->
+    <button class="more-btn-2">
+        <span class="more-text">More</span>
+        <div class="arrow">
+            <div class="rect-102"></div>
+            <div class="rect-103"></div>
+            <div class="rect-104"></div>
+            <div class="rect-105"></div>
+            <div class="rect-106"></div>
+        </div>
+    </button>
+
+    <!-- Decorative Section (Desktop) -->
+    <section class="decorative-section">
+        <img src="images/lines.svg" class="lines-bg" alt="">
+        <img src="images/frame-decoration.svg" class="frame-decoration" alt="">
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+        <img src="images/map-background.png" alt="活動地點地圖">
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-container">
+        <div class="footer-content">
+            <h4 class="footer-title-organizer">主辦單位</h4>
+            <p class="footer-text-organizer">臺北市數位實驗高級中等學校學生自治會</p>
+
+            <h4 class="footer-title-contact">聯絡方式</h4>
+            <div class="footer-text-contact">
+                電子郵件信箱：studentcouncil@tschool.tp.edu.tw<br>
+                IG：<a href="https://www.instagram.com/tschool_student_council/" target="_blank">tschool_student_council</a><br>
+                FB：<a href="https://www.facebook.com/people/%E6%95%B8%E4%BD%8D%E5%AF%A6%E4%B8%AD%E5%AD%B8%E7%94%9F%E6%9C%83/61579395212418/" target="_blank">數位實中學生會</a><br>
+                官方網站：<a href="https://tschool-students.github.io" target="_blank">https://tschool-students.github.io</a>
+            </div>
+
+            <h4 class="footer-title-address">學校地址</h4>
+            <p class="footer-address"><a href="https://maps.app.goo.gl/8FggNvviVhifgD6C7" target="_blank">104089臺北市中山區吉林路110號5樓（吉林學習基地）</a></p>
+        </div>
     </footer>
-    <p style="display: none;">學習分享會,學享會,成果展,臺北市數位實驗高級中等學校,學生自治會,臺北市數位實驗高中,數位實驗高中,臺北市數位實中,數位實中,數實,學生會,首頁,網路高中,數位高中,網中,實驗高中,實中</p>
+
+    <!-- Mobile Footer Elements -->
+    <div class="footer-label-1">主辦單位</div>
+    <div class="footer-content-1">臺北市數位實驗高級中等學校學生自治會</div>
+
+    <div class="footer-label-2">聯絡方式</div>
+    <div class="footer-content-2">
+        電子郵件信箱：studentcouncil@tschool.tp.edu.tw<br>
+        IG：<a href="https://www.instagram.com/tschool_student_council/" target="_blank">tschool_student_council</a><br>
+        FB：<a href="https://www.facebook.com/people/%E6%95%B8%E4%BD%8D%E5%AF%A6%E4%B8%AD%E5%AD%B8%E7%94%9F%E6%9C%83/61579395212418/" target="_blank">數位實中學生會</a><br>
+        官方網站：<a href="https://tschool-students.github.io" target="_blank">https://tschool-students.github.io</a>
+    </div>
+
+    <div class="footer-label-3">學校地址</div>
+    <div class="footer-address"><a href="https://maps.app.goo.gl/8FggNvviVhifgD6C7" target="_blank">104089臺北市中山區吉林路110號5樓（吉林學習基地）</a></div>
+
+    <script>
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const mainNav = document.getElementById('mainNav');
+        const header = document.querySelector('header');
+
+        if (menuToggle && mainNav && header) {
+            menuToggle.addEventListener('click', (e) => {
+                e.stopPropagation();
+                header.classList.toggle('menu-open');
+            });
+
+            // Close menu when clicking on a link
+            const navLinks = mainNav.querySelectorAll('a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    header.classList.remove('menu-open');
+                });
+            });
+
+            // Close menu when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!header.contains(e.target) || (!mainNav.contains(e.target) && !menuToggle.contains(e.target))) {
+                    if (window.innerWidth <= 768) {
+                        header.classList.remove('menu-open');
+                    }
+                }
+            });
+        }
+    </script>
 </body>
 </html>

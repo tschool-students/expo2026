@@ -3,9 +3,1858 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>活動理念-2026學習分享會｜臺北市數位實驗高中</title>
+    <title>理念 - T-SCHOOL STUDENTS EXPO'26</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Cubic 11 Font */
+        @font-face {
+            font-family: 'Cubic 11';
+            src: url('Cubic-11-1.430/fonts/web/Cubic_11.woff2') format('woff2'),
+                 url('Cubic-11-1.430/fonts/web/Cubic_11.woff') format('woff');
+            font-weight: 400;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-primary: #E3DFDC;
+            --bg-secondary: #F2F1F1;
+            --text-primary: #000000;
+            --border-color: #666;
+        }
+
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            overflow-x: hidden;
+            line-height: 1.6;
+            position: relative;
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+        }
+
+        .main-container {
+            animation: fadeIn 1s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .main-container {
+            position: relative;
+            width: 100%;
+            max-width: 1440px;
+            margin: 0 auto;
+            min-height: 2100px;
+            overflow: visible;
+        }
+
+        /* Header */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background-color: #F2F1F1;
+            border-bottom: 1px solid #000000;
+            height: 100px;
+            width: 100%;
+        }
+
+        .header-content {
+            max-width: 1440px;
+            margin: 0 auto;
+            height: 100%;
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            position: absolute;
+            left: 31px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 126px;
+            height: 58px;
+        }
+
+        .logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        nav {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 80px;
+            align-items: center;
+        }
+
+        nav a {
+            color: #000000;
+            text-decoration: none;
+            font-size: 24px;
+            font-weight: 400;
+            font-family: 'Noto Sans TC', sans-serif;
+            text-align: center;
+            line-height: 1.2;
+            transition: opacity 0.3s;
+            display: inline-block;
+            height: 35px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        nav a:hover {
+            color: #E1801F;
+        }
+
+        .menu-toggle {
+            display: none;
+        }
+
+        .header-bg {
+            display: none;
+        }
+
+        /* Hide mobile footer elements on desktop */
+        body > .footer-label-1,
+        body > .footer-label-2,
+        body > .footer-content-1,
+        body > .footer-content-2,
+        body > .footer-address {
+            display: none;
+        }
+
+        /* Hide mobile frame elements on desktop */
+        .rect-188-bg,
+        .rect-188-border,
+        .rect-189-bg,
+        .rect-189-border,
+        .rect-190-bg,
+        .rect-190-border {
+            display: none;
+        }
+
+        /* Rectangle 188 */
+        .rect-188 {
+            box-sizing: border-box;
+            position: absolute;
+            width: 100vw;
+            height: 430px;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 351px;
+            background: #F2F1F1;
+            border-width: 1px 0px;
+            border-style: solid;
+            border-color: #604F37;
+        }
+
+        /* 拓・邊 */
+        .theme-title {
+            position: absolute;
+            width: 84px;
+            height: 41px;
+            left: 80px;
+            top: 415px;
+            /* H3 Bold */
+            font-family: 'Noto Sans TC';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 28px;
+            line-height: 34px;
+            display: flex;
+            align-items: center;
+            color: #000000;
+        }
+
+        /* 本年度的學習分享會，以「拓邊」為策展主題。取「拓」字的「開展、擴充」與「拓印」及「邊」字的「邊界」與「方向」之意，扣合本校「廣闊探索，天賦自由」之理念，具有本校學生積極拓展學習領域、描繪未來方向的意象。而「學習．移動．影響」作為本校的學生圖像，被具體而微的融入到議程軌、靜態展的策展主軸中，希望可以完整呈現本校的各大課程模組與學習活動之間的緊密關聯。 */
+        .theme-description {
+            position: absolute;
+            width: 405px;
+            height: 232px;
+            left: 80px;
+            top: 468px;
+            font-family: 'Noto Sans TC';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 160%;
+            /* or 29px */
+            display: flex;
+            align-items: center;
+            color: #000000;
+        }
+
+        /* Rectangle 189 */
+        .rect-189 {
+            box-sizing: border-box;
+            position: absolute;
+            width: 100vw;
+            height: 709px;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 870px;
+            background: #F2F1F1;
+            border-width: 1px 0px;
+            border-style: solid;
+            border-color: #604F37;
+        }
+
+        /* 沙粒 */
+        .concept-sand {
+            position: absolute;
+            width: 56px;
+            height: 41px;
+            left: 811px;
+            top: 970px;
+            /* H3 Bold */
+            font-family: 'Noto Sans TC';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 28px;
+            line-height: 34px;
+            display: flex;
+            align-items: center;
+            color: #000000;
+        }
+
+        /* 在學習過程中，知識與技能逐步累積，聚沙成塔 */
+        .concept-sand-desc {
+            position: absolute;
+            width: 217px;
+            height: 52px;
+            left: 813px;
+            top: 1023px;
+            /* Body */
+            font-family: 'Noto Sans TC';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 22px;
+            display: flex;
+            align-items: center;
+            color: #000000;
+        }
+
+        /* 帶著所學事物四處移動，廣闊探索 */
+        .concept-water-desc {
+            position: absolute;
+            width: 217px;
+            height: 52px;
+            left: 1141px;
+            top: 1023px;
+            /* Body */
+            font-family: 'Noto Sans TC';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 22px;
+            display: flex;
+            align-items: center;
+            color: #000000;
+        }
+
+        /* 影響力 */
+        .label-influence {
+            position: absolute;
+            width: 54px;
+            height: 26px;
+            left: 883px;
+            top: 1188px;
+            /* Body */
+            font-family: 'Noto Sans TC';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 22px;
+            color: rgba(0, 0, 0, 0.5);
+        }
+
+        /* 學習力 */
+        .label-learning {
+            position: absolute;
+            width: 54px;
+            height: 26px;
+            left: 883px;
+            top: 983px;
+            /* Body */
+            font-family: 'Noto Sans TC';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 22px;
+            color: rgba(0, 0, 0, 0.5);
+        }
+
+        /* 移動力 */
+        .label-movement {
+            position: absolute;
+            width: 219px;
+            height: 26px;
+            left: 1211px;
+            top: 983px;
+            /* Body */
+            font-family: 'Noto Sans TC';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 22px;
+            color: rgba(0, 0, 0, 0.5);
+        }
+
+        /* 拓展邊界 */
+        .label-expand {
+            position: absolute;
+            width: 72px;
+            height: 26px;
+            left: 1211px;
+            top: 1188px;
+            /* Body */
+            font-family: 'Noto Sans TC';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 22px;
+            color: rgba(0, 0, 0, 0.5);
+        }
+
+        /* 數位時代 */
+        .label-digital {
+            position: absolute;
+            width: 72px;
+            height: 26px;
+            left: 1267px;
+            top: 1277px;
+            /* Body */
+            font-family: 'Noto Sans TC';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 22px;
+            color: rgba(0, 0, 0, 0.5);
+        }
+
+        /* 將知識與技能（沙）精煉、熔融，形成能夠影響光線的稜鏡（玻璃） */
+        .concept-prism-desc {
+            position: absolute;
+            width: 219px;
+            height: 78px;
+            left: 813px;
+            top: 1228px;
+            /* Body */
+            font-family: 'Noto Sans TC';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 22px;
+            color: #000000;
+        }
+
+        /* 水流 */
+        .concept-water {
+            position: absolute;
+            width: 56px;
+            height: 41px;
+            left: 1139px;
+            top: 970px;
+            /* H3 Bold */
+            font-family: 'Noto Sans TC';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 28px;
+            line-height: 34px;
+            display: flex;
+            align-items: center;
+            color: #000000;
+        }
+
+        /* 稜鏡 */
+        .concept-prism {
+            position: absolute;
+            width: 56px;
+            height: 41px;
+            left: 811px;
+            top: 1175px;
+            /* H3 Bold */
+            font-family: 'Noto Sans TC';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 28px;
+            line-height: 34px;
+            display: flex;
+            align-items: center;
+            color: #000000;
+        }
+
+        /* 鏡像 */
+        .concept-mirror {
+            position: absolute;
+            width: 56px;
+            height: 41px;
+            left: 1139px;
+            top: 1175px;
+            /* H3 Bold */
+            font-family: 'Noto Sans TC';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 28px;
+            line-height: 34px;
+            display: flex;
+            align-items: center;
+            color: #000000;
+        }
+
+        /* AI＆字體 */
+        .concept-ai {
+            position: absolute;
+            width: 112px;
+            height: 41px;
+            left: 1139px;
+            top: 1264px;
+            /* H3 Bold */
+            font-family: 'Noto Sans TC';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 28px;
+            line-height: 34px;
+            display: flex;
+            align-items: center;
+            color: #000000;
+        }
+
+        /* Frame */
+        .number-frame {
+            position: absolute;
+            width: 942px;
+            height: 74px;
+            left: calc(499px - (100vw - 100%) / 2);
+            top: 1505px;
+        }
+
+        /* Rectangle 190 */
+        .rect-190 {
+            box-sizing: border-box;
+            position: absolute;
+            width: 100vw;
+            height: 477px;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 1578px;
+            background: #F2F1F1;
+            border-width: 1px 0px;
+            border-style: solid;
+            border-color: #604F37;
+        }
+
+        /* 打造屬於學生的分享平台 */
+        .goal-title-1 {
+            position: absolute;
+            width: 308px;
+            height: 41px;
+            left: 157px;
+            top: 1738px;
+            /* H3 Bold */
+            font-family: 'Noto Sans TC';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 28px;
+            line-height: 34px;
+            display: flex;
+            align-items: center;
+            color: #000000;
+        }
+
+        /* 促進各界連結 */
+        .goal-title-2 {
+            position: absolute;
+            width: 168px;
+            height: 41px;
+            left: 595px;
+            top: 1738px;
+            /* H3 Bold */
+            font-family: 'Noto Sans TC';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 28px;
+            line-height: 34px;
+            display: flex;
+            align-items: center;
+            color: #000000;
+        }
+
+        /* 開啟公共對話 */
+        .goal-title-3 {
+            position: absolute;
+            width: 168px;
+            height: 41px;
+            left: 965px;
+            top: 1738px;
+            /* H3 Bold */
+            font-family: 'Noto Sans TC';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 28px;
+            line-height: 34px;
+            display: flex;
+            align-items: center;
+            color: #000000;
+        }
+
+        /* 盼能透過建立專屬學生的分享平台，讓學生能主動展現學習經驗和成果，透過分享與交流，展示自我的學習成長，並進一步反思與檢視自我軌跡。 */
+        .goal-desc-1 {
+            position: absolute;
+            width: 338px;
+            height: 104px;
+            left: 159px;
+            top: 1791px;
+            /* Body */
+            font-family: 'Noto Sans TC';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 22px;
+            display: flex;
+            align-items: center;
+            color: #000000;
+        }
+
+        /* 邀請教師、家長、友校及教育夥伴共同參與，建立跨界交流與合作的網絡，促進教育社群間的認識、互動與經驗分享。 */
+        .goal-desc-2 {
+            position: absolute;
+            width: 282px;
+            height: 104px;
+            left: 597px;
+            top: 1791px;
+            /* Body */
+            font-family: 'Noto Sans TC';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 22px;
+            display: flex;
+            align-items: center;
+            color: #000000;
+        }
+
+        /* 以短講、對談與展覽為媒介，將數位實中學生獨特的學習經驗帶入公共討論場域，期待能激發更多對教育與社會的思考，產生更多元的想像。 */
+        .goal-desc-3 {
+            position: absolute;
+            width: 316px;
+            height: 104px;
+            left: 967px;
+            top: 1791px;
+            /* Body */
+            font-family: 'Noto Sans TC';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 22px;
+            display: flex;
+            align-items: center;
+            color: #000000;
+        }
+
+        /* Main_Visual_Poster_Web(C251124_0938) 1 */
+        .poster-1 {
+            position: absolute;
+            width: 884px;
+            max-width: calc(100% - 556px + (100vw - 100%) / 2);
+            height: 518px;
+            right: calc(-1 * (100vw - 100%) / 2);
+            top: 352px;
+            background: url('images/Main_Visual_Poster_Web_C251124_0938_1.png') center / contain no-repeat;
+        }
+
+        /* Main_Visual_Poster_Web(C251124_0938) 2 */
+        .poster-2 {
+            position: absolute;
+            width: 720px;
+            max-width: calc(720px + (100vw - 100%) / 2);
+            height: 797px;
+            left: calc(-1 * (100vw - 100%) / 2);
+            top: 781px;
+            background: url('images/Main_Visual_Poster_Web_C251124_0938_2.png') center / contain no-repeat;
+        }
+
+        /* 理念 */
+        .title-main {
+            position: absolute;
+            width: 139px;
+            height: 75px;
+            left: 147px;
+            top: 120px;
+            /* H2 */
+            font-family: 'Cubic 11';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 64px;
+            line-height: 75px;
+            /* identical to box height */
+            display: flex;
+            align-items: center;
+            color: #000000;
+        }
+
+        /* Vision */
+        .title-sub {
+            position: absolute;
+            width: 114px;
+            height: 47px;
+            left: 302px;
+            top: 146px;
+            font-family: 'Cubic 11';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 40px;
+            line-height: 47px;
+            display: flex;
+            align-items: center;
+            color: #000000;
+        }
+
+        /* Frame 64 */
+        .frame-64 {
+            position: absolute;
+            width: 605px;
+            height: 344px;
+            left: 67px;
+            top: 910px;
+        }
+
+        /* Frame 93 */
+        .frame-93 {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 0px;
+            gap: 10px;
+            position: absolute;
+            width: 605px;
+            height: 344px;
+            left: 0px;
+            top: 0px;
+        }
+
+        /* Frame 94 */
+        .frame-94 {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 0px;
+            gap: 37px;
+            width: 605px;
+            height: 344px;
+            flex: none;
+            order: 0;
+            align-self: stretch;
+            flex-grow: 0;
+        }
+
+        /* Frame 95 */
+        .frame-95 {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 0px;
+            gap: 23px;
+            width: 605px;
+            height: 121px;
+            flex: none;
+            order: 0;
+            align-self: stretch;
+            flex-grow: 0;
+        }
+
+        /* 數位時代下，我們面對更多元的生活模式，也探索更多可能性，展現時代的多元性。藝術人文、社會科學、自然科技，三個基本面的探究，讓學生往感興趣的方向尋找各種體驗的機會；而議題式PBL結合知識、技能及態度，給予理解、解釋與批判，讓學生「會學」並且「學會」。 */
+        .text-content-1 {
+            width: 605px;
+            height: 78px;
+            font-family: 'Noto Sans TC';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 22px;
+            line-height: 26px;
+            color: #000000;
+            flex: none;
+            order: 0;
+            align-self: stretch;
+            flex-grow: 0;
+        }
+
+        /* 學習×移動×影響 */
+        .text-subtitle-1 {
+            width: 187px;
+            height: 20px;
+            font-family: 'Noto Sans TC';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 22px;
+            line-height: 26px;
+            color: #000000;
+            flex: none;
+            order: 1;
+            flex-grow: 0;
+        }
+
+        /* Frame 96 */
+        .frame-96 {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 0px;
+            gap: 18px;
+            width: 605px;
+            height: 186px;
+            flex: none;
+            order: 1;
+            align-self: stretch;
+            flex-grow: 0;
+        }
+
+        /* 學習，學生透過多元面向學習並關注各式議題，培育思辨和解決問題的能力。 移動，學生向外展開學習的觸角，利用各式場域持續創造學習的機會，開拓視野，實踐行動。 影響，學生透過分享引發關注，主動提出解方，持續激盪及促成改變的發生。 */
+        .text-content-2 {
+            width: 605px;
+            height: 168px;
+            font-family: 'Noto Sans TC';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 22px;
+            line-height: 26px;
+            color: #000000;
+            flex: none;
+            order: 0;
+            align-self: stretch;
+            flex-grow: 0;
+        }
+
+        /* Frame 97 */
+        .frame-97 {
+            position: absolute;
+            width: 605px;
+            height: 344px;
+            left: 768px;
+            top: 1652px;
+        }
+
+        /* Frame 98 */
+        .frame-98 {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 0px;
+            gap: 10px;
+            position: absolute;
+            width: 605px;
+            height: 344px;
+            left: 0px;
+            top: 0px;
+        }
+
+        /* Frame 99 */
+        .frame-99 {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 0px;
+            gap: 37px;
+            width: 605px;
+            height: 344px;
+            flex: none;
+            order: 0;
+            align-self: stretch;
+            flex-grow: 0;
+        }
+
+        /* Frame 100 */
+        .frame-100 {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 0px;
+            gap: 23px;
+            width: 605px;
+            height: 99px;
+            flex: none;
+            order: 0;
+            align-self: stretch;
+            flex-grow: 0;
+        }
+
+        /* 世界上有各式各樣的美術館或藝術展覽館，蒐羅各種大師作品，典藏歷史重要的文物；我們是一群學生，在持續學習和積累的過程，創造和孵化一件件有意義的作品。 */
+        .text-content-3 {
+            width: 605px;
+            height: 56px;
+            font-family: 'Noto Sans TC';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 22px;
+            line-height: 26px;
+            color: #000000;
+            flex: none;
+            order: 0;
+            align-self: stretch;
+            flex-grow: 0;
+        }
+
+        /* 學習分享會 */
+        .text-subtitle-2 {
+            width: 109px;
+            height: 20px;
+            font-family: 'Noto Sans TC';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 22px;
+            line-height: 26px;
+            color: #000000;
+            flex: none;
+            order: 1;
+            flex-grow: 0;
+        }
+
+        /* Frame 101 */
+        .frame-101 {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 0px;
+            gap: 18px;
+            width: 605px;
+            height: 208px;
+            flex: none;
+            order: 1;
+            align-self: stretch;
+            flex-grow: 0;
+        }
+
+        /* 這是學生的學習美術館，是展示學習成果的載體，透過不同的視角，觀眾看到學生的生活、想法、思維、思辨和行動。 這是學生精心打造的學習作品，是個小小的實驗，串聯過去、現在與未來，運用有限的時間，提供學生體驗管理、辦理活動以及分享自己的機會，也期望讓更多人有機會走入認識 數位實驗高中 這所學校。 */
+        .text-content-4 {
+            width: 605px;
+            height: 190px;
+            font-family: 'Noto Sans TC';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 22px;
+            line-height: 26px;
+            color: #000000;
+            flex: none;
+            order: 0;
+            align-self: stretch;
+            flex-grow: 0;
+        }
+
+        /* Frame 115 */
+        .frame-115 {
+            position: absolute;
+            width: 605px;
+            height: 119px;
+            left: 67px;
+            top: 1652px;
+        }
+
+        /* Frame 107 */
+        .frame-107 {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 0px;
+            gap: 10px;
+            position: absolute;
+            width: 605px;
+            height: 119px;
+            left: 0px;
+            top: 0px;
+        }
+
+        /* Frame 108 */
+        .frame-108 {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 0px;
+            gap: 37px;
+            width: 605px;
+            height: 119px;
+            flex: none;
+            order: 0;
+            align-self: stretch;
+            flex-grow: 0;
+        }
+
+        /* Frame 109 */
+        .frame-109 {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 0px;
+            gap: 18px;
+            width: 605px;
+            height: 119px;
+            flex: none;
+            order: 0;
+            align-self: stretch;
+            flex-grow: 0;
+        }
+
+        /* 設計規劃學生學習分享會活動，以及策展和執行。 */
+        .text-content-5 {
+            width: 605px;
+            height: 56px;
+            font-family: 'Noto Sans TC';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 22px;
+            line-height: 26px;
+            color: #000000;
+            flex: none;
+            order: 0;
+            align-self: stretch;
+            flex-grow: 0;
+        }
+
+        /* 目標 */
+        .text-subtitle-3 {
+            width: 44px;
+            height: 45px;
+            font-family: 'Noto Sans TC';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 22px;
+            line-height: 26px;
+            color: #000000;
+            flex: none;
+            order: 1;
+            flex-grow: 0;
+        }
+
+        /* Rectangle 191 - Footer Top Line */
+        .rect-191 {
+            position: absolute;
+            width: 100vw;
+            height: 1px;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 1579px;
+            background: #604F37;
+        }
+
+        /* Footer */
+        .footer-container {
+            position: relative;
+            width: 100%;
+            max-width: 1440px;
+            background: transparent;
+            padding: 0px 0px 40px;
+            margin: 0 auto;
+            z-index: 2;
+        }
+
+        .footer-content {
+            position: relative;
+            width: 624px;
+            height: 147px;
+            margin-left: 188px;
+        }
+
+        /* 主辦單位 */
+        .footer-title-organizer {
+            position: absolute;
+            height: 29px;
+            left: 0px;
+            top: 0px;
+            font-family: 'Noto Sans TC';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 24px;
+            color: #000000;
+            margin: 0;
+        }
+
+        /* 臺北市數位實驗高中學生 */
+        .footer-text-organizer {
+            position: absolute;
+            height: 29px;
+            left: 219px;
+            top: 0px;
+            font-family: 'Noto Sans TC';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 24px;
+            color: #000000;
+            margin: 0;
+        }
+
+        /* 聯絡方式 */
+        .footer-title-contact {
+            position: absolute;
+            height: 29px;
+            left: 0px;
+            top: 59px;
+            font-family: 'Noto Sans TC';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 24px;
+            color: #000000;
+            margin: 0;
+        }
+
+        /* 臺北市數位實驗高中學生 */
+        .footer-text-contact {
+            position: absolute;
+            height: 29px;
+            left: 219px;
+            top: 59px;
+            font-family: 'Noto Sans TC';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 24px;
+            color: #000000;
+            margin: 0;
+        }
+
+        /* 104089臺北市中山區吉林路110號5樓(吉林學習基地) */
+        .footer-address {
+            position: absolute;
+            height: 29px;
+            left: 0px;
+            top: 118px;
+            font-family: 'Noto Sans TC';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 24px;
+            color: #000000;
+            margin: 0;
+        }
+
+        /* ====================================
+           Mobile Styles
+           ==================================== */
+        @media (max-width: 1024px) {
+            body {
+                position: relative;
+                width: 100%;
+                max-width: 412px;
+                height: auto;
+                min-height: 2096px;
+                background: #E3DFDC;
+                margin: 0 auto;
+                padding: 0;
+                overflow-x: hidden;
+            }
+
+            .main-container {
+                min-height: auto;
+            }
+
+            /* Header */
+            header {
+                position: absolute;
+                width: 100%;
+                height: 72px;
+                left: 0px;
+                top: 0px;
+            }
+
+            /* Rectangle 34 */
+            .header-bg {
+                box-sizing: border-box;
+                position: absolute;
+                height: 72px;
+                left: 0px;
+                right: 0px;
+                top: 0px;
+                background: #F2F1F1;
+                border-bottom: 0.5px solid #000000;
+            }
+
+            /* Group 45 - Logo */
+            .logo {
+                position: absolute;
+                width: 76.84px;
+                height: 35.35px;
+                left: 20px;
+                top: 18px;
+                transform: none;
+            }
+
+            .logo img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+
+            /* dehaze - Menu Icon */
+            .menu-toggle {
+                display: block;
+                position: absolute;
+                width: 40px;
+                height: 40px;
+                left: auto;
+                right: 20px;
+                top: 16px;
+                background: #F2F1F1;
+                border: none;
+                cursor: pointer;
+                padding: 0;
+                transform: none;
+                z-index: 1001;
+            }
+
+            /* dehaze icon - 三條線 */
+            .menu-toggle::before {
+                content: '';
+                position: absolute;
+                height: 2px;
+                left: 5px;
+                right: 5px;
+                top: calc(50% - 8px);
+                background: #1C1B1F;
+            }
+
+            .menu-toggle::after {
+                content: '';
+                position: absolute;
+                height: 2px;
+                left: 5px;
+                right: 5px;
+                top: calc(50% + 8px);
+                background: #1C1B1F;
+            }
+
+            .menu-icon {
+                position: absolute;
+                height: 2px;
+                left: 5px;
+                right: 5px;
+                top: 50%;
+                transform: translateY(-50%);
+                background: #1C1B1F;
+                transition: all 0.3s ease;
+            }
+
+            /* Hide desktop elements */
+            nav {
+                display: none;
+            }
+
+            /* Menu Expanded State */
+            header.menu-open {
+                height: 395px;
+            }
+
+            header.menu-open .header-bg {
+                height: 395px;
+            }
+
+            /* close icon - X形狀 */
+            header.menu-open .menu-toggle::before {
+                top: 50%;
+                transform: translateY(-50%) rotate(45deg);
+            }
+
+            header.menu-open .menu-toggle::after {
+                top: 50%;
+                transform: translateY(-50%) rotate(-45deg);
+            }
+
+            header.menu-open .menu-icon {
+                opacity: 0;
+            }
+
+            header.menu-open nav {
+                display: block;
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                transform: none;
+            }
+
+            header.menu-open nav a {
+                position: absolute;
+                display: flex;
+                left: 20px;
+                font-family: 'Noto Sans TC';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 24px;
+                align-items: center;
+                color: #000000;
+                height: 35px;
+            }
+
+            header.menu-open nav a:nth-child(1) {
+                width: 96px;
+                top: 86px;
+            }
+
+            header.menu-open nav a:nth-child(2) {
+                width: 96px;
+                top: 142px;
+            }
+
+            header.menu-open nav a:nth-child(3) {
+                width: 48px;
+                top: 198px;
+            }
+
+            header.menu-open nav a:nth-child(4) {
+                width: 48px;
+                top: 254px;
+            }
+
+            /* 理念 */
+            .title-main {
+                position: absolute;
+                height: 42px;
+                left: 20px;
+                right: 314px;
+                top: 102px;
+                width: auto;
+                font-family: 'Cubic 11';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 36px;
+                line-height: 42px;
+                display: flex;
+                align-items: center;
+                color: #000000;
+                white-space: nowrap;
+            }
+
+            /* Vision */
+            .title-sub {
+                position: absolute;
+                height: 28px;
+                left: 106px;
+                right: 238px;
+                top: 115px;
+                width: auto;
+                font-family: 'Cubic 11';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 24px;
+                line-height: 28px;
+                display: flex;
+                align-items: center;
+                color: #000000;
+            }
+
+            /* Main_Visual_Poster_Web(C251124_0938) 1 */
+            .poster-1,
+            .poster-2 {
+                position: absolute;
+                width: 100%;
+                height: 247px;
+                left: 0px;
+                top: 171px;
+                background: url('images/Main_Visual_Poster_Web_C251124_0938_1.png') center / cover no-repeat;
+            }
+
+            /* Rectangle 188 - Background */
+            .rect-188-bg {
+                position: absolute;
+                height: 618px;
+                left: 0px;
+                right: 0px;
+                top: 418px;
+                background: #F2F1F1;
+            }
+
+            /* Rectangle 188 - Border */
+            .rect-188-border {
+                box-sizing: border-box;
+                position: absolute;
+                height: 618px;
+                left: 0px;
+                right: 0px;
+                top: 418px;
+                border-width: 0.5px 0px;
+                border-style: solid;
+                border-color: #000000;
+            }
+
+            /* 拓・邊 */
+            .theme-title {
+                position: absolute;
+                width: 84px;
+                height: 41px;
+                left: 20px;
+                top: 442px;
+                font-family: 'Noto Sans TC';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 28px;
+                line-height: 34px;
+                display: flex;
+                align-items: center;
+                color: #000000;
+            }
+
+            /* 本年度的學習分享會，以「拓邊」為策展主題... */
+            .theme-description {
+                position: absolute;
+                width: 372px;
+                height: 261px;
+                left: 20px;
+                top: 491px;
+                font-family: 'Noto Sans TC';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 160%;
+                color: #000000;
+            }
+
+            /* Rectangle 189 - Background */
+            .rect-189-bg {
+                position: absolute;
+                height: 493px;
+                left: 0px;
+                right: 0px;
+                top: 787px;
+                background: #F2F1F1;
+            }
+
+            /* Rectangle 189 - Border */
+            .rect-189-border {
+                box-sizing: border-box;
+                position: absolute;
+                height: 493px;
+                left: 0px;
+                right: 0px;
+                top: 787px;
+                border-width: 0.5px 0px;
+                border-style: solid;
+                border-color: #000000;
+            }
+
+            /* 概念區域 - 沙粒 */
+            .concept-sand {
+                width: 56px;
+                height: 41px;
+                left: 20px;
+                top: 811px;
+                font-size: 28px;
+                line-height: 34px;
+            }
+
+            .concept-sand-desc {
+                width: 217px;
+                height: 52px;
+                left: 22px;
+                top: 860px;
+                font-size: 18px;
+                line-height: 22px;
+            }
+
+            .label-learning {
+                width: 54px;
+                height: 26px;
+                left: 92px;
+                top: 824px;
+                font-size: 18px;
+                line-height: 22px;
+                color: rgba(0, 0, 0, 0.5);
+            }
+
+            /* 水流 */
+            .concept-water {
+                width: 56px;
+                height: 41px;
+                left: 228px;
+                top: 912px;
+                font-size: 28px;
+                line-height: 34px;
+            }
+
+            .concept-water-desc {
+                width: 176px;
+                height: 52px;
+                left: 230px;
+                top: 961px;
+                font-size: 18px;
+                line-height: 22px;
+            }
+
+            .label-movement {
+                width: 100px;
+                height: 26px;
+                left: 300px;
+                top: 925px;
+                font-size: 18px;
+                line-height: 22px;
+                color: rgba(0, 0, 0, 0.5);
+            }
+
+            /* 稜鏡 */
+            .concept-prism {
+                width: 56px;
+                height: 41px;
+                left: 20px;
+                top: 1013px;
+                font-size: 28px;
+                line-height: 34px;
+            }
+
+            .concept-prism-desc {
+                width: 219px;
+                height: 78px;
+                left: 22px;
+                top: 1066px;
+                font-size: 18px;
+                line-height: 22px;
+            }
+
+            .label-influence {
+                width: 54px;
+                height: 26px;
+                left: 92px;
+                top: 1026px;
+                font-size: 18px;
+                line-height: 22px;
+                color: rgba(0, 0, 0, 0.5);
+            }
+
+            /* 鏡像 */
+            .concept-mirror {
+                width: 56px;
+                height: 41px;
+                left: 248px;
+                top: 1144px;
+                font-size: 28px;
+                line-height: 34px;
+            }
+
+            .label-expand {
+                width: 72px;
+                height: 26px;
+                left: 320px;
+                top: 1157px;
+                font-size: 18px;
+                line-height: 22px;
+                color: rgba(0, 0, 0, 0.5);
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+
+            /* AI＆字體 */
+            .concept-ai {
+                width: 112px;
+                height: 41px;
+                left: 20px;
+                top: 1203px;
+                font-size: 28px;
+                line-height: 34px;
+            }
+
+            .label-digital {
+                width: 72px;
+                height: 26px;
+                left: 148px;
+                top: 1216px;
+                font-size: 18px;
+                line-height: 22px;
+                color: rgba(0, 0, 0, 0.5);
+            }
+
+            /* Rectangle 190 - Goals Section Background */
+            .rect-190-bg {
+                position: absolute;
+                height: 559px;
+                left: 0px;
+                right: 0px;
+                top: 1279px;
+                background: #F2F1F1;
+            }
+
+            /* Rectangle 190 - Border */
+            .rect-190-border {
+                box-sizing: border-box;
+                position: absolute;
+                height: 559px;
+                left: 0px;
+                right: 0px;
+                top: 1279px;
+                border-width: 0.5px 0px;
+                border-style: solid;
+                border-color: #000000;
+            }
+
+            /* Rectangle 191 - Footer Line */
+            .rect-191 {
+                position: absolute;
+                width: 100%;
+                height: 1px;
+                left: 0px;
+                top: 1837px;
+                background: #604F37;
+                transform: none;
+            }
+
+            /* 目標區域 */
+            .goal-title-1 {
+                width: 308px;
+                height: 41px;
+                left: 20px;
+                top: 1303px;
+                font-size: 28px;
+                line-height: 34px;
+            }
+
+            .goal-desc-1 {
+                width: 370px;
+                height: 104px;
+                left: 22px;
+                top: 1352px;
+                font-size: 18px;
+                line-height: 22px;
+            }
+
+            .goal-title-2 {
+                width: 168px;
+                height: 41px;
+                left: 22px;
+                top: 1476px;
+                font-size: 28px;
+                line-height: 34px;
+            }
+
+            .goal-desc-2 {
+                width: 282px;
+                height: 104px;
+                left: 24px;
+                top: 1525px;
+                font-size: 18px;
+                line-height: 22px;
+            }
+
+            .goal-title-3 {
+                width: 168px;
+                height: 41px;
+                left: 20px;
+                top: 1649px;
+                font-size: 28px;
+                line-height: 34px;
+            }
+
+            .goal-desc-3 {
+                width: 316px;
+                height: 104px;
+                left: 22px;
+                top: 1698px;
+                font-size: 18px;
+                line-height: 22px;
+            }
+
+            /* Hide desktop elements */
+            .frame-64,
+            .frame-97,
+            .frame-115,
+            .number-frame,
+            .rect-188,
+            .rect-189,
+            .rect-190 {
+                display: none !important;
+            }
+
+            /* Show mobile frame elements */
+            .rect-188-bg,
+            .rect-188-border,
+            .rect-189-bg,
+            .rect-189-border,
+            .rect-190-bg,
+            .rect-190-border {
+                display: block;
+            }
+
+            /* Footer */
+            .footer-container {
+                display: none;
+            }
+
+            /* Show mobile footer elements */
+            body > .footer-label-1,
+            body > .footer-label-2,
+            body > .footer-content-1,
+            body > .footer-content-2,
+            body > .footer-address {
+                display: block !important;
+            }
+
+            /* 主辦單位 */
+            .footer-label-1 {
+                position: absolute;
+                height: 26px;
+                left: 20px;
+                right: 153.15px;
+                top: 1888px;
+                font-family: 'Noto Sans TC';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 18px;
+                line-height: 22px;
+                color: #000000;
+            }
+
+            /* 聯絡方式 */
+            .footer-label-2 {
+                position: absolute;
+                height: 26px;
+                left: 20px;
+                right: 153.15px;
+                top: 1944px;
+                font-family: 'Noto Sans TC';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 18px;
+                line-height: 22px;
+                color: #000000;
+            }
+
+            /* 臺北市數位實驗高中學生 - 主辦單位 */
+            .footer-content-1 {
+                position: absolute;
+                height: 26px;
+                left: 149.15px;
+                right: 24px;
+                top: 1888px;
+                font-family: 'Noto Sans TC';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 22px;
+                color: #000000;
+            }
+
+            /* 臺北市數位實驗高中學生 - 聯絡方式 */
+            .footer-content-2 {
+                position: absolute;
+                height: 26px;
+                left: 149.15px;
+                right: 24px;
+                top: 1944px;
+                font-family: 'Noto Sans TC';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 22px;
+                color: #000000;
+            }
+
+            /* 104089臺北市中山區吉林路110號5樓(吉林學習基地) */
+            .footer-address {
+                position: absolute;
+                height: 46px;
+                left: 20px;
+                right: 103.03px;
+                top: 2000px;
+                font-family: 'Noto Sans TC';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 19px;
+                color: #000000;
+            }
+        }
+    </style>
 </head>
 <body>
-    
+    <!-- Header -->
+    <header>
+        <div class="header-bg"></div>
+        <div class="header-content">
+            <a href="index.html" class="logo">
+                <img src="images/header-logo.svg" alt="T-School Logo">
+            </a>
+            <nav id="mainNav">
+                <a href="index.html#about">關於我們</a>
+                <a href="map.html">展區資訊</a>
+                <a href="agenda.html">議程</a>
+                <a href="vision.html">理念</a>
+            </nav>
+            <button class="menu-toggle" id="menuToggle" aria-label="開啟選單">
+                <span class="menu-icon"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- Rectangle 188 -->
+        <div class="rect-188"></div>
+        <div class="rect-188-bg"></div>
+        <div class="rect-188-border"></div>
+
+    <!-- 拓・邊 -->
+    <div class="theme-title">拓・邊</div>
+
+    <!-- 拓邊主題說明 -->
+    <div class="theme-description">本年度的學習分享會，以「拓邊」為策展主題。取「拓」字的「開展、擴充」與「拓印」及「邊」字的「邊界」與「方向」之意，扣合本校「廣闊探索，天賦自由」之理念，具有本校學生積極拓展學習領域、描繪未來方向的意象。而「學習．移動．影響」作為本校的學生圖像，被具體而微的融入到議程軌、靜態展的策展主軸中，希望可以完整呈現本校的各大課程模組與學習活動之間的緊密關聯。</div>
+
+    <!-- Rectangle 189 -->
+    <div class="rect-189"></div>
+    <div class="rect-189-bg"></div>
+    <div class="rect-189-border"></div>
+
+    <!-- 中下區域概念文字 -->
+    <div class="concept-sand">沙粒</div>
+    <div class="concept-sand-desc">在學習過程中，知識與技能逐步累積，聚沙成塔</div>
+    <div class="label-learning">學習力</div>
+
+    <div class="concept-water">水流</div>
+    <div class="concept-water-desc">帶著所學事物四處移動，廣闊探索</div>
+    <div class="label-movement">移動力</div>
+
+    <div class="concept-prism">稜鏡</div>
+    <div class="concept-prism-desc">將知識與技能（沙）精煉、熔融，形成能夠影響光線的稜鏡（玻璃）</div>
+    <div class="label-influence">影響力</div>
+
+    <div class="concept-mirror">鏡像</div>
+    <div class="label-expand">拓展邊界</div>
+
+    <div class="concept-ai">AI＆字體</div>
+    <div class="label-digital">數位時代</div>
+
+    <!-- Number Frame with SVG -->
+    <div class="number-frame">
+        <svg width="942" height="74" viewBox="0 0 942 74" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_229_4012)">
+                <path d="M469.263 41.1109H477.499V65.7774H469.263V73.9997H444.557V65.7774H436.321V41.1109H444.557V32.8887H469.263V8.22217H444.557V32.8887H436.321V8.22217H444.557V0H469.263V8.22217H477.499V32.8887H469.263V41.1109H444.557V65.7774H469.263V41.1109Z" fill="#FF5900"/>
+                <path d="M395.144 24.6665H386.908V16.4444H395.144V8.22217H403.379V0H411.615V73.9997H403.379V16.4444H395.144V24.6665Z" fill="#FF5900"/>
+                <path d="M362.201 65.7773H370.437V73.9996H362.201V65.7773Z" fill="#FF5900"/>
+                <path d="M321.024 24.6665H312.788V16.4444H321.024V8.22217H329.259V0H337.495V73.9997H329.259V16.4444H321.024V24.6665Z" fill="#FF5900"/>
+                <path d="M288.114 8.22217H296.35V65.7774H288.114V73.9997H263.407V65.7774H255.172V8.22217H263.407V0H288.114V8.22217H263.407V65.7774H288.114V8.22217Z" fill="#565555"/>
+                <path d="M230.465 65.7773H238.7V73.9996H230.465V65.7773Z" fill="#565555"/>
+                <path d="M214.026 65.7774H205.791V73.9997H181.084V65.7774H172.849V16.4444H181.084V8.22217H189.32V0H205.791V8.22217H189.32V16.4444H181.084V24.6665H205.791V32.8887H214.026V65.7774ZM181.084 65.7774H205.791V32.8887H181.084V65.7774Z" fill="#565555"/>
+                <path d="M131.704 57.5552H123.469V65.7774H156.411V73.9997H115.233V57.5552H123.469V49.333H131.704V41.1109H139.94V32.8887H148.175V8.22217H123.469V24.6665H115.233V8.22217H123.469V0H148.175V8.22217H156.411V32.8887H148.175V41.1109H139.94V49.333H131.704V57.5552Z" fill="#565555"/>
+                <path d="M90.5582 8.22217H98.7938V65.7774H90.5582V73.9997H65.8518V65.7774H57.6162V8.22217H65.8518V0H90.5582V8.22217H65.8518V65.7774H90.5582V8.22217Z" fill="#565555"/>
+                <path d="M16.471 57.5552H8.23552V65.7774H41.1776V73.9997H0V57.5552H8.23552V49.333H16.471V41.1109H24.7065V32.8887H32.942V8.22217H8.23552V24.6665H0V8.22217H8.23552V0H32.942V8.22217H41.1776V32.8887H32.942V41.1109H24.7065V49.333H16.471V57.5552Z" fill="#565555"/>
+                <path d="M902.798 8.22217H911.033V0H935.74V8.22217H943.976V57.5552H935.74V65.7774H927.505V73.9997H911.033V65.7774H927.505V57.5552H935.74V49.333H911.033V41.1109H902.798V8.22217ZM935.74 8.22217H911.033V41.1109H935.74V8.22217Z" fill="#FF5900"/>
+                <path d="M861.62 24.6665H853.385V16.4444H861.62V8.22217H869.856V0H878.091V73.9997H869.856V16.4444H861.62V24.6665Z" fill="#FF5900"/>
+                <path d="M828.679 65.7773H836.914V73.9996H828.679V65.7773Z" fill="#FF5900"/>
+                <path d="M787.5 24.6665H779.265V16.4444H787.5V8.22217H795.736V0H803.971V73.9997H795.736V16.4444H787.5V24.6665Z" fill="#FF5900"/>
+                <path d="M754.589 8.22217H762.824V65.7774H754.589V73.9997H729.882V65.7774H721.646V8.22217H729.882V0H754.589V8.22217H729.882V65.7774H754.589V8.22217Z" fill="#565555"/>
+                <path d="M501.753 34.6299H697.291V40.0961H501.753V34.6299Z" fill="#565555"/>
+                <path d="M691.816 29.1631H686.341V34.6293H691.816V29.1631Z" fill="#565555"/>
+                <path d="M686.34 23.6982H680.865V29.1645H686.34V23.6982Z" fill="#565555"/>
+                <path d="M691.816 40.0957H686.341V45.5619H691.816V40.0957Z" fill="#565555"/>
+                <path d="M686.34 45.5625H680.865V51.0287H686.34V45.5625Z" fill="#565555"/>
+            </g>
+            <defs>
+                <clipPath id="clip0_229_4012">
+                    <rect width="944" height="74" fill="white"/>
+                </clipPath>
+            </defs>
+        </svg>
+    </div>
+
+    <!-- Rectangle 190 -->
+    <div class="rect-190"></div>
+    <div class="rect-190-bg"></div>
+    <div class="rect-190-border"></div>
+
+    <!-- 下半部目標區域 -->
+    <div class="goal-title-1">打造屬於學生的分享平台</div>
+    <div class="goal-desc-1">盼能透過建立專屬學生的分享平台，讓學生能主動展現學習經驗和成果，透過分享與交流，展示自我的學習成長，並進一步反思與檢視自我軌跡。</div>
+
+    <div class="goal-title-2">促進各界連結</div>
+    <div class="goal-desc-2">邀請教師、家長、友校及教育夥伴共同參與，建立跨界交流與合作的網絡，促進教育社群間的認識、互動與經驗分享。</div>
+
+    <div class="goal-title-3">開啟公共對話</div>
+    <div class="goal-desc-3">以短講、對談與展覽為媒介，將數位實中學生獨特的學習經驗帶入公共討論場域，期待能激發更多對教育與社會的思考，產生更多元的想像。</div>
+
+    <!-- Poster Images -->
+    <div class="poster-1"></div>
+    <div class="poster-2"></div>
+
+    <!-- Title Section -->
+    <h1 class="title-main">理念</h1>
+    <div class="title-sub">Vision</div>
+
+    <!-- Rectangle 191 - Footer Background -->
+    <div class="rect-191"></div>
+    </div><!-- End Main Container -->
+
+    <!-- Footer -->
+    <footer class="footer-container">
+        <div class="footer-content">
+            <h4 class="footer-title-organizer">主辦單位</h4>
+            <p class="footer-text-organizer">臺北市數位實驗高中學生</p>
+
+            <h4 class="footer-title-contact">聯絡方式</h4>
+            <p class="footer-text-contact">臺北市數位實驗高中學生</p>
+
+            <p class="footer-address">104089臺北市中山區吉林路110號5樓(吉林學習基地)</p>
+        </div>
+    </footer>
+
+    <!-- Mobile Footer Elements -->
+    <div class="footer-label-1">主辦單位</div>
+    <div class="footer-content-1">臺北市數位實驗高中學生</div>
+    <div class="footer-label-2">聯絡方式</div>
+    <div class="footer-content-2">臺北市數位實驗高中學生</div>
+    <div class="footer-address">104089臺北市中山區吉林路110號5樓(吉林學習基地)</div>
+
+    <script>
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const mainNav = document.getElementById('mainNav');
+        const header = document.querySelector('header');
+
+        if (menuToggle && mainNav && header) {
+            menuToggle.addEventListener('click', (e) => {
+                e.stopPropagation();
+                header.classList.toggle('menu-open');
+            });
+
+            // Close menu when clicking on a link
+            const navLinks = mainNav.querySelectorAll('a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    header.classList.remove('menu-open');
+                });
+            });
+
+            // Close menu when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!header.contains(e.target) || (!mainNav.contains(e.target) && !menuToggle.contains(e.target))) {
+                    if (window.innerWidth <= 768) {
+                        header.classList.remove('menu-open');
+                    }
+                }
+            });
+        }
+    </script>
 </body>
 </html>
