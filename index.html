@@ -378,11 +378,9 @@
         .map-section {
             width: 100%;
             margin: 0;
-            margin-top: 0;
             position: relative;
             z-index: 2;
             border-top: 1px solid #000000;
-            border-bottom: 1px solid #000000;
         }
 
         .map-section img {
@@ -391,22 +389,34 @@
             display: block;
         }
 
+        /* Rectangle 191 - Map Bottom Line */
+        .rect-191 {
+            position: relative;
+            width: 100%;
+            height: 1px;
+            background: #604F37;
+            margin: 0;
+            display: none;
+        }
+
         /* Footer */
         .footer-container {
             position: relative;
             width: 100%;
             max-width: 1440px;
             background: var(--bg-primary);
-            padding: 60px 0px 40px;
+            padding: 60px 188px 40px;
             margin: 0 auto;
+            margin-top: 0;
             z-index: 2;
+            box-sizing: border-box;
         }
 
         .footer-content {
             position: relative;
-            width: 900px;
+            width: 100%;
             height: 220px;
-            margin-left: 188px;
+            margin: 0;
         }
 
         /* Hide mobile footer elements on desktop */
@@ -415,7 +425,11 @@
         body > .footer-label-3,
         body > .footer-content-1,
         body > .footer-content-2,
-        body > .footer-address {
+        body > .footer-address,
+        .footer-instagram,
+        .footer-facebook,
+        .footer-feedback-mobile,
+        .footer-lost-found-mobile {
             display: none;
         }
 
@@ -528,10 +542,66 @@
             color: #E1801F;
         }
 
+        /* 活動回饋 */
+        .footer-feedback {
+            position: absolute;
+            width: 72px;
+            height: 26px;
+            right: 0;
+            bottom: 128px;
+            font-family: 'Noto Sans TC';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 22px;
+            text-decoration-line: underline;
+            color: #000000;
+            transition: color 0.3s;
+        }
+
+        .footer-feedback:hover {
+            color: #E1801F;
+        }
+
+        /* 失物招領 */
+        .footer-lost-found {
+            position: absolute;
+            width: 72px;
+            height: 26px;
+            right: 0;
+            bottom: 82px;
+            font-family: 'Noto Sans TC';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 22px;
+            text-decoration-line: underline;
+            color: #000000;
+            transition: color 0.3s;
+        }
+
+        .footer-lost-found:hover {
+            color: #E1801F;
+        }
+
         /* ====================================
            Mobile Styles - 直接從 index_mobile.html 複製
            ==================================== */
         @media (max-width: 1024px) {
+            /* Show mobile footer elements */
+            body > .footer-label-1,
+            body > .footer-label-2,
+            body > .footer-label-3,
+            body > .footer-content-1,
+            body > .footer-content-2,
+            body > .footer-address,
+            .footer-instagram,
+            .footer-facebook,
+            .footer-feedback-mobile,
+            .footer-lost-found-mobile {
+                display: block !important;
+            }
+
             /* Android Compact - 1 */
             body {
                 position: relative;
@@ -953,24 +1023,37 @@
                 box-sizing: border-box;
                 position: absolute;
                 width: 100%;
-                height: 300px;
+                height: auto;
                 left: 0;
                 top: 865px;
                 margin: 0;
                 border-width: 0.5px 0px;
                 border-style: solid;
                 border-color: #000000;
-                transform: matrix(1, 0, 0, -1, 0, 0);
                 display: flex;
                 flex-direction: row;
                 align-items: center;
+                justify-content: center;
                 padding: 0;
+                overflow: hidden;
             }
 
             .map-section img {
+                width: calc(100% / 0.9);
+                height: auto;
+                object-fit: contain;
+                margin-left: calc((100% / 0.9 - 100%) / -2);
+            }
+
+            /* Rectangle 191 - Map Bottom Line */
+            .rect-191 {
+                position: absolute;
                 width: 100%;
-                height: 100%;
-                object-fit: cover;
+                height: 1px;
+                left: 0;
+                background: #000000;
+                margin: 0;
+                display: none;
             }
 
             /* Footer */
@@ -978,12 +1061,14 @@
                 display: none;
             }
 
+            /* Frame 124 - Mobile Footer Container */
             footer {
                 position: absolute;
-                width: 368px;
-                height: 158px;
-                left: 20px;
-                top: 1215px;
+                width: 412px;
+                height: 400px;
+                left: 0px;
+                top: 1165px;
+                background: #E3DFDC;
             }
 
             /* 主辦單位 */
@@ -992,7 +1077,7 @@
                 height: 26px;
                 left: 20px;
                 right: 153.15px;
-                top: 1215px;
+                top: 1115px;
                 font-family: 'Noto Sans TC';
                 font-style: normal;
                 font-weight: 700;
@@ -1007,7 +1092,7 @@
                 height: 26px;
                 left: 20px;
                 right: 153.15px;
-                top: 1271px;
+                top: 1187px;
                 font-family: 'Noto Sans TC';
                 font-style: normal;
                 font-weight: 700;
@@ -1019,10 +1104,10 @@
             /* 學校地址 */
             .footer-label-3 {
                 position: absolute;
+                width: 72px;
                 height: 26px;
                 left: 20px;
-                right: 153.15px;
-                top: 1430px;
+                top: 1308px;
                 font-family: 'Noto Sans TC';
                 font-style: normal;
                 font-weight: 700;
@@ -1031,13 +1116,13 @@
                 color: #000000;
             }
 
-            /* 臺北市數位實驗高中學生 - 主辦單位 */
+            /* 臺北市數位實驗高級中等學校學生自治會 */
             .footer-content-1 {
                 position: absolute;
-                height: 26px;
-                left: 149.15px;
-                right: 24px;
-                top: 1215px;
+                height: 52px;
+                left: 117px;
+                right: 56.15px;
+                top: 1115px;
                 font-family: 'Noto Sans TC';
                 font-style: normal;
                 font-weight: 400;
@@ -1049,15 +1134,15 @@
             /* 聯絡方式內容 */
             .footer-content-2 {
                 position: absolute;
-                height: auto;
-                left: 149.15px;
-                right: 24px;
-                top: 1271px;
+                height: 104px;
+                left: 117px;
+                right: 56.15px;
+                top: 1187px;
                 font-family: 'Noto Sans TC';
                 font-style: normal;
                 font-weight: 400;
                 font-size: 18px;
-                line-height: 26px;
+                line-height: 22px;
                 color: #000000;
             }
 
@@ -1074,15 +1159,15 @@
             /* 學校地址內容 */
             .footer-address {
                 position: absolute;
-                height: 46px;
-                left: 149.15px;
-                right: 24px;
-                top: 1460px;
+                height: 52px;
+                left: 117px;
+                right: 6.03px;
+                top: 1308px;
                 font-family: 'Noto Sans TC';
                 font-style: normal;
                 font-weight: 400;
-                font-size: 16px;
-                line-height: 19px;
+                font-size: 18px;
+                line-height: 22px;
                 color: #000000;
             }
 
@@ -1093,6 +1178,68 @@
             }
 
             .footer-address a:hover {
+                color: #E1801F;
+            }
+
+            /* Instagram Icon */
+            .footer-instagram {
+                position: absolute;
+                width: 44px;
+                height: 44px;
+                left: 348px;
+                top: 1408px;
+                background: url('images/Instagram_Glyph_Black.png') center / contain no-repeat;
+            }
+
+            /* Facebook Icon */
+            .footer-facebook {
+                position: absolute;
+                height: 44px;
+                width: 44px;
+                left: 64.81%;
+                top: 1408px;
+                background: url('images/Facebook_Logo_Secondary.png') center / contain no-repeat;
+            }
+
+            /* 活動回饋 */
+            .footer-feedback-mobile {
+                position: absolute;
+                width: 72px;
+                height: 26px;
+                left: 20px;
+                top: 1390px;
+                font-family: 'Noto Sans TC';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 22px;
+                text-decoration-line: underline;
+                color: #000000;
+                transition: color 0.3s;
+            }
+
+            .footer-feedback-mobile:hover {
+                color: #E1801F;
+            }
+
+            /* 失物招領 */
+            .footer-lost-found-mobile {
+                position: absolute;
+                width: 72px;
+                height: 26px;
+                left: 20px;
+                top: 1426px;
+                font-family: 'Noto Sans TC';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 22px;
+                text-decoration-line: underline;
+                color: #000000;
+                transition: color 0.3s;
+            }
+
+            .footer-lost-found-mobile:hover {
                 color: #E1801F;
             }
         }
@@ -1211,6 +1358,9 @@ T-SCHOOL STUDENTS EXPO'26</h2>
         <img src="images/map-background.png" alt="活動地點地圖">
     </section>
 
+    <!-- Rectangle 191 - Map Bottom Line -->
+    <div class="rect-191"></div>
+
     <!-- Footer -->
     <footer class="footer-container">
         <div class="footer-content">
@@ -1227,6 +1377,9 @@ T-SCHOOL STUDENTS EXPO'26</h2>
 
             <h4 class="footer-title-address">學校地址</h4>
             <p class="footer-address"><a href="https://maps.app.goo.gl/8FggNvviVhifgD6C7" target="_blank">104089臺北市中山區吉林路110號5樓（吉林學習基地）</a></p>
+
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScMHmr5TmUeqXqNsf0M4Y40MVV-y_LDF8sG_AB4vsEXami71A/viewform" target="_blank" class="footer-feedback">活動回饋</a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScX5hgfnTpRZsmjDNoy6aGTDNoL1Pd0Szrnmc54No2zcE_H2A/viewform" target="_blank" class="footer-lost-found">失物招領</a>
         </div>
     </footer>
 
@@ -1237,13 +1390,19 @@ T-SCHOOL STUDENTS EXPO'26</h2>
     <div class="footer-label-2">聯絡方式</div>
     <div class="footer-content-2">
         電子郵件信箱：studentcouncil@tschool.tp.edu.tw<br>
-        IG：<a href="https://www.instagram.com/tschool_student_council/" target="_blank">tschool_student_council</a><br>
-        FB：<a href="https://www.facebook.com/people/%E6%95%B8%E4%BD%8D%E5%AF%A6%E4%B8%AD%E5%AD%B8%E7%94%9F%E6%9C%83/61579395212418/" target="_blank">數位實中學生會</a><br>
         官方網站：<a href="https://tschool-students.github.io" target="_blank">https://tschool-students.github.io</a>
     </div>
 
     <div class="footer-label-3">學校地址</div>
     <div class="footer-address"><a href="https://maps.app.goo.gl/8FggNvviVhifgD6C7" target="_blank">104089臺北市中山區吉林路110號5樓（吉林學習基地）</a></div>
+
+    <!-- Mobile Footer Social Icons -->
+    <a href="https://www.instagram.com/tschool_student_council/" target="_blank" class="footer-instagram" aria-label="Instagram"></a>
+    <a href="https://www.facebook.com/people/%E6%95%B8%E4%BD%8D%E5%AF%A6%E4%B8%AD%E5%AD%B8%E7%94%9F%E6%9C%83/61579395212418/" target="_blank" class="footer-facebook" aria-label="Facebook"></a>
+
+    <!-- Mobile Footer Links -->
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLScMHmr5TmUeqXqNsf0M4Y40MVV-y_LDF8sG_AB4vsEXami71A/viewform" target="_blank" class="footer-feedback-mobile">活動回饋</a>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLScX5hgfnTpRZsmjDNoy6aGTDNoL1Pd0Szrnmc54No2zcE_H2A/viewform" target="_blank" class="footer-lost-found-mobile">失物招領</a>
 
     <script>
         // Mobile menu toggle
@@ -1306,6 +1465,30 @@ T-SCHOOL STUDENTS EXPO'26</h2>
                 window.location.href = 'map.html';
             });
         }
+
+        // Position rect-191 and footer based on map-section in mobile view
+        function positionMobileFooter() {
+            if (window.innerWidth <= 1024) {
+                const mapSection = document.querySelector('.map-section');
+                const rect191 = document.querySelector('.rect-191');
+                const footer = document.querySelector('footer');
+
+                if (mapSection && rect191 && footer) {
+                    // Calculate the position after map-section
+                    const mapBottom = mapSection.offsetTop + mapSection.offsetHeight;
+
+                    // Position rect-191 at map-section's bottom edge
+                    rect191.style.top = mapBottom + 'px';
+
+                    // Position footer right after rect-191 (1px line)
+                    footer.style.top = (mapBottom + 1) + 'px';
+                }
+            }
+        }
+
+        // Run on load and resize
+        window.addEventListener('load', positionMobileFooter);
+        window.addEventListener('resize', positionMobileFooter);
     </script>
 </body>
 </html>
