@@ -2219,6 +2219,55 @@
             });
         }
 
+        // Position rect-191 and footer elements based on poster-section bottom in mobile view
+        function positionMobileFooter() {
+            if (window.innerWidth <= 1024) {
+                const posterSection = document.querySelector('.poster-section');
+                const rect191 = document.querySelector('.rect-191');
+                const footerContainer = document.querySelector('footer');
+
+                if (posterSection && rect191 && footerContainer) {
+                    // Calculate the position after poster-section
+                    const posterBottom = posterSection.offsetTop + posterSection.offsetHeight;
+
+                    // Position rect-191 at poster-section's bottom edge
+                    rect191.style.top = posterBottom + 'px';
+
+                    // Position footer container right after rect-191 (1px line)
+                    footerContainer.style.top = (posterBottom + 1) + 'px';
+
+                    // Position all footer elements with proper spacing
+                    const baseTop = posterBottom + 120; // 120px gap from rect-191
+
+                    const footerLabel1 = document.querySelector('.footer-label-1');
+                    const footerContent1 = document.querySelector('.footer-content-1');
+                    const footerLabel2 = document.querySelector('.footer-label-2');
+                    const footerContent2 = document.querySelector('.footer-content-2');
+                    const footerLabel3 = document.querySelector('.footer-label-3');
+                    const footerAddressMobile = document.querySelector('.footer-address-mobile');
+                    const footerInstagram = document.querySelector('.footer-instagram');
+                    const footerFacebook = document.querySelector('.footer-facebook');
+                    const footerFeedback = document.querySelector('.footer-feedback-mobile');
+                    const footerLostFound = document.querySelector('.footer-lost-found-mobile');
+
+                    if (footerLabel1) footerLabel1.style.top = baseTop + 'px';
+                    if (footerContent1) footerContent1.style.top = baseTop + 'px';
+                    if (footerLabel2) footerLabel2.style.top = (baseTop + 72) + 'px';
+                    if (footerContent2) footerContent2.style.top = (baseTop + 72) + 'px';
+                    if (footerLabel3) footerLabel3.style.top = (baseTop + 193) + 'px';
+                    if (footerAddressMobile) footerAddressMobile.style.top = (baseTop + 193) + 'px';
+                    if (footerFeedback) footerFeedback.style.top = (baseTop + 325) + 'px';
+                    if (footerInstagram) footerInstagram.style.top = (baseTop + 343) + 'px';
+                    if (footerFacebook) footerFacebook.style.top = (baseTop + 343) + 'px';
+                    if (footerLostFound) footerLostFound.style.top = (baseTop + 361) + 'px';
+                }
+            }
+        }
+
+        // Run on load and resize
+        window.addEventListener('load', positionMobileFooter);
+        window.addEventListener('resize', positionMobileFooter);
+
     </script>
 </body>
 </html>
