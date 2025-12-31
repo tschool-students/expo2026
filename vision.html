@@ -594,10 +594,12 @@
             width: 884px;
             max-width: calc(100% - 556px + (100vw - 100%) / 2);
             min-width: 734px;
-            aspect-ratio: 884 / 518;
+            height: 430px;
             right: calc(-1 * (100vw - 100%) / 2);
             top: 351px;
-            background: url('images/Main_Visual_Poster_Web_C251124_0938_1.png') right top / contain no-repeat;
+            background: url('images/Main_Visual_Poster_Web_C251124_0938_1.png') right top no-repeat;
+            background-size: auto 100%;
+            overflow: hidden;
         }
 
         /* Main_Visual_Poster_Web(C251124_0938) 2 */
@@ -2094,8 +2096,77 @@
             });
         }
 
-        // Sync rect-189 height with poster-2 height and rect-190 position
+        // Sync poster-1 bottom edge with rect-188 bottom edge
         const poster1 = document.querySelector('.poster-1');
+        const rect188 = document.querySelector('.rect-188');
+
+        if (poster1 && rect188) {
+            let animationFrameId = null;
+
+            const updatePoster1Height = () => {
+                const isDesktop = window.innerWidth > 1024;
+
+                if (isDesktop) {
+                    // Get rect-188's position and dimensions
+                    const rect188Top = parseInt(getComputedStyle(rect188).top);
+                    const rect188Height = rect188.offsetHeight;
+                    const rect188Bottom = rect188Top + rect188Height;
+
+                    // Get poster-1's top position
+                    const poster1Top = parseInt(getComputedStyle(poster1).top);
+
+                    // Calculate poster-1's height to align bottom edges
+                    const poster1Height = rect188Bottom - poster1Top;
+
+                    // Set poster-1's height
+                    poster1.style.height = poster1Height + 'px';
+                } else {
+                    // Reset to CSS values on mobile
+                    poster1.style.height = '';
+                }
+            };
+
+            // Continuous update using requestAnimationFrame
+            const continuousUpdate = () => {
+                updatePoster1Height();
+                animationFrameId = requestAnimationFrame(continuousUpdate);
+            };
+
+            // Create ResizeObserver to watch rect-188's size changes
+            const rect188Observer = new ResizeObserver(entries => {
+                updatePoster1Height();
+            });
+
+            // Create MutationObserver to watch for attribute/style changes
+            const mutationObserver = new MutationObserver(mutations => {
+                updatePoster1Height();
+            });
+
+            // Observe rect-188 for attribute and style changes
+            mutationObserver.observe(rect188, {
+                attributes: true,
+                attributeFilter: ['style', 'class'],
+                childList: false,
+                subtree: false
+            });
+
+            // Listen to window resize
+            window.addEventListener('resize', updatePoster1Height);
+
+            // Listen to scroll events
+            window.addEventListener('scroll', updatePoster1Height);
+
+            // Start observing rect-188
+            rect188Observer.observe(rect188);
+
+            // Start continuous updates
+            continuousUpdate();
+
+            // Initial sync
+            updatePoster1Height();
+        }
+
+        // Sync rect-189 height with poster-2 height and rect-190 position
         const poster2 = document.querySelector('.poster-2');
         const rect189 = document.querySelector('.rect-189');
         const rect190 = document.querySelector('.rect-190');
