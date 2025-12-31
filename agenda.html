@@ -1,11 +1,3027 @@
+
+
 <!DOCTYPE html>
 <html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>議程-2026學習分享會｜臺北市數位實驗高中</title>
+    <title>議程 - T-SCHOOL STUDENTS EXPO'26</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Cubic 11 Font */
+        @font-face {
+            font-family: 'Cubic 11';
+            src: url('Cubic-11-1.430/fonts/web/Cubic_11.woff2') format('woff2'),
+                 url('Cubic-11-1.430/fonts/web/Cubic_11.woff') format('woff');
+            font-weight: 400;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-primary: #E3DFDC;
+            --bg-secondary: #F2F1F1;
+            --text-primary: #000000;
+            --border-color: #604F37;
+        }
+
+        html {
+            overflow-x: hidden;
+            width: 100%;
+        }
+
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            overflow-x: hidden;
+            line-height: 1.6;
+            position: relative;
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+        }
+
+        .main-container {
+            animation: fadeIn 1s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .main-container {
+            position: relative;
+            width: 100%;
+            max-width: 1440px;
+            margin: 0 auto;
+            overflow: visible;
+        }
+
+        /* Header */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background-color: #F2F1F1;
+            border-bottom: 1px solid #000000;
+            height: 100px;
+            width: 100%;
+        }
+
+        .header-content {
+            max-width: 1440px;
+            margin: 0 auto;
+            height: 100%;
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            position: absolute;
+            left: 31px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 126px;
+            height: 58px;
+        }
+
+        .logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        nav {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 80px;
+            align-items: center;
+        }
+
+        nav a {
+            color: #000000;
+            text-decoration: none;
+            font-size: 24px;
+            font-weight: 400;
+            font-family: 'Noto Sans TC', sans-serif;
+            text-align: center;
+            line-height: 1.2;
+            transition: opacity 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 35px;
+        }
+
+        nav a:hover {
+            color: #E1801F;
+        }
+
+        .menu-toggle {
+            display: none;
+        }
+
+        .header-bg {
+            display: none;
+        }
+
+        /* Title Section */
+        .title-main {
+            position: absolute;
+            width: 139px;
+            height: 75px;
+            left: 147px;
+            top: 120px;
+            font-family: 'Cubic 11';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 64px;
+            line-height: 75px;
+            display: flex;
+            align-items: center;
+            color: #000000;
+        }
+
+        .title-sub {
+            position: absolute;
+            width: 140px;
+            height: 47px;
+            left: 302px;
+            top: 146px;
+            font-family: 'Cubic 11';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 40px;
+            line-height: 47px;
+            display: flex;
+            align-items: center;
+            color: #000000;
+        }
+
+        /* Track Titles */
+        .track-title {
+            position: absolute;
+            font-family: 'Cubic 11';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 29px;
+            color: #000000;
+            transform: translateX(-50%);
+        }
+
+        /* Tab Navigation */
+        .tab-navigation {
+            box-sizing: border-box;
+            position: absolute;
+            width: 100vw;
+            height: 70px;
+            left: calc(-50vw + 50%);
+            top: 351px;
+            background: #FFFFFF;
+            border-width: 1px 0px;
+            border-style: solid;
+            border-color: #604F37;
+        }
+
+        .tab-buttons {
+            position: absolute;
+            width: 169px;
+            height: 35px;
+            left: calc(50vw - 84.5px);
+            top: 18px;
+            display: flex;
+            gap: 43px;
+        }
+
+        .tab-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-family: 'Noto Sans TC';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 29px;
+            text-align: center;
+            color: #000000;
+            padding: 0;
+            transition: color 0.3s;
+        }
+
+        .tab-btn.active {
+            color: #E1801F;
+        }
+
+        /* Bottom Tab Navigation */
+        .bottom-tab-navigation {
+            box-sizing: border-box;
+            position: absolute;
+            width: 100vw;
+            height: 70px;
+            left: calc(-50vw + 50%);
+            top: 2236px;
+            background: #FFFFFF;
+            border-width: 1px 0px;
+            border-style: solid;
+            border-color: #604F37;
+        }
+
+        .bottom-tab-buttons {
+            position: absolute;
+            width: 169px;
+            height: 35px;
+            left: calc(50vw - 84.5px);
+            top: 18px;
+            display: flex;
+            gap: 43px;
+        }
+
+        .bottom-tab-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-family: 'Noto Sans TC';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 29px;
+            text-align: center;
+            color: #000000;
+            padding: 0;
+            transition: color 0.3s;
+        }
+
+        .bottom-tab-btn.active {
+            color: #E1801F;
+        }
+
+        /* Agenda Container */
+        .agenda-wrapper {
+            position: absolute;
+            width: 100vw;
+            height: 1815px;
+            left: calc(-50vw + 50%);
+            top: 421px;
+            overflow: hidden;
+        }
+
+        /* Days Container - holds both day sections */
+        .days-container {
+            position: absolute;
+            width: 200%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .days-container.show-day1 {
+            transform: translateX(0);
+        }
+
+        .days-container.show-day2 {
+            transform: translateX(-50%);
+        }
+
+        /* Day sections */
+        .day-section {
+            position: relative;
+            width: 50%;
+            height: 1815px;
+            flex-shrink: 0;
+            background: #FFFFFF;
+            display: flex;
+            justify-content: center;
+        }
+
+        .day-section-inner {
+            position: relative;
+            width: 100%;
+            max-width: 1440px;
+            height: 100%;
+        }
+
+        /* Time labels */
+        .time-label {
+            position: absolute;
+            font-family: 'Cubic 11';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 23px;
+            display: flex;
+            align-items: center;
+            text-align: right;
+            color: #000000;
+        }
+
+        /* Horizontal lines */
+        .h-line {
+            position: absolute;
+            width: 1215px;
+            height: 0px;
+            left: 145px;
+            border: 1px solid rgba(94, 47, 0, 0.16);
+        }
+
+        /* Mobile Horizontal lines */
+        @media (max-width: 1024px) {
+            .h-line {
+                width: 321px;
+            }
+        }
+
+        /* Grid pattern */
+        .grid-pattern {
+            position: absolute;
+            width: 48px;
+            height: 20px;
+            left: calc(50% - 24px);
+        }
+
+        .grid-rect {
+            position: absolute;
+            width: 12px;
+            height: 4px;
+            background: #604F37;
+        }
+
+        /* Session frames */
+        .session-frame {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+        }
+
+        .session-opening {
+            background: #DCDEE3;
+        }
+
+        .session-forum {
+            background: #FFE2C5;
+            cursor: pointer;
+            border: 3px solid transparent;
+            transition: border-color 0.3s ease;
+        }
+
+        .session-forum:hover {
+            border-color: #FFB366;
+        }
+
+        .session-talk {
+            background: rgba(227, 223, 220, 0.6);
+        }
+
+        .session-title {
+            font-family: 'Noto Sans TC';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 22px;
+            color: #000000;
+            margin-bottom: 8px;
+        }
+
+        .session-speaker {
+            font-family: 'Noto Sans TC';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 22px;
+            color: rgba(0, 0, 0, 0.5);
+            margin-bottom: 8px;
+        }
+
+        .session-tag {
+            position: absolute;
+            font-family: 'Noto Sans TC';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 22px;
+            color: rgba(0, 0, 0, 0.5);
+        }
+
+        /* Rectangle 191 - Footer Top Line */
+        .rect-191 {
+            position: absolute;
+            width: 100vw;
+            height: 1px;
+            left: calc(-50vw + 50%);
+            top: 2306px;
+            background: #604F37;
+            display: none;
+        }
+
+        /* Modal Overlay */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0);
+            z-index: 9999;
+            justify-content: center;
+            align-items: center;
+            transition: background 0.3s ease;
+        }
+
+        .modal-overlay.active {
+            display: flex;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .modal-overlay.closing {
+            background: rgba(0, 0, 0, 0);
+        }
+
+        /* Modal Content */
+        .modal-content {
+            box-sizing: border-box;
+            position: relative;
+            width: 1024px;
+            height: 552px;
+            background: #FFFFFF;
+            border: 1px solid #604F37;
+        }
+
+        .modal-title {
+            position: absolute;
+            width: 677px;
+            height: 41px;
+            left: 64px;
+            top: 56px;
+            font-family: 'Noto Sans TC';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 28px;
+            line-height: 34px;
+            display: flex;
+            align-items: center;
+            color: #000000;
+        }
+
+        .modal-tag {
+            position: absolute;
+            width: 90px;
+            height: 26px;
+            left: 870px;
+            top: 69px;
+            font-family: 'Noto Sans TC';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 22px;
+            display: flex;
+            align-items: center;
+            color: rgba(0, 0, 0, 0.5);
+        }
+
+        .modal-speakers {
+            position: absolute;
+            width: 896px;
+            height: 52px;
+            left: 64px;
+            top: 112px;
+            font-family: 'Noto Sans TC';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 22px;
+            display: flex;
+            align-items: center;
+            color: rgba(0, 0, 0, 0.5);
+        }
+
+        .modal-description {
+            position: absolute;
+            width: 896px;
+            height: 203px;
+            left: 64px;
+            top: 179px;
+            font-family: 'Noto Sans TC';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 160%;
+            color: #000000;
+        }
+
+        .modal-close {
+            position: absolute;
+            width: 23.33px;
+            height: 23.33px;
+            right: 24.33px;
+            top: 24.33px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+        }
+
+        .modal-close img {
+            width: 23.33px;
+            height: 23.33px;
+            object-fit: contain;
+        }
+
+        .modal-topics {
+            position: absolute;
+            left: 64px;
+            top: 406px;
+            width: 895px;
+            height: 90px;
+            display: flex;
+            gap: 66px;
+        }
+
+        .topic-card {
+            height: 90px;
+            background: rgba(227, 223, 220, 0.6);
+            display: flex;
+            align-items: center;
+            padding: 0 15px;
+            gap: 10px;
+        }
+
+        .topic-card:nth-child(1) {
+            width: 280px;
+        }
+
+        .topic-card:nth-child(2) {
+            width: 270px;
+        }
+
+        .topic-card:nth-child(3) {
+            width: 325px;
+        }
+
+        .topic-icon {
+            width: 52px;
+            height: 52px;
+            flex-shrink: 0;
+            object-fit: contain;
+        }
+
+        .topic-text {
+            font-family: 'Noto Sans TC';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 22px;
+            color: #000000;
+        }
+
+        /* Modal 2 specific styles */
+        .modal-content-2 {
+            height: 575px;
+        }
+
+        .modal-description-2 {
+            height: 116px;
+        }
+
+        .modal-topics-2 {
+            position: absolute;
+            left: 0;
+            top: 319px;
+            width: 100%;
+            height: 200px;
+        }
+
+        .topic-card-2-1 {
+            position: absolute;
+            width: 256px !important;
+            max-width: 256px;
+            left: 64px;
+            top: 0;
+        }
+
+        .topic-card-2-2 {
+            position: absolute;
+            width: 189px !important;
+            max-width: 189px;
+            left: 535px;
+            top: 0;
+        }
+
+        .topic-card-2-3 {
+            position: absolute;
+            width: 261px !important;
+            max-width: 261px;
+            left: 297px;
+            top: 110px;
+        }
+
+        .topic-card-2-4 {
+            position: absolute;
+            width: 285px !important;
+            max-width: 285px;
+            left: 711px;
+            top: 110px;
+        }
+
+        /* Modal 3 specific styles */
+        .modal-content-3 {
+            height: 519px;
+        }
+
+        .modal-description-3 {
+            height: 174px;
+        }
+
+        .modal-topics-3 {
+            position: absolute;
+            left: 0;
+            top: 373px;
+            width: 100%;
+            height: 90px;
+        }
+
+        .topic-card-3-1 {
+            position: absolute;
+            width: 244px !important;
+            max-width: 244px;
+            left: 64px;
+            top: 0;
+        }
+
+        .topic-card-3-2 {
+            position: absolute;
+            width: 232px !important;
+            max-width: 232px;
+            left: 379px;
+            top: 0;
+        }
+
+        .topic-card-3-3 {
+            position: absolute;
+            width: 276px !important;
+            max-width: 276px;
+            left: 684px;
+            top: 0;
+        }
+
+        /* Modal 4 specific styles */
+        .modal-content-4 {
+            height: 637px;
+        }
+
+        .modal-description-4 {
+            height: 203px;
+            top: 158px;
+        }
+
+        .modal-topics-4 {
+            position: absolute;
+            left: 0;
+            top: 381px;
+            width: 100%;
+            height: 200px;
+        }
+
+        .topic-card-4-1 {
+            position: absolute;
+            width: 254px !important;
+            max-width: 254px;
+            left: 64px;
+            top: 0;
+        }
+
+        .topic-card-4-2 {
+            position: absolute;
+            width: 200px !important;
+            max-width: 200px;
+            left: 476px;
+            top: 0;
+        }
+
+        .topic-card-4-3 {
+            position: absolute;
+            width: 186px !important;
+            max-width: 186px;
+            left: 290px;
+            top: 110px;
+        }
+
+        .topic-card-4-4 {
+            position: absolute;
+            width: 186px;
+            left: 661px;
+            top: 110px;
+        }
+
+        .topic-card-4-5 {
+            position: absolute;
+            width: 126px;
+            left: 834px;
+            top: 0;
+        }
+
+        /* Footer */
+        .footer-container {
+            position: relative;
+            width: 100%;
+            max-width: 1440px;
+            background: var(--bg-primary);
+            padding: 60px 188px 40px;
+            margin: 0 auto;
+            margin-top: 0;
+            z-index: 2;
+            box-sizing: border-box;
+        }
+
+        .footer-content {
+            position: relative;
+            width: 100%;
+            height: 220px;
+            margin: 0;
+        }
+
+        .footer-title-organizer {
+            position: absolute;
+            height: 29px;
+            left: 0px;
+            top: 0px;
+            font-family: 'Noto Sans TC';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 24px;
+            color: #000000;
+            margin: 0;
+        }
+
+        .footer-text-organizer {
+            position: absolute;
+            height: 29px;
+            left: 219px;
+            top: 0px;
+            font-family: 'Noto Sans TC';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 24px;
+            color: #000000;
+            margin: 0;
+        }
+
+        .footer-title-contact {
+            position: absolute;
+            height: 29px;
+            left: 0px;
+            top: 59px;
+            font-family: 'Noto Sans TC';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 24px;
+            color: #000000;
+            margin: 0;
+        }
+
+        .footer-text-contact {
+            position: absolute;
+            left: 219px;
+            top: 59px;
+            font-family: 'Noto Sans TC';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 28px;
+            color: #000000;
+            margin: 0;
+        }
+
+        .footer-text-contact a {
+            color: #000000;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-text-contact a:hover {
+            color: #E1801F;
+        }
+
+        /* 學校地址標題 */
+        .footer-title-address {
+            position: absolute;
+            height: 29px;
+            left: 0px;
+            top: 191px;
+            font-family: 'Noto Sans TC';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 24px;
+            color: #000000;
+            margin: 0;
+        }
+
+        .footer-address {
+            position: absolute;
+            height: 29px;
+            left: 219px;
+            top: 191px;
+            font-family: 'Noto Sans TC';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 24px;
+            color: #000000;
+            margin: 0;
+        }
+
+        .footer-address a {
+            color: #000000;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-address a:hover {
+            color: #E1801F;
+        }
+
+        /* 活動回饋 */
+        .footer-feedback {
+            position: absolute;
+            width: 72px;
+            height: 26px;
+            right: 0;
+            bottom: 128px;
+            font-family: 'Noto Sans TC';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 22px;
+            text-decoration-line: underline;
+            color: #000000;
+            transition: color 0.3s;
+        }
+
+        .footer-feedback:hover {
+            color: #E1801F;
+        }
+
+        /* 失物招領 */
+        .footer-lost-found {
+            position: absolute;
+            width: 72px;
+            height: 26px;
+            right: 0;
+            bottom: 82px;
+            font-family: 'Noto Sans TC';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 22px;
+            text-decoration-line: underline;
+            color: #000000;
+            transition: color 0.3s;
+        }
+
+        .footer-lost-found:hover {
+            color: #E1801F;
+        }
+
+        /* Hide mobile footer elements on desktop */
+        body > .footer-label-1,
+        body > .footer-label-2,
+        body > .footer-label-3,
+        body > .footer-content-1,
+        body > .footer-content-2,
+        body > .footer-address-mobile,
+        .footer-instagram,
+        .footer-facebook,
+        .footer-feedback-mobile,
+        .footer-lost-found-mobile {
+            display: none;
+        }
+
+        /* Hide mobile date picker on desktop */
+        .mobile-date-picker {
+            display: none;
+        }
+
+        /* ====================================
+           Mobile Styles
+           ==================================== */
+        @media (max-width: 1024px) {
+            body {
+                position: relative;
+                width: 100%;
+                max-width: 412px;
+                height: auto;
+                min-height: 2166px;
+                background: #E3DFDC;
+                margin: 0 auto;
+                padding: 0;
+                overflow-x: hidden;
+            }
+
+            .main-container {
+                min-height: auto;
+                width: 412px;
+                margin: 0 auto;
+            }
+
+            /* Header */
+            header {
+                position: sticky;
+                width: 100%;
+                max-width: 412px;
+                height: 72px;
+                left: 0;
+                top: 0;
+                z-index: 1000;
+            }
+
+            /* Header Background */
+            .header-bg {
+                display: block;
+                box-sizing: border-box;
+                position: absolute;
+                height: 72px;
+                left: 0;
+                right: 0;
+                top: 0;
+                background: #F2F1F1;
+                border-bottom: 0.5px solid #000000;
+            }
+
+            /* Logo */
+            .logo {
+                position: absolute;
+                width: 76.84px;
+                height: 35.35px;
+                left: 20px;
+                top: 18px;
+                transform: none;
+            }
+
+            .logo img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+
+            /* Hamburger Menu */
+            .menu-toggle {
+                display: block;
+                position: absolute;
+                width: 40px;
+                height: 40px;
+                left: auto;
+                right: 20px;
+                top: 16px;
+                background: transparent;
+                border: none;
+                cursor: pointer;
+                padding: 0;
+                transform: none;
+                z-index: 1001;
+            }
+
+            /* Hamburger icon lines */
+            .menu-toggle::before {
+                content: '';
+                position: absolute;
+                height: 2px;
+                left: 5px;
+                right: 5px;
+                top: calc(50% - 8px);
+                background: #1C1B1F;
+            }
+
+            .menu-toggle::after {
+                content: '';
+                position: absolute;
+                height: 2px;
+                left: 5px;
+                right: 5px;
+                top: calc(50% + 8px);
+                background: #1C1B1F;
+            }
+
+            .menu-icon {
+                position: absolute;
+                height: 2px;
+                left: 5px;
+                right: 5px;
+                top: 50%;
+                transform: translateY(-50%);
+                background: #1C1B1F;
+                transition: all 0.3s ease;
+            }
+
+            /* Hide desktop nav */
+            nav {
+                display: none;
+            }
+
+            /* Menu Expanded State */
+            header.menu-open {
+                height: 395px;
+            }
+
+            header.menu-open .header-bg {
+                height: 395px;
+            }
+
+            /* Close icon - X shape */
+            header.menu-open .menu-toggle::before {
+                top: 50%;
+                transform: translateY(-50%) rotate(45deg);
+            }
+
+            header.menu-open .menu-toggle::after {
+                top: 50%;
+                transform: translateY(-50%) rotate(-45deg);
+            }
+
+            header.menu-open .menu-icon {
+                opacity: 0;
+            }
+
+            header.menu-open nav {
+                display: block;
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                transform: none;
+            }
+
+            header.menu-open nav a {
+                position: absolute;
+                display: flex;
+                left: 20px;
+                font-family: 'Noto Sans TC';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 24px;
+                align-items: center;
+                color: #000000;
+                height: 35px;
+            }
+
+            header.menu-open nav a:nth-child(1) {
+                width: 96px;
+                top: 86px;
+            }
+
+            header.menu-open nav a:nth-child(2) {
+                width: 96px;
+                top: 142px;
+            }
+
+            header.menu-open nav a:nth-child(3) {
+                width: 48px;
+                top: 198px;
+            }
+
+            header.menu-open nav a:nth-child(4) {
+                width: 48px;
+                top: 254px;
+            }
+
+            /* Title Section */
+            .title-main {
+                position: absolute;
+                height: 42px;
+                left: 20px;
+                right: 314px;
+                top: 30px;
+                width: auto;
+                font-family: 'Cubic 11';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 36px;
+                line-height: 42px;
+                display: flex;
+                align-items: center;
+                color: #000000;
+            }
+
+            .title-sub {
+                position: absolute;
+                height: 28px;
+                left: 106px;
+                right: 229px;
+                top: 37px;
+                width: auto;
+                font-family: 'Cubic 11';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 24px;
+                line-height: 28px;
+                display: flex;
+                align-items: center;
+                color: #000000;
+            }
+
+            /* Hide desktop tab navigation */
+            .tab-navigation,
+            .bottom-tab-navigation {
+                display: none;
+            }
+
+            /* Mobile Date Picker */
+            .mobile-date-picker {
+                display: block;
+                box-sizing: border-box;
+                position: absolute;
+                width: 412px;
+                height: 70px;
+                left: 0;
+                top: 99px;
+                background: #FFFFFF;
+                border-width: 1px 0px;
+                border-style: solid;
+                border-color: #604F37;
+                border-radius: 0px;
+            }
+
+            .mobile-date-buttons {
+                position: absolute;
+                width: 169px;
+                height: 29px;
+                left: calc(50% - 84.5px);
+                top: calc(50% - 14.5px);
+                display: flex;
+                gap: 43px;
+            }
+
+            .mobile-date-btn {
+                background: none;
+                border: none;
+                cursor: pointer;
+                font-family: 'Noto Sans TC';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 24px;
+                line-height: 29px;
+                text-align: center;
+                color: #000000;
+                padding: 0;
+                width: 63px;
+                height: 29px;
+                transition: color 0.3s;
+            }
+
+            .mobile-date-btn.active {
+                color: #E1801F;
+            }
+
+            /* Agenda Wrapper - No Horizontal Scroll */
+            .agenda-wrapper {
+                position: absolute;
+                width: 100%;
+                max-width: 412px;
+                height: 1584px;
+                left: 0;
+                top: 169px;
+                overflow-x: hidden;
+                overflow-y: hidden;
+            }
+
+            /* Days Container */
+            .days-container {
+                position: relative;
+                width: 100%;
+                max-width: 412px;
+                height: 1584px;
+                left: 0;
+                top: 0;
+                display: block;
+                transition: none;
+            }
+
+            /* Day Section */
+            .day-section {
+                position: absolute;
+                width: 100%;
+                max-width: 412px;
+                height: 1584px;
+                left: 0;
+                top: 0;
+                background: #FFFFFF;
+                border-radius: 0;
+            }
+
+            /* Hide track titles on mobile */
+            .track-title {
+                display: none;
+            }
+
+            /* Day Section Inner */
+            .day-section-inner {
+                width: 100%;
+                max-width: 412px;
+                left: 0;
+                transform: translateX(-70px);
+            }
+
+            /* Override desktop translateX behavior on mobile */
+            .days-container {
+                transform: none !important;
+            }
+
+            /* Show only one day at a time on mobile */
+            .days-container.show-day1 .day-section:nth-child(1) {
+                display: block;
+            }
+
+            .days-container.show-day1 .day-section:nth-child(2) {
+                display: none;
+            }
+
+            .days-container.show-day2 .day-section:nth-child(1) {
+                display: none;
+            }
+
+            .days-container.show-day2 .day-section:nth-child(2) {
+                display: block;
+            }
+
+            /* Mobile Modal Styles */
+            .modal-content {
+                width: calc(100% - 40px);
+                max-width: 372px;
+                height: auto;
+                min-height: 300px;
+                padding: 20px;
+            }
+
+            .modal-close {
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                width: 24px;
+                height: 24px;
+            }
+
+            .modal-tag {
+                position: static !important;
+                left: auto !important;
+                top: auto !important;
+                width: 100% !important;
+                height: auto !important;
+                margin-bottom: 16px !important;
+                font-size: 16px;
+                line-height: 20px;
+            }
+
+            .modal-title {
+                position: static !important;
+                left: auto !important;
+                top: auto !important;
+                width: 100% !important;
+                height: auto !important;
+                margin-bottom: 16px !important;
+                font-size: 20px;
+                line-height: 24px;
+            }
+
+            .modal-speakers {
+                position: static !important;
+                left: auto !important;
+                top: auto !important;
+                width: 100% !important;
+                height: auto !important;
+                margin-bottom: 16px !important;
+                font-size: 16px;
+                line-height: 20px;
+            }
+
+            .modal-description {
+                position: static;
+                width: 100%;
+                height: auto;
+                font-size: 16px;
+                line-height: 24px;
+            }
+
+            /* Override specific modal classes for mobile */
+            .modal-content-2,
+            .modal-content-3,
+            .modal-content-4 {
+                width: calc(100% - 40px);
+                max-width: 372px;
+                height: auto !important;
+                min-height: 300px;
+                padding: 20px;
+            }
+
+            .modal-description-2,
+            .modal-description-3,
+            .modal-description-4 {
+                position: static !important;
+                width: 100% !important;
+                height: auto !important;
+                top: auto !important;
+                font-size: 16px;
+                line-height: 24px;
+            }
+
+            /* Hide decorative elements in mobile modal */
+            .modal-topics,
+            .modal-topics-2,
+            .modal-topics-3,
+            .modal-topics-4,
+            .topic-card,
+            .modal-content .modal-bg,
+            .modal-content .decorative-rect {
+                display: none !important;
+            }
+
+            /* Mobile Session Talk Styles */
+            .session-talk {
+                width: 294px !important;
+                height: 131px !important;
+            }
+
+            .session-talk .session-title {
+                position: absolute;
+                width: 254px;
+                height: 44px;
+                left: 20px;
+                top: 20px;
+                font-family: 'Noto Sans TC';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 18px;
+                line-height: 22px;
+                display: flex;
+                align-items: center;
+                color: #000000;
+                margin-bottom: 0;
+            }
+
+            .session-talk .session-speaker {
+                position: absolute;
+                width: 198px;
+                height: 22px;
+                left: 20px;
+                top: 70px;
+                font-family: 'Noto Sans TC';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 22px;
+                display: flex;
+                align-items: center;
+                color: rgba(0, 0, 0, 0.5);
+                margin-bottom: 0;
+            }
+
+            /* Mobile Session Forum Styles */
+            .session-forum {
+                width: 294px !important;
+                height: 127px !important;
+            }
+
+            .session-forum .session-title {
+                position: absolute;
+                width: 254px;
+                height: 44px;
+                left: 20px;
+                top: 21px;
+                font-family: 'Noto Sans TC';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 18px;
+                line-height: 22px;
+                display: flex;
+                align-items: center;
+                color: #000000;
+                margin-bottom: 0;
+            }
+
+            .session-forum .session-speaker {
+                visibility: hidden;
+            }
+
+            .session-forum .session-tag {
+                position: absolute !important;
+                width: 90px !important;
+                height: 22px !important;
+                left: 184px !important;
+                top: 88px !important;
+                right: auto !important;
+                font-family: 'Noto Sans TC' !important;
+                font-style: normal !important;
+                font-weight: 700 !important;
+                font-size: 18px !important;
+                line-height: 22px !important;
+                display: flex !important;
+                align-items: center !important;
+                color: rgba(0, 0, 0, 0.5) !important;
+            }
+
+            .session-track-label {
+                position: absolute;
+                height: 22px;
+                right: 20px;
+                bottom: 17px;
+                font-family: 'Noto Sans TC';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 18px;
+                line-height: 22px;
+                display: flex;
+                align-items: center;
+                color: rgba(0, 0, 0, 0.5);
+                white-space: nowrap;
+            }
+
+            /* Mobile Session Opening Styles */
+            .session-opening {
+                width: 294px !important;
+            }
+
+
+            /* Footer */
+            .footer-container {
+                display: none;
+            }
+
+            .rect-191 {
+                display: none;
+                position: absolute;
+                width: 100%;
+                height: 1px;
+                left: 0px;
+                background: #604F37;
+                transform: none;
+            }
+
+            /* Hide desktop footer elements on mobile */
+            .footer-title-organizer,
+            .footer-title-contact,
+            .footer-title-address,
+            .footer-text-organizer,
+            .footer-text-contact {
+                display: none !important;
+            }
+
+            /* Show mobile footer elements */
+            body > .footer-label-1,
+            body > .footer-label-2,
+            body > .footer-label-3,
+            body > .footer-content-1,
+            body > .footer-content-2,
+            body > .footer-address-mobile,
+            .footer-instagram,
+            .footer-facebook,
+            .footer-feedback-mobile,
+            .footer-lost-found-mobile {
+                display: block !important;
+            }
+
+            /* 主辦單位 */
+            .footer-label-1 {
+                position: absolute;
+                height: 26px;
+                left: 20px;
+                right: 153.15px;
+                font-family: 'Noto Sans TC';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 18px;
+                line-height: 22px;
+                color: #000000;
+            }
+
+            /* 聯絡方式 */
+            .footer-label-2 {
+                position: absolute;
+                height: 26px;
+                left: 20px;
+                right: 153.15px;
+                font-family: 'Noto Sans TC';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 18px;
+                line-height: 22px;
+                color: #000000;
+            }
+
+            /* 學校地址 */
+            .footer-label-3 {
+                position: absolute;
+                height: 26px;
+                left: 20px;
+                right: 153.15px;
+                font-family: 'Noto Sans TC';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 18px;
+                line-height: 22px;
+                color: #000000;
+            }
+
+            /* 臺北市數位實驗高中學生 - 主辦單位 */
+            .footer-content-1 {
+                position: absolute;
+                height: 52px;
+                left: 117px;
+                right: 56.15px;
+                font-family: 'Noto Sans TC';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 22px;
+                color: #000000;
+            }
+
+            /* 臺北市數位實驗高中學生 - 聯絡方式 */
+            .footer-content-2 {
+                position: absolute;
+                height: 104px;
+                left: 117px;
+                right: 56.15px;
+                font-family: 'Noto Sans TC';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 22px;
+                color: #000000;
+            }
+
+            .footer-content-2 a {
+                color: #000000;
+                text-decoration: none;
+                transition: color 0.3s;
+            }
+
+            .footer-content-2 a:hover {
+                color: #E1801F;
+            }
+
+            /* 學校地址內容 */
+            .footer-address-mobile {
+                position: absolute;
+                height: 52px;
+                left: 117px;
+                right: 6.03px;
+                font-family: 'Noto Sans TC';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 22px;
+                color: #000000;
+            }
+
+            .footer-address-mobile a {
+                color: #000000;
+                text-decoration: none;
+                transition: color 0.3s;
+            }
+
+            .footer-address-mobile a:hover {
+                color: #E1801F;
+            }
+
+            /* Mobile Footer Container */
+            footer {
+                position: absolute;
+                width: 412px;
+                height: 400px;
+                left: 0px;
+                background: #E3DFDC;
+                z-index: 10;
+            }
+
+            /* Instagram Icon */
+            .footer-instagram {
+                position: absolute;
+                width: 44px;
+                height: 44px;
+                left: 348px;
+                background: url('images/Instagram_Glyph_Black.png') center / contain no-repeat;
+                z-index: 10;
+            }
+
+            /* Facebook Icon */
+            .footer-facebook {
+                position: absolute;
+                height: 44px;
+                width: 44px;
+                left: 64.81%;
+                background: url('images/Facebook_Logo_Secondary.png') center / contain no-repeat;
+                z-index: 10;
+            }
+
+            /* 活動回饋 */
+            .footer-feedback-mobile {
+                position: absolute;
+                width: 72px;
+                height: 26px;
+                left: 20px;
+                font-family: 'Noto Sans TC';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 22px;
+                text-decoration-line: underline;
+                color: #000000;
+                transition: color 0.3s;
+                z-index: 10;
+            }
+
+            .footer-feedback-mobile:hover {
+                color: #E1801F;
+            }
+
+            /* 失物招領 */
+            .footer-lost-found-mobile {
+                position: absolute;
+                width: 72px;
+                height: 26px;
+                left: 20px;
+                font-family: 'Noto Sans TC';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 22px;
+                text-decoration-line: underline;
+                color: #000000;
+                transition: color 0.3s;
+                z-index: 10;
+            }
+
+            .footer-lost-found-mobile:hover {
+                color: #E1801F;
+            }
+        }
+    </style>
 </head>
 <body>
-    
+    <!-- Header -->
+    <header>
+        <div class="header-bg"></div>
+        <div class="header-content">
+            <a href="index.html" class="logo">
+                <img src="images/header-logo.svg" alt="T-School Logo">
+            </a>
+            <nav id="mainNav">
+                <a href="about.html">關於我們</a>
+                <a href="map.html">展區資訊</a>
+                <a href="agenda.html">議程</a>
+                <a href="vision.html">理念</a>
+            </nav>
+            <button class="menu-toggle" id="menuToggle" aria-label="開啟選單">
+                <span class="menu-icon"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- Title Section -->
+        <h1 class="title-main">議程</h1>
+        <div class="title-sub">Agenda</div>
+
+        <!-- Mobile Date Picker -->
+        <div class="mobile-date-picker">
+            <div class="mobile-date-buttons">
+                <button class="mobile-date-btn active" data-day="day1">01/18</button>
+                <button class="mobile-date-btn" data-day="day2">01/19</button>
+            </div>
+        </div>
+
+        <!-- Tab Navigation -->
+        <div class="tab-navigation">
+            <div class="tab-buttons">
+                <button class="tab-btn active" data-day="day1">01/18</button>
+                <button class="tab-btn" data-day="day2">01/19</button>
+            </div>
+        </div>
+
+        <!-- Agenda Wrapper -->
+        <div class="agenda-wrapper">
+            <div class="days-container show-day1">
+                <!-- Day 1: 01/18 -->
+                <div class="day-section" id="day1">
+                    <div class="day-section-inner">
+                <!-- Time Labels -->
+                <div class="time-label" style="width: 52px; left: 78px; top: 80px;">09:30</div>
+                <div class="time-label" style="width: 50px; left: 80px; top: 144px;">10:00</div>
+                <div class="time-label" style="width: 49px; left: 81px; top: 282px;">11:00</div>
+                <div class="time-label" style="width: 47px; left: 83px; top: 321px;">11:15</div>
+                <div class="time-label" style="width: 49px; left: 81px; top: 459px;">11:30</div>
+                <div class="time-label" style="width: 50px; left: 80px; top: 597px;">11:45</div>
+                <div class="time-label" style="width: 50px; left: 80px; top: 735px;">12:00</div>
+                <div class="time-label" style="width: 50px; left: 80px; top: 845px;">13:30</div>
+                <div class="time-label" style="width: 52px; left: 78px; top: 983px;">13:45</div>
+                <div class="time-label" style="width: 50px; left: 80px; top: 1121px;">14:00</div>
+                <div class="time-label" style="width: 49px; left: 81px; top: 1259px;">14:15</div>
+                <div class="time-label" style="width: 50px; left: 80px; top: 1397px;">14:30</div>
+                <div class="time-label" style="width: 52px; left: 78px; top: 1535px;">14:45</div>
+                <div class="time-label" style="width: 50px; left: 80px; top: 1574px;">15:00</div>
+                <div class="time-label" style="width: 50px; left: 80px; top: 1712px;">16:00</div>
+
+                <!-- Horizontal Lines -->
+                <div class="h-line" style="top: 92px;"></div>
+                <div class="h-line" style="top: 156px;"></div>
+                <div class="h-line" style="top: 294px;"></div>
+                <div class="h-line" style="top: 333px;"></div>
+                <div class="h-line" style="top: 471px;"></div>
+                <div class="h-line" style="top: 609px;"></div>
+                <div class="h-line" style="top: 747px;"></div>
+                <div class="h-line" style="top: 857px;"></div>
+                <div class="h-line" style="top: 995px;"></div>
+                <div class="h-line" style="top: 1133px;"></div>
+                <div class="h-line" style="top: 1271px;"></div>
+                <div class="h-line" style="top: 1409px;"></div>
+                <div class="h-line" style="top: 1547px;"></div>
+                <div class="h-line" style="top: 1586px;"></div>
+                <div class="h-line" style="top: 1724px;"></div>
+
+                <!-- Grid Pattern -->
+                <div class="grid-pattern" style="top: 792px;">
+                    <div class="grid-rect" style="left: 0px; top: 4px;"></div>
+                    <div class="grid-rect" style="left: 0px; top: 16px;"></div>
+                    <div class="grid-rect" style="left: 12px; top: 0px;"></div>
+                    <div class="grid-rect" style="left: 12px; top: 12px;"></div>
+                    <div class="grid-rect" style="left: 24px; top: 4px;"></div>
+                    <div class="grid-rect" style="left: 24px; top: 16px;"></div>
+                    <div class="grid-rect" style="left: 36px; top: 0px;"></div>
+                    <div class="grid-rect" style="left: 36px; top: 12px;"></div>
+                </div>
+
+                <!-- Opening Session -->
+                <div class="session-frame session-opening" style="width: 504px; height: 53px; left: 160px; top: 97px;">
+                    <div class="session-title">開幕式</div>
+                </div>
+
+                <!-- Forum 1 -->
+                <div class="session-frame session-forum" style="width: 685px; height: 127px; left: 160px; top: 161px;">
+                    <div class="session-title">協作與對話:數位學習的策略與實踐</div>
+                    <div class="session-speaker">台灣人工智慧學校 AI 素養專案林怡廷經理、臺北市立中崙高級中等學校吳銘祥校長、臺北市數位實驗高級中等學校研發處汪檍主任、余〇宜同學、陳〇駿同學...</div>
+                    <div class="session-tag" style="right: 20px; top: 17px;">主題論壇一</div>
+                </div>
+
+                <!-- Forum 2 -->
+                <div class="session-frame session-forum" style="width: 685px; height: 127px; left: 160px; top: 1591px;">
+                    <div class="session-title">必修課程與深度學習素養的實踐</div>
+                    <div class="session-speaker">臺北市立內湖高級中等學校許靜喆教師、臺北市數位實驗高級中等學校黃翊軒教師、毛〇禾同學、陸〇恩同學、葉〇蓁同學...</div>
+                    <div class="session-tag" style="right: 20px; top: 17px;">主題論壇二</div>
+                </div>
+
+                <!-- Track Titles -->
+                <div class="track-title" style="left: 340px; top: 50px;">學習力</div>
+                <div class="track-title" style="left: 708px; top: 50px;">移動力</div>
+                <div class="track-title" style="left: 1076px; top: 50px;">影響力</div>
+
+                <!-- Talk Sessions - Learning Track -->
+                                                                <div class="session-frame session-talk" style="width: 360px; height: 127px; left: 160px; top: 338px;">
+                    <div class="session-title">突破語言界限－文化之間的對話</div>
+                    <div class="session-speaker">倪〇喬、陳〇璇</div>
+                </div>
+                                                                <div class="session-frame session-talk" style="width: 360px; height: 127px; left: 160px; top: 476px;">
+                    <div class="session-title">從音樂班到實驗高中:時間分配的自由與挑戰</div>
+                    <div class="session-speaker">丁〇語</div>
+                </div>
+                                                                <div class="session-frame session-talk" style="width: 360px; height: 127px; left: 160px; top: 614px;">
+                    <div class="session-title">如何時間管理</div>
+                    <div class="session-speaker">戴〇帆</div>
+                </div>
+                                                                <div class="session-frame session-talk" style="width: 360px; height: 127px; left: 160px; top: 862px;">
+                    <div class="session-title">明天再寫</div>
+                    <div class="session-speaker">呂〇桓、牟〇棠</div>
+                </div>
+                                                                <div class="session-frame session-talk" style="width: 360px; height: 127px; left: 160px; top: 1000px;">
+                    <div class="session-title">主題待定</div>
+                    <div class="session-speaker">朱〇芃</div>
+                </div>
+                                                                <div class="session-frame session-talk" style="width: 360px; height: 127px; left: 160px; top: 1138px;">
+                    <div class="session-title">那些文字教會我們的事</div>
+                    <div class="session-speaker">劉〇瑜、吳〇亞</div>
+                </div>
+                                                                <div class="session-frame session-talk" style="width: 360px; height: 127px; left: 160px; top: 1276px;">
+                    <div class="session-title">簡報視覺設計：不只好看</div>
+                    <div class="session-speaker">謝〇宣</div>
+                </div>
+                                                                <div class="session-frame session-talk" style="width: 360px; height: 127px; left: 160px; top: 1414px;">
+                    <div class="session-title">以桌遊形式探討「台灣社會以固定標準評判藝術作品，忽略創作者多樣性和創新性」—創抑</div>
+                    <div class="session-speaker">王〇綺、黃〇媞、翁〇漱</div>
+                </div>
+
+                <!-- Talk Sessions - Movement Track -->
+                                                                <div class="session-frame session-talk" style="width: 360px; height: 127px; left: 528px; top: 338px;">
+                    <div class="session-title">同城三視角：用移動探索台北的生態、城門與古蹟</div>
+                    <div class="session-speaker">黃〇泓、董〇濤、曾〇然</div>
+                </div>
+                                                                <div class="session-frame session-talk" style="width: 360px; height: 127px; left: 528px; top: 476px;">
+                    <div class="session-title">所以，「廣闊探索」究竟是多廣闊？</div>
+                    <div class="session-speaker">毛〇禾</div>
+                </div>
+                                                                <div class="session-frame session-talk" style="width: 360px; height: 127px; left: 528px; top: 614px;">
+                    <div class="session-title">被拾起的時光</div>
+                    <div class="session-speaker">張〇樂、許〇真</div>
+                </div>
+                                                                <div class="session-frame session-talk" style="width: 360px; height: 127px; left: 528px; top: 862px;">
+                    <div class="session-title">網路世界的探索與追尋</div>
+                    <div class="session-speaker">劉〇妤、陳〇澤</div>
+                </div>
+                                                                <div class="session-frame session-talk" style="width: 360px; height: 127px; left: 528px; top: 1000px;">
+                    <div class="session-title">城市與程式</div>
+                    <div class="session-speaker">賴〇來、張〇漢</div>
+                </div>
+                                                                <div class="session-frame session-talk" style="width: 360px; height: 127px; left: 528px; top: 1138px;">
+                    <div class="session-title">主題待定</div>
+                    <div class="session-speaker">余〇宜</div>
+                </div>
+                                                                <div class="session-frame session-talk" style="width: 360px; height: 127px; left: 528px; top: 1276px;">
+                    <div class="session-title">由思到行：STW設計思考挑戰</div>
+                    <div class="session-speaker">林〇晴</div>
+                </div>
+                                                                <div class="session-frame session-talk" style="width: 360px; height: 127px; left: 528px; top: 1414px;">
+                    <div class="session-title">果蠅的尋水之路————我們都各自在追求什麼呢?</div>
+                    <div class="session-speaker">周〇康</div>
+                </div>
+
+                <!-- Talk Sessions - Influence Track -->
+                                                                <div class="session-frame session-talk" style="width: 360px; height: 127px; left: 896px; top: 338px;">
+                    <div class="session-title">主題待定</div>
+                    <div class="session-speaker">馮〇倢</div>
+                </div>
+                                                                <div class="session-frame session-talk" style="width: 360px; height: 127px; left: 896px; top: 476px;">
+                    <div class="session-title">個別需求課程與社會影響 —— 以從自由主義與比較政治看議題</div>
+                    <div class="session-speaker">莊〇誠、余〇軒</div>
+                </div>
+                                                                <div class="session-frame session-talk" style="width: 360px; height: 127px; left: 896px; top: 614px;">
+                    <div class="session-title">三個比賽讓我學到的事</div>
+                    <div class="session-speaker">廖〇蔚</div>
+                </div>
+                                                                <div class="session-frame session-talk" style="width: 360px; height: 127px; left: 896px; top: 862px;">
+                    <div class="session-title">「心距離零距離」國高中心輔資源探討之專題研究</div>
+                    <div class="session-speaker">林〇均、賴〇澐</div>
+                </div>
+                                                                <div class="session-frame session-talk" style="width: 360px; height: 127px; left: 896px; top: 1000px;">
+                    <div class="session-title">COP30 —— 全球發表，影響世界；那些學校裡不會教的內容</div>
+                    <div class="session-speaker">魏〇展</div>
+                </div>
+                                                                <div class="session-frame session-talk" style="width: 360px; height: 127px; left: 896px; top: 1138px;">
+                    <div class="session-title">設計思考</div>
+                    <div class="session-speaker">許〇瞳、康〇翊</div>
+                </div>
+                                                                <div class="session-frame session-talk" style="width: 360px; height: 127px; left: 896px; top: 1276px;">
+                    <div class="session-title">健康生活</div>
+                    <div class="session-speaker">涂〇安、黃〇婼</div>
+                </div>
+                                                                <div class="session-frame session-talk" style="width: 360px; height: 127px; left: 896px; top: 1414px;">
+                    <div class="session-title">當我們同在一起，數實使我們開發出的工具！</div>
+                    <div class="session-speaker">陳〇駿、賴〇叡</div>
+                </div>
+                    </div>
+                </div>
+
+                <!-- Day 2: 01/19 -->
+                <div class="day-section" id="day2">
+                    <div class="day-section-inner">
+                <!-- Time Labels -->
+                <div class="time-label" style="width: 50px; left: 80px; top: 80px;">10:00</div>
+                <div class="time-label" style="width: 49px; left: 81px; top: 218px;">11:00</div>
+                <div class="time-label" style="width: 47px; left: 83px; top: 257px;">11:15</div>
+                <div class="time-label" style="width: 49px; left: 81px; top: 395px;">11:30</div>
+                <div class="time-label" style="width: 50px; left: 80px; top: 533px;">11:45</div>
+                <div class="time-label" style="width: 50px; left: 80px; top: 671px;">12:00</div>
+                <div class="time-label" style="width: 50px; left: 80px; top: 781px;">13:30</div>
+                <div class="time-label" style="width: 52px; left: 78px; top: 919px;">13:45</div>
+                <div class="time-label" style="width: 50px; left: 80px; top: 1057px;">14:00</div>
+                <div class="time-label" style="width: 49px; left: 81px; top: 1195px;">14:15</div>
+                <div class="time-label" style="width: 50px; left: 80px; top: 1333px;">14:30</div>
+                <div class="time-label" style="width: 52px; left: 78px; top: 1471px;">14:45</div>
+                <div class="time-label" style="width: 50px; left: 80px; top: 1510px;">15:00</div>
+                <div class="time-label" style="width: 50px; left: 80px; top: 1648px;">16:00</div>
+                <div class="time-label" style="width: 50px; left: 80px; top: 1712px;">16:30</div>
+
+                <!-- Horizontal Lines -->
+                <div class="h-line" style="top: 92px;"></div>
+                <div class="h-line" style="top: 230px;"></div>
+                <div class="h-line" style="top: 269px;"></div>
+                <div class="h-line" style="top: 407px;"></div>
+                <div class="h-line" style="top: 545px;"></div>
+                <div class="h-line" style="top: 683px;"></div>
+                <div class="h-line" style="top: 793px;"></div>
+                <div class="h-line" style="top: 931px;"></div>
+                <div class="h-line" style="top: 1069px;"></div>
+                <div class="h-line" style="top: 1207px;"></div>
+                <div class="h-line" style="top: 1345px;"></div>
+                <div class="h-line" style="top: 1483px;"></div>
+                <div class="h-line" style="top: 1522px;"></div>
+                <div class="h-line" style="top: 1660px;"></div>
+                <div class="h-line" style="top: 1724px;"></div>
+
+                <!-- Grid Pattern -->
+                <div class="grid-pattern" style="top: 728px;">
+                    <div class="grid-rect" style="left: 0px; top: 4px;"></div>
+                    <div class="grid-rect" style="left: 0px; top: 16px;"></div>
+                    <div class="grid-rect" style="left: 12px; top: 0px;"></div>
+                    <div class="grid-rect" style="left: 12px; top: 12px;"></div>
+                    <div class="grid-rect" style="left: 24px; top: 4px;"></div>
+                    <div class="grid-rect" style="left: 24px; top: 16px;"></div>
+                    <div class="grid-rect" style="left: 36px; top: 0px;"></div>
+                    <div class="grid-rect" style="left: 36px; top: 12px;"></div>
+                </div>
+
+                <!-- Forum 3 -->
+                <div class="session-frame session-forum" style="width: 653px; height: 127px; left: 160px; top: 97px;">
+                    <div class="session-title">如何透過搭建支持系統讓學生實踐自由探索與天賦發展</div>
+                    <div class="session-speaker">臺北市數位實驗高級中等學校學輔主任李浩瑜、輔導與諮商組組長吳珮萱、高二學輔教師陳心慈、家長會長鄭宇竣、朱〇芃同學、陳〇璇同學...</div>
+                    <div class="session-tag" style="right: 20px; top: 17px;">主題論壇三</div>
+                </div>
+
+                <!-- Forum 4 -->
+                <div class="session-frame session-forum" style="width: 795px; height: 127px; left: 160px; top: 1527px;">
+                    <div class="session-title">數位實驗高中在實驗教育發展脈絡中的定位與展望</div>
+                    <div class="session-speaker">國立中央大學戎培芬講師、臺北市數位實驗高級中等學校賴宏銓校長、黃〇陞同學、余〇軒同學、曾〇淳同學...</div>
+                    <div class="session-tag" style="right: 20px; top: 17px;">主題論壇四</div>
+                </div>
+
+                <!-- Closing Session -->
+                <div class="session-frame session-opening" style="width: 504px; height: 53px; left: 160px; top: 1665px;">
+                    <div class="session-title">閉幕式</div>
+                </div>
+
+                <!-- Track Titles -->
+                <div class="track-title" style="left: 340px; top: 50px;">學習力</div>
+                <div class="track-title" style="left: 708px; top: 50px;">移動力</div>
+                <div class="track-title" style="left: 1076px; top: 50px;">影響力</div>
+
+                <!-- Talk Sessions - Learning Track -->
+                                                                <div class="session-frame session-talk" style="width: 360px; height: 127px; left: 160px; top: 274px;">
+                    <div class="session-title">創作無界：從畫紙到螢幕</div>
+                    <div class="session-speaker">劉〇翊、徐〇英</div>
+                </div>
+                                                                <div class="session-frame session-talk" style="width: 360px; height: 127px; left: 160px; top: 412px;">
+                    <div class="session-title">從解讀到建構,藝術視野的拓展與深化</div>
+                    <div class="session-speaker">徐〇</div>
+                </div>
+                                                                <div class="session-frame session-talk" style="width: 360px; height: 127px; left: 160px; top: 550px;">
+                    <div class="session-title">自我覺察主題動畫製作</div>
+                    <div class="session-speaker">盧〇楠、高〇星</div>
+                </div>
+                                                                <div class="session-frame session-talk" style="width: 360px; height: 127px; left: 160px; top: 798px;">
+                    <div class="session-title">突破限制：用學習的彈性打造競賽實力</div>
+                    <div class="session-speaker">李〇安、郝〇澄、陳〇睿</div>
+                </div>
+                                                                <div class="session-frame session-talk" style="width: 360px; height: 127px; left: 160px; top: 936px;">
+                    <div class="session-title">尼泊爾埋葬蟲繁殖合作行為調查研究大揭密</div>
+                    <div class="session-speaker">黃〇陞、崔〇綱</div>
+                </div>
+                                                                <div class="session-frame session-talk" style="width: 360px; height: 127px; left: 160px; top: 1074px;">
+                    <div class="session-title">關於航空研究社你不知道的事</div>
+                    <div class="session-speaker">曾〇淳、林〇佑</div>
+                </div>
+                                                                <div class="session-frame session-talk" style="width: 360px; height: 127px; left: 160px; top: 1212px;">
+                    <div class="session-title">自我管理與比賽間的平衡</div>
+                    <div class="session-speaker">王〇澤、李〇澐、沈〇
+
+                    </div>
+                </div>
+                                <div class="session-frame session-talk" style="width: 360px; height: 127px; left: 160px; top: 1350px;">
+                    <div class="session-title">在感官之間：以影像與空間展開的藝術觀察</div>
+                    <div class="session-speaker">陳〇涵、林〇睿</div>
+                </div>
+
+                <!-- Talk Sessions - Movement Track -->
+                                                                <div class="session-frame session-talk" style="width: 360px; height: 127px; left: 528px; top: 274px;">
+                    <div class="session-title">「實」察「移」路上</div>
+                    <div class="session-speaker">陳〇妍、徐〇庭、張〇懷</div>
+                </div>
+                                                                <div class="session-frame session-talk" style="width: 360px; height: 127px; left: 528px; top: 412px;">
+                    <div class="session-title">追尋：永續與多元學習</div>
+                    <div class="session-speaker">鄧〇彣、徐〇</div>
+                </div>
+                                                                <div class="session-frame session-talk" style="width: 360px; height: 127px; left: 528px; top: 550px;">
+                    <div class="session-title">準備讓自己更強</div>
+                    <div class="session-speaker">楊〇睿、鄒〇宇</div>
+                </div>
+                                                                <div class="session-frame session-talk" style="width: 360px; height: 127px; left: 528px; top: 798px;">
+                    <div class="session-title">民以食為天—現在我做煮</div>
+                    <div class="session-speaker">邱〇涵</div>
+                </div>
+                                                                <div class="session-frame session-talk" style="width: 360px; height: 127px; left: 528px; top: 936px;">
+                    <div class="session-title">挑戰自我：數實不溯時</div>
+                    <div class="session-speaker">侯〇允、高〇祐、李〇鋐</div>
+                </div>
+                                                                <div class="session-frame session-talk" style="width: 360px; height: 127px; left: 528px; top: 1074px;">
+                    <div class="session-title">打破國界的學習：線上語言課的力量</div>
+                    <div class="session-speaker">楊〇喬、朱〇姸</div>
+                </div>
+                                                                <div class="session-frame session-talk" style="width: 360px; height: 127px; left: 528px; top: 1212px;">
+                    <div class="session-title">人權教育現場</div>
+                    <div class="session-speaker">林〇凌</div>
+                </div>
+                                <div class="session-frame session-talk" style="width: 360px; height: 127px; left: 528px; top: 1350px;">
+                    <div class="session-title">實體探究的學習與能力</div>
+                    <div class="session-speaker">孫〇明</div>
+                </div>
+
+                <!-- Talk Sessions - Influence Track -->
+                                                                <div class="session-frame session-talk" style="width: 360px; height: 127px; left: 896px; top: 274px;">
+                    <div class="session-title">文學與同理的連結</div>
+                    <div class="session-speaker">詹〇慈、盧〇安</div>
+                </div>
+                                                                <div class="session-frame session-talk" style="width: 360px; height: 127px; left: 896px; top: 412px;">
+                    <div class="session-title">容止莊靜，共融無畏</div>
+                    <div class="session-speaker">陳〇媛、林〇薇</div>
+                </div>
+                                                                <div class="session-frame session-talk" style="width: 360px; height: 127px; left: 896px; top: 550px;">
+                    <div class="session-title">議想天開</div>
+                    <div class="session-speaker">葉〇蓁、張〇晴</div>
+                </div>
+                                                                <div class="session-frame session-talk" style="width: 360px; height: 127px; left: 896px; top: 798px;">
+                    <div class="session-title">懶惰蟲也能自主生活？</div>
+                    <div class="session-speaker">鄭〇希、丁〇</div>
+                </div>
+                                                                <div class="session-frame session-talk" style="width: 360px; height: 127px; left: 896px; top: 936px;">
+                    <div class="session-title">從數實到賽場：都是邁向更強的自己</div>
+                    <div class="session-speaker">曾〇瑋、吳〇之</div>
+                </div>
+                                                                <div class="session-frame session-talk" style="width: 360px; height: 127px; left: 896px; top: 1074px;">
+                    <div class="session-title">「青少年心理地圖：從探索到理解」</div>
+                    <div class="session-speaker">陸〇恩、蔡〇楨、陳〇彤</div>
+                </div>
+                                                                <div class="session-frame session-talk" style="width: 360px; height: 127px; left: 896px; top: 1212px;">
+                    <div class="session-title">一個實舞_關於在實驗教育跳舞的我們</div>
+                    <div class="session-speaker">楊〇珊、許〇翔</div>
+                </div>
+                                <div class="session-frame session-talk" style="width: 360px; height: 127px; left: 896px; top: 1350px;">
+                    <div class="session-title">成長路上並肩而行</div>
+                    <div class="session-speaker">麥〇恩、謝〇成</div>
+                </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Tab Navigation -->
+        <div class="bottom-tab-navigation">
+            <div class="bottom-tab-buttons">
+                <button class="bottom-tab-btn active" data-day="day1">01/18</button>
+                <button class="bottom-tab-btn" data-day="day2">01/19</button>
+            </div>
+        </div>
+
+        <!-- Rectangle 191 - Footer Top Line -->
+        <div class="rect-191"></div>
+    </div><!-- End Main Container -->
+
+            <!-- Footer -->
+    <footer class="footer-container">
+        <div class="footer-content">
+            <h4 class="footer-title-organizer">主辦單位</h4>
+            <p class="footer-text-organizer">臺北市數位實驗高級中等學校學生自治會</p>
+
+            <h4 class="footer-title-contact">聯絡方式</h4>
+            <div class="footer-text-contact">
+                電子郵件信箱：studentcouncil@tschool.tp.edu.tw<br>
+                IG：<a href="https://www.instagram.com/tschool_student_council/" target="_blank">tschool_student_council</a><br>
+                FB：<a href="https://www.facebook.com/people/數位實中學生會/61579395212418/" target="_blank">數位實中學生會</a><br>
+                官方網站：<a href="https://tschool-students.github.io" target="_blank">https://tschool-students.github.io</a>
+            </div>
+
+            <h4 class="footer-title-address">學校地址</h4>
+            <p class="footer-address"><a href="https://maps.app.goo.gl/8FggNvviVhifgD6C7" target="_blank">104089臺北市中山區吉林路110號5樓（吉林學習基地）</a></p>
+
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScMHmr5TmUeqXqNsf0M4Y40MVV-y_LDF8sG_AB4vsEXami71A/viewform" target="_blank" class="footer-feedback">活動回饋</a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScX5hgfnTpRZsmjDNoy6aGTDNoL1Pd0Szrnmc54No2zcE_H2A/viewform" target="_blank" class="footer-lost-found">失物招領</a>
+        </div>
+    </footer>
+
+    <!-- Mobile Footer Elements -->
+    <div class="footer-label-1">主辦單位</div>
+    <div class="footer-content-1">臺北市數位實驗高級中等學校學生自治會</div>
+
+    <div class="footer-label-2">聯絡方式</div>
+    <div class="footer-content-2">
+        電子郵件信箱：studentcouncil@tschool.tp.edu.tw<br>
+        官方網站：<a href="https://tschool-students.github.io" target="_blank">https://tschool-students.github.io</a>
+    </div>
+
+    <div class="footer-label-3">學校地址</div>
+    <div class="footer-address-mobile"><a href="https://maps.app.goo.gl/8FggNvviVhifgD6C7" target="_blank">104089臺北市中山區吉林路110號5樓（吉林學習基地）</a></div>
+
+    <!-- Mobile Footer Social Icons -->
+    <a href="https://www.instagram.com/tschool_student_council/" target="_blank" class="footer-instagram" aria-label="Instagram"></a>
+    <a href="https://www.facebook.com/people/%E6%95%B8%E4%BD%8D%E5%AF%A6%E4%B8%AD%E5%AD%B8%E7%94%9F%E6%9C%83/61579395212418/" target="_blank" class="footer-facebook" aria-label="Facebook"></a>
+
+    <!-- Mobile Footer Links -->
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLScMHmr5TmUeqXqNsf0M4Y40MVV-y_LDF8sG_AB4vsEXami71A/viewform" target="_blank" class="footer-feedback-mobile">活動回饋</a>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLScX5hgfnTpRZsmjDNoy6aGTDNoL1Pd0Szrnmc54No2zcE_H2A/viewform" target="_blank" class="footer-lost-found-mobile">失物招領</a>
+
+    <!-- Modal Overlay - Forum 1 -->
+    <div class="modal-overlay" id="forumModal1">
+        <div class="modal-content">
+            <button class="modal-close close-modal-1">
+                <img src="images/OTclose.svg" alt="關閉">
+            </button>
+            <div class="modal-tag">主題論壇一</div>
+            <div class="modal-title">協作與對話：數位學習的策略與實踐</div>
+            <div class="modal-speakers">台灣人工智慧學校 AI 素養專案林怡廷經理、臺北市立中崙高級中等學校吳銘祥校長、臺北市數位實驗高級中等學校研發處汪檍主任、余〇宜同學、陳〇駿同學</div>
+            <div class="modal-description">「數位學習」是數位實驗高中重要的辦學特色。而在本校數位學習的樣態中，又可分為「以數位方式促進學習成效」與「以數位方式促進對話協作」兩大面向。在第一個面向，本校承襲疫情期間對於線上教學的試驗，發展出了實體、線上同步、非同步等三種課程形式，讓學生可以彈性調配自己的學習時間，教師也能依需求選擇更利於吸收的教學方式；在第二個面向，本校無論在課程內、外的學習，都大量的應用數位工具去討論、實作解方，讓創新更容易在便利的討論中發生。本場次主要聚焦於學校如何打造以協作概念為主、數位工具為輔的學習環境，讓師生都可以方便的安排自己的時間去完成學習任務、發起討論、留下紀錄。又如何將這些思維與能力推展到公民社會的場域中實踐。</div>
+            <div class="modal-topics">
+                <div class="topic-card">
+                    <img src="images/OT1_1.svg" alt="臺灣數位學習的發展背景補充" class="topic-icon">
+                    <div class="topic-text">臺灣數位學習的<br>發展背景補充</div>
+                </div>
+                <div class="topic-card">
+                    <img src="images/OT1_2.svg" alt="如何以數位手段促進學習成效" class="topic-icon">
+                    <div class="topic-text">如何以數位手段<br>促進學習成效</div>
+                </div>
+                <div class="topic-card">
+                    <img src="images/OT1_3.svg" alt="如何以數位手段促進組織間的對話與協作" class="topic-icon">
+                    <div class="topic-text">如何以數位手段促進<br>組織間的對話與協作</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Overlay - Forum 2 -->
+    <div class="modal-overlay" id="forumModal2">
+        <div class="modal-content modal-content-2">
+            <button class="modal-close close-modal-2">
+                <img src="images/OTclose.svg" alt="關閉">
+            </button>
+            <div class="modal-tag">主題論壇二</div>
+            <div class="modal-title">必修課程與深度學習素養的實踐</div>
+            <div class="modal-speakers">臺北市立內湖高級中等學校許靜喆教師、臺北市數位實驗高級中等學校黃翊軒教師、毛〇禾同學、陸〇恩同學、葉〇蓁同學</div>
+            <div class="modal-description modal-description-2">本校的必修課程模組發展，皆高度扣合 NPDL 深度學習的 6C 素養，並透過 PBL 的方式來進行實作。本講座希望從學生對於必修課程的經驗出發，探討必修課程的「數位軸」與「議題軸」兩大軸線，是如何在課程安排上交互作用，影響數位實驗高中的學習環境與學生圖像。教師們又如何在備課的時候融入 6C 核心素養，透過具體的課程設計，協助學生逐漸發展出符合 6C 素養的能力。</div>
+            <div class="modal-topics modal-topics-2">
+                <div class="topic-card topic-card-2-1">
+                    <img src="images/OT2_1.svg" alt="簡述「NPDL深度學習」的概念" class="topic-icon">
+                    <div class="topic-text">簡述「NPDL 深度<br>學習」的概念</div>
+                </div>
+                <div class="topic-card topic-card-2-2">
+                    <img src="images/OT2_2.svg" alt="深度學習架構概覽" class="topic-icon">
+                    <div class="topic-text">深度學習<br>架構概覽</div>
+                </div>
+                <div class="topic-card topic-card-2-3">
+                    <img src="images/OT2_3.svg" alt="深度學習在必修課上的具體實踐" class="topic-icon">
+                    <div class="topic-text">深度學習在必修課<br>上的具體實踐</div>
+                </div>
+                <div class="topic-card topic-card-2-4">
+                    <img src="images/OT2_4.svg" alt="對深度學習素養的精進與展望" class="topic-icon">
+                    <div class="topic-text">對深度學習素養的<br>精進與展望</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Overlay - Forum 3 -->
+    <div class="modal-overlay" id="forumModal3">
+        <div class="modal-content modal-content-3">
+            <button class="modal-close close-modal-3">
+                <img src="images/OTclose.svg" alt="關閉">
+            </button>
+            <div class="modal-tag">主題論壇三</div>
+            <div class="modal-title">如何透過搭建支持系統讓學生實踐自由探索與天賦發展</div>
+            <div class="modal-speakers">臺北市數位實驗高級中等學校學輔主任李浩瑜、輔導與諮商組組長吳珮萱、高二學輔教師陳心慈、家長會長鄭宇竣、朱〇芃同學、陳〇璇同學</div>
+            <div class="modal-description modal-description-3">本場次將聚焦於數位實驗高中如何透過搭建獨特的支持系統，幫助學生在學習的過程中實踐本校「廣闊探索、天賦自由」的發展理念。透過成長導師、學習輔導教師與專輔教師的角色分工，提供學生在選課規劃、學習安排、生涯探索與發展規劃等不同面向的建議與支持；同時，家長的參與及協作，會透過親師生之間的溝通，共同構築支撐學生發展與探索的網絡，使學生在充分支持下，能以課程與非課程形式進行多元探索。本場次將根據生、師、親三方的體感經驗，邀請與談人共同思考並梳理支持系統的運作方式，探討其對學生自由探索與天賦發展的實際影響。</div>
+            <div class="modal-topics modal-topics-3">
+                <div class="topic-card topic-card-3-1">
+                    <img src="images/OT3_1.svg" alt="輔導系統的建構" class="topic-icon">
+                    <div class="topic-text">輔導系統的建構</div>
+                </div>
+                <div class="topic-card topic-card-3-2">
+                    <img src="images/OT3_2.svg" alt="場域實踐的經驗" class="topic-icon">
+                    <div class="topic-text">場域實踐的經驗</div>
+                </div>
+                <div class="topic-card topic-card-3-3">
+                    <img src="images/OT3_3.svg" alt="支持系統遭遇的挑戰" class="topic-icon">
+                    <div class="topic-text">支持系統遭遇的挑戰</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Overlay - Forum 4 -->
+    <div class="modal-overlay" id="forumModal4">
+        <div class="modal-content modal-content-4">
+            <button class="modal-close close-modal-4">
+                <img src="images/OTclose.svg" alt="關閉">
+            </button>
+            <div class="modal-tag">主題論壇四</div>
+            <div class="modal-title">數位實驗高中在實驗教育發展脈絡中的定位與展望</div>
+            <div class="modal-speakers">國立中央大學戎培芬講師、臺北市數位實驗高級中等學校賴宏銓校長、黃〇陞同學、余〇軒同學、曾〇淳同學</div>
+            <div class="modal-description modal-description-4">本場次主要聚焦於數位實驗高中在臺灣的實驗教育環境下，是如何乘著數位教學蓬勃發展之便，同時吸收國外創新型態學校的經驗，發展出一套以本土公立學校體制為骨架，加入數位教學模式、重視人文與數位素養的必修課程模組、肯認學生個別發展的一生一課表及個別需求課程等創新的制度。而本校所聚集的學生又具有什麼樣的特質，又因為什麼樣的理由、亮點而選擇來到這間學校。期盼可以透過多方意見的匯集、討論，梳理本校的發展脈絡，試圖幫助我們釐清，在發展本校體制時的每一個選擇，是為何而選、如何去選。我們未來又該如何定義自己在整個教育體系當中所扮演的角色，在光譜上處於什麼位置，我們應該向什麼體制內的制度去妥協，又該保有哪些空間去創新。</div>
+            <div class="modal-topics modal-topics-4">
+                <div class="topic-card topic-card-4-1">
+                    <img src="images/OT4_1.svg" alt="臺灣本土實驗教育的發展脈絡" class="topic-icon">
+                    <div class="topic-text">臺灣本土實驗教育<br>的發展脈絡</div>
+                </div>
+                <div class="topic-card topic-card-4-2">
+                    <img src="images/OT4_2.svg" alt="學校文化與學生特質" class="topic-icon">
+                    <div class="topic-text">學校文化與<br>學生特質</div>
+                </div>
+                <div class="topic-card topic-card-4-3">
+                    <img src="images/OT4_3.svg" alt="公辦公營的制度特色" class="topic-icon">
+                    <div class="topic-text">公辦公營的<br>制度特色</div>
+                </div>
+                <div class="topic-card topic-card-4-4">
+                    <img src="images/OT4_4.svg" alt="制度創新與未來展望" class="topic-icon">
+                    <div class="topic-text">制度創新與<br>未來展望</div>
+                </div>
+                <div class="topic-card topic-card-4-5">
+                    <img src="images/OT4_5.svg" alt="Q&A" class="topic-icon">
+                    <div class="topic-text">Q&A</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Tab switching functionality
+        const tabButtons = document.querySelectorAll('.tab-btn');
+        const bottomTabButtons = document.querySelectorAll('.bottom-tab-btn');
+        const mobileDateButtons = document.querySelectorAll('.mobile-date-btn');
+        const allTabButtons = document.querySelectorAll('.tab-btn, .bottom-tab-btn, .mobile-date-btn');
+        const daysContainer = document.querySelector('.days-container');
+
+        function switchDay(targetDay) {
+            // Update container class
+            if (targetDay === 'day1') {
+                daysContainer.classList.remove('show-day2');
+                daysContainer.classList.add('show-day1');
+            } else {
+                daysContainer.classList.remove('show-day1');
+                daysContainer.classList.add('show-day2');
+            }
+
+            // Update buttons
+            allTabButtons.forEach(btn => {
+                if (btn.getAttribute('data-day') === targetDay) {
+                    btn.classList.add('active');
+                } else {
+                    btn.classList.remove('active');
+                }
+            });
+        }
+
+        // Add click listeners to top tab buttons
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const targetDay = button.getAttribute('data-day');
+                switchDay(targetDay);
+            });
+        });
+
+        // Add click listeners to bottom tab buttons
+        bottomTabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const targetDay = button.getAttribute('data-day');
+                switchDay(targetDay);
+            });
+        });
+
+        // Add click listeners to mobile date buttons
+        mobileDateButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const targetDay = button.getAttribute('data-day');
+                switchDay(targetDay);
+            });
+        });
+
+        // Modal functionality
+        const forumModal1 = document.getElementById('forumModal1');
+        const forumModal2 = document.getElementById('forumModal2');
+        const forumModal3 = document.getElementById('forumModal3');
+        const forumModal4 = document.getElementById('forumModal4');
+        const closeModal1Btn = document.querySelector('.close-modal-1');
+        const closeModal2Btn = document.querySelector('.close-modal-2');
+        const closeModal3Btn = document.querySelector('.close-modal-3');
+        const closeModal4Btn = document.querySelector('.close-modal-4');
+        const forumSessions = document.querySelectorAll('.session-forum');
+
+        // Open modal function
+        function openModal(modal) {
+            modal.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+            modal.offsetHeight;
+            modal.classList.add('active');
+        }
+
+        // Close modal function with fade-out
+        function closeModal(modal) {
+            modal.classList.add('closing');
+            modal.classList.remove('active');
+
+            setTimeout(() => {
+                modal.style.display = 'none';
+                modal.classList.remove('closing');
+                document.body.style.overflow = '';
+            }, 300);
+        }
+
+        // Open modal when clicking on forum sessions
+        forumSessions.forEach((session, index) => {
+            session.style.cursor = 'pointer';
+            session.addEventListener('click', () => {
+                // Determine which modal to open based on session content
+                const sessionTitle = session.querySelector('.session-title').textContent;
+                if (sessionTitle.includes('協作與對話')) {
+                    openModal(forumModal1);
+                } else if (sessionTitle.includes('必修課程')) {
+                    openModal(forumModal2);
+                } else if (sessionTitle.includes('支持系統')) {
+                    openModal(forumModal3);
+                } else if (sessionTitle.includes('定位與展望')) {
+                    openModal(forumModal4);
+                }
+            });
+        });
+
+        // Close modal 1
+        closeModal1Btn.addEventListener('click', () => closeModal(forumModal1));
+        forumModal1.addEventListener('click', (e) => {
+            if (e.target === forumModal1) {
+                closeModal(forumModal1);
+            }
+        });
+
+        // Close modal 2
+        closeModal2Btn.addEventListener('click', () => closeModal(forumModal2));
+        forumModal2.addEventListener('click', (e) => {
+            if (e.target === forumModal2) {
+                closeModal(forumModal2);
+            }
+        });
+
+        // Close modal 3
+        closeModal3Btn.addEventListener('click', () => closeModal(forumModal3));
+        forumModal3.addEventListener('click', (e) => {
+            if (e.target === forumModal3) {
+                closeModal(forumModal3);
+            }
+        });
+
+        // Close modal 4
+        closeModal4Btn.addEventListener('click', () => closeModal(forumModal4));
+        forumModal4.addEventListener('click', (e) => {
+            if (e.target === forumModal4) {
+                closeModal(forumModal4);
+            }
+        });
+
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const mainNav = document.getElementById('mainNav');
+        const header = document.querySelector('header');
+
+        if (menuToggle && mainNav && header) {
+            menuToggle.addEventListener('click', (e) => {
+                e.stopPropagation();
+                header.classList.toggle('menu-open');
+            });
+
+            const navLinks = mainNav.querySelectorAll('a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    header.classList.remove('menu-open');
+                });
+            });
+
+            document.addEventListener('click', (e) => {
+                if (!header.contains(e.target) || (!mainNav.contains(e.target) && !menuToggle.contains(e.target))) {
+                    if (window.innerWidth <= 768) {
+                        header.classList.remove('menu-open');
+                    }
+                }
+            });
+        }
+
+        // Add track labels to mobile sessions
+        function addTrackLabels() {
+            if (window.innerWidth <= 1024) {
+                const talkSessions = document.querySelectorAll('.session-talk');
+                talkSessions.forEach(session => {
+                    // Check if label already exists
+                    if (session.querySelector('.session-track-label')) {
+                        return;
+                    }
+
+                    // Get the left position from style attribute
+                    const styleAttr = session.getAttribute('style');
+                    const leftMatch = styleAttr.match(/left:\s*(\d+)px/);
+
+                    if (leftMatch) {
+                        const leftPos = parseInt(leftMatch[1]);
+                        let trackName = '';
+
+                        // Determine track based on left position
+                        if (leftPos === 160) {
+                            trackName = '學習力';
+                        } else if (leftPos === 528) {
+                            trackName = '移動力';
+                        } else if (leftPos === 896) {
+                            trackName = '影響力';
+                        }
+
+                        if (trackName) {
+                            const trackLabel = document.createElement('span');
+                            trackLabel.className = 'session-track-label';
+                            trackLabel.textContent = trackName;
+                            session.appendChild(trackLabel);
+                        }
+                    }
+                });
+            }
+        }
+
+        // Run on page load
+        addTrackLabels();
+
+        // Run when window is resized
+        window.addEventListener('resize', addTrackLabels);
+
+        // Store original positions
+        const originalPositions = new Map();
+        const originalTimeLabels = new Map();
+        const originalHLines = new Map();
+
+        // Save original positions on first load
+        function saveOriginalPositions() {
+            const sessions = document.querySelectorAll('.session-talk, .session-forum, .session-opening');
+            sessions.forEach(session => {
+                if (!originalPositions.has(session)) {
+                    const styleAttr = session.getAttribute('style');
+                    originalPositions.set(session, styleAttr);
+                }
+            });
+
+            const timeLabels = document.querySelectorAll('.time-label');
+            timeLabels.forEach(label => {
+                if (!originalTimeLabels.has(label)) {
+                    const styleAttr = label.getAttribute('style');
+                    originalTimeLabels.set(label, styleAttr);
+                }
+            });
+
+            const hLines = document.querySelectorAll('.h-line');
+            hLines.forEach(line => {
+                if (!originalHLines.has(line)) {
+                    const styleAttr = line.getAttribute('style');
+                    originalHLines.set(line, styleAttr);
+                }
+            });
+        }
+
+        // Rearrange sessions vertically for mobile
+        function rearrangeSessionsVertically() {
+            const sessions = document.querySelectorAll('.session-talk, .session-forum, .session-opening');
+
+            if (window.innerWidth <= 1024) {
+                const daySections = document.querySelectorAll('.day-section');
+                let maxHeight = 0;
+
+                daySections.forEach(daySection => {
+                    const sessions = daySection.querySelectorAll('.session-talk, .session-forum, .session-opening');
+
+                    // Group sessions by their original top position (time slot)
+                    const timeSlots = {};
+                    const timeSlotMapping = {}; // Map original top to new top
+
+                    sessions.forEach(session => {
+                        const styleAttr = originalPositions.get(session) || session.getAttribute('style');
+                        const topMatch = styleAttr.match(/top:\s*(\d+)px/);
+                        const leftMatch = styleAttr.match(/left:\s*(\d+)px/);
+                        const heightMatch = styleAttr.match(/height:\s*(\d+)px/);
+
+                        if (topMatch && leftMatch) {
+                            const top = parseInt(topMatch[1]);
+                            const left = parseInt(leftMatch[1]);
+                            const height = heightMatch ? parseInt(heightMatch[1]) : 131;
+
+                            if (!timeSlots[top]) {
+                                timeSlots[top] = [];
+                            }
+
+                            // Determine track order: 160=learning(1), 528=movement(2), 896=influence(3)
+                            let trackOrder = 0;
+                            if (left === 160) trackOrder = 1;
+                            else if (left === 528) trackOrder = 2;
+                            else if (left === 896) trackOrder = 3;
+
+                            timeSlots[top].push({
+                                element: session,
+                                originalTop: top,
+                                trackOrder: trackOrder,
+                                height: height
+                            });
+                        }
+                    });
+
+                    // Sort each time slot by track order and recalculate positions
+                    let currentTop = 0;
+                    let previousTime = null;
+                    const sortedTimes = Object.keys(timeSlots).sort((a, b) => parseInt(a) - parseInt(b));
+
+                    sortedTimes.forEach((time, timeIndex) => {
+                        const slotsAtTime = timeSlots[time];
+                        const currentTimeInt = parseInt(time);
+
+                        // Check if there's a gap between this time slot and the previous one
+                        // This indicates a break period (e.g., lunch break)
+                        if (previousTime !== null) {
+                            const timeDiff = currentTimeInt - previousTime;
+
+                            // Only add break space for specific time slots to avoid affecting normal sessions
+                            // 11:00-11:15 break: Day 1 (161→338), Day 2 (97→274)
+                            const is11Break = (previousTime === 161 && currentTimeInt === 338) ||
+                                             (previousTime === 97 && currentTimeInt === 274);
+
+                            // 14:45-15:00 break: Day 1 (1414→1665), Day 2 (1527→1665)
+                            const is14Break = (previousTime === 1414 && currentTimeInt === 1665) ||
+                                             (previousTime === 1527 && currentTimeInt === 1665);
+
+                            if (is11Break || is14Break) {
+                                // Add 39px spacing for rest periods
+                                currentTop += 39;
+                            }
+                            // Large gaps (> 200px) that aren't the specific breaks above
+                            else if (timeDiff > 200) {
+                                // Keep original logic for other large breaks
+                                const breakGap = timeDiff - 150;
+                                currentTop += breakGap;
+                            }
+                            // Special case: Break before Forum 2 (around 1591px in original layout)
+                            // Check if current time slot contains Forum 2
+                            const hasForumTwo = slotsAtTime.some(slot => {
+                                const title = slot.element.querySelector('.session-title');
+                                return title && title.textContent.includes('必修課程與深度學習素養的實踐');
+                            });
+                            if (hasForumTwo) {
+                                // Add extra break time (50px as in original between Forum 1 and talks)
+                                currentTop += 39; // Additional break gap
+                            }
+                        }
+
+                        // Sort by track order (1, 2, 3)
+                        slotsAtTime.sort((a, b) => a.trackOrder - b.trackOrder);
+
+                        // Set new positions
+                        slotsAtTime.forEach((slot, index) => {
+                            const session = slot.element;
+                            const styleAttr = originalPositions.get(session) || session.getAttribute('style');
+
+                            // Calculate new top position
+                            let newTop;
+                            if (index === 0) {
+                                // For the first session in a time slot
+                                // Add extra spacing between different time slots (11px gap as in original)
+                                // Always add 6px between time slots (except absolute first session)
+                                if (currentTop > 0) {
+                                    currentTop += 6; // Add extra 6px gap between time slots (total 11px with the 5px below)
+                                }
+                                // Use currentTop to enforce consistent 11px gaps
+                                // Only preserve original position for very first session or after large breaks
+                                if (currentTop === 0) {
+                                    newTop = slot.originalTop; // Keep first session at original position
+                                } else {
+                                    newTop = currentTop; // Use calculated position for consistent gaps
+                                }
+                                // Store mapping for time labels and lines
+                                timeSlotMapping[slot.originalTop] = newTop;
+                            } else {
+                                newTop = currentTop;
+                            }
+
+                            // Update style with new left (160px - align to original leftmost position) and top
+                            let newStyle = styleAttr.replace(/left:\s*\d+px/, 'left: 160px');
+                            newStyle = newStyle.replace(/top:\s*\d+px/, `top: ${newTop}px`);
+                            session.setAttribute('style', newStyle);
+
+                            // Consistent gap: 5px between all sessions
+                            currentTop = newTop + slot.height + 5;
+                        });
+
+                        previousTime = currentTimeInt;
+                    });
+
+                    // Adjust time labels and horizontal lines
+                    const timeLabels = daySection.querySelectorAll('.time-label');
+                    const hLines = daySection.querySelectorAll('.h-line');
+
+                    // Build a comprehensive mapping including all time points
+                    const allTimeLabelPositions = [];
+                    timeLabels.forEach(label => {
+                        const styleAttr = originalTimeLabels.get(label) || label.getAttribute('style');
+                        const topMatch = styleAttr.match(/top:\s*(\d+)px/);
+                        if (topMatch) {
+                            allTimeLabelPositions.push({
+                                element: label,
+                                originalTop: parseInt(topMatch[1]),
+                                type: 'label'
+                            });
+                        }
+                    });
+
+                    hLines.forEach(line => {
+                        const styleAttr = originalHLines.get(line) || line.getAttribute('style');
+                        const topMatch = styleAttr.match(/top:\s*(\d+)px/);
+                        if (topMatch) {
+                            allTimeLabelPositions.push({
+                                element: line,
+                                originalTop: parseInt(topMatch[1]),
+                                type: 'line'
+                            });
+                        }
+                    });
+
+                    // Sort by original position
+                    allTimeLabelPositions.sort((a, b) => a.originalTop - b.originalTop);
+
+                    // Process each time label and horizontal line
+                    allTimeLabelPositions.forEach(item => {
+                        const originalTop = item.originalTop;
+
+                        // Special check for break markers (lines at 747 and 1547)
+                        const isSpecialBreakLine = (item.type === 'line' && (originalTop === 747 || originalTop === 1547));
+
+                        // Find the closest session mapping
+                        const sessionTops = Object.keys(timeSlotMapping).map(k => parseInt(k)).sort((a, b) => a - b);
+
+                        // Find the session that should be just after this time label/line
+                        let targetSessionTop = null;
+                        let newTop = null;
+                        let minDiff = Infinity;
+
+                        // Look for the closest session that starts after this time label/line
+                        for (let i = 0; i < sessionTops.length; i++) {
+                            const sessionTop = sessionTops[i];
+                            const diff = sessionTop - originalTop;
+
+                            // Only consider sessions that are after (or very close to) the time label/line
+                            // Special lines (747, 1547) are break markers, look for sessions before them
+                            if (isSpecialBreakLine ? (diff <= 5 && diff >= -150) : (diff >= -5 && diff < 100)) {
+                                // Find the session with the smallest positive difference
+                                const expectedDiff = item.type === 'label' ? 17 : 5;
+                                if (Math.abs(diff - expectedDiff) < minDiff) {
+                                    minDiff = Math.abs(diff - expectedDiff);
+                                    targetSessionTop = sessionTop;
+                                    newTop = timeSlotMapping[sessionTop];
+                                }
+                            }
+                        }
+
+                        if (newTop !== null && minDiff < 30) {
+                            // Only adjust if we found a good match (within 30px tolerance)
+                            const styleAttr = item.type === 'label'
+                                ? (originalTimeLabels.get(item.element) || item.element.getAttribute('style'))
+                                : (originalHLines.get(item.element) || item.element.getAttribute('style'));
+
+                            const offset = item.type === 'label' ? 17 : 5;
+                            let newStyle = styleAttr.replace(/top:\s*\d+px/, `top: ${newTop - offset}px`);
+                            item.element.setAttribute('style', newStyle);
+                        } else {
+                            // No good match found - this might be an ending time marker
+                            // Try to find the previous session and position relative to it
+                            let previousSessionTop = null;
+                            let previousNewTop = null;
+
+                            for (let i = sessionTops.length - 1; i >= 0; i--) {
+                                const sessionTop = sessionTops[i];
+                                if (sessionTop < originalTop) {
+                                    previousSessionTop = sessionTop;
+                                    previousNewTop = timeSlotMapping[sessionTop];
+                                    break;
+                                }
+                            }
+
+                            if (previousNewTop !== null) {
+                                const styleAttr = item.type === 'label'
+                                    ? (originalTimeLabels.get(item.element) || item.element.getAttribute('style'))
+                                    : (originalHLines.get(item.element) || item.element.getAttribute('style'));
+
+                                // Get the time label text to determine calculation method
+                                const timeText = item.element.textContent.trim();
+
+                                // Special handling for break time labels and their marker lines
+                                // Day 1 & Day 2:
+                                // 11:00-11:15: lines at 294/230 (11:00) and 333/269 (11:15)
+                                // 12:00: lines at 747 (Day 1) and 683 (Day 2)
+                                // 14:45-15:00: lines at 1547 (Day 1, 14:45) and 1586/1522 (15:00)
+                                // Note: Day 2's 1483 line (14:45) uses normal positioning
+                                const isBreakMarker = timeText === '11:00' || timeText === '11:15' || timeText === '12:00' || timeText === '14:45' || timeText === '15:00' ||
+                                                     (item.type === 'line' && (originalTop === 294 || originalTop === 230 || originalTop === 333 || originalTop === 269)) ||
+                                                     (item.type === 'line' && (originalTop === 747 || originalTop === 683)) ||
+                                                     (item.type === 'line' && (originalTop === 1547 || originalTop === 1586 || originalTop === 1522));
+
+                                if (isBreakMarker) {
+                                    const sessionsAtTime = timeSlots[previousSessionTop] || [];
+                                    let totalHeight = 131; // default
+                                    if (sessionsAtTime.length > 0) {
+                                        totalHeight = sessionsAtTime.reduce((sum, slot) => sum + slot.height + 5, 0) - 5;
+                                    }
+                                    const offset = item.type === 'label' ? (totalHeight + 17) : (totalHeight + 5);
+                                    const adjustedTop = previousNewTop + offset;
+                                    let newStyle = styleAttr.replace(/top:\s*\d+px/, `top: ${adjustedTop}px`);
+                                    item.element.setAttribute('style', newStyle);
+                                } else {
+                                    // For other time markers (like 11:00, 16:00), use relative distance
+                                    const originalGap = originalTop - previousSessionTop;
+                                    const adjustedTop = previousNewTop + originalGap;
+                                    let newStyle = styleAttr.replace(/top:\s*\d+px/, `top: ${adjustedTop}px`);
+                                    item.element.setAttribute('style', newStyle);
+                                }
+                            }
+                            // Else: keep original position (no modification needed)
+                        }
+                    });
+
+                    // Track the maximum height needed
+                    maxHeight = Math.max(maxHeight, currentTop + 100); // Add 100px padding
+                });
+
+                // Update container heights
+                const agendaWrapper = document.querySelector('.agenda-wrapper');
+                const daysContainer = document.querySelector('.days-container');
+                if (agendaWrapper && daysContainer) {
+                    agendaWrapper.style.height = maxHeight + 'px';
+                    daysContainer.style.height = maxHeight + 'px';
+                    daySections.forEach(section => {
+                        section.style.height = maxHeight + 'px';
+                    });
+
+                    // Update rect-191 position to be below agenda-wrapper
+                    const rect191 = document.querySelector('.rect-191');
+                    if (rect191) {
+                        const agendaWrapperTop = parseInt(getComputedStyle(agendaWrapper).top);
+                        const agendaWrapperHeight = parseInt(agendaWrapper.style.height);
+                        const rect191Top = agendaWrapperTop + agendaWrapperHeight;
+                        rect191.style.top = rect191Top + 'px';
+
+                        // Set main-container height to rect-191's position + 1px (rect-191's height)
+                        const mainContainer = document.querySelector('.main-container');
+                        if (mainContainer) {
+                            mainContainer.style.minHeight = (rect191Top + 1) + 'px';
+                        }
+
+                        // Only position footer elements for mobile view
+                        if (window.innerWidth <= 1024) {
+                            // Update footer positions to be below rect-191 with proper spacing
+                            const footerContainer = document.querySelector('footer');
+                            if (footerContainer) {
+                                footerContainer.style.top = (rect191Top + 1) + 'px';
+                            }
+
+                            const baseTop = rect191Top + 120; // 120px gap from rect-191
+
+                            const footerLabel1 = document.querySelector('.footer-label-1');
+                            const footerContent1 = document.querySelector('.footer-content-1');
+                            const footerLabel2 = document.querySelector('.footer-label-2');
+                            const footerContent2 = document.querySelector('.footer-content-2');
+                            const footerLabel3 = document.querySelector('.footer-label-3');
+                            const footerAddressMobile = document.querySelector('.footer-address-mobile');
+                            const footerInstagram = document.querySelector('.footer-instagram');
+                            const footerFacebook = document.querySelector('.footer-facebook');
+                            const footerFeedback = document.querySelector('.footer-feedback-mobile');
+                            const footerLostFound = document.querySelector('.footer-lost-found-mobile');
+
+                            if (footerLabel1) footerLabel1.style.top = baseTop + 'px';
+                            if (footerContent1) footerContent1.style.top = baseTop + 'px';
+                            if (footerLabel2) footerLabel2.style.top = (baseTop + 72) + 'px';
+                            if (footerContent2) footerContent2.style.top = (baseTop + 72) + 'px';
+                            if (footerLabel3) footerLabel3.style.top = (baseTop + 193) + 'px';
+                            if (footerAddressMobile) footerAddressMobile.style.top = (baseTop + 193) + 'px';
+                            if (footerFeedback) footerFeedback.style.top = (baseTop + 325) + 'px';
+                            if (footerInstagram) footerInstagram.style.top = (baseTop + 343) + 'px';
+                            if (footerFacebook) footerFacebook.style.top = (baseTop + 343) + 'px';
+                            if (footerLostFound) footerLostFound.style.top = (baseTop + 361) + 'px';
+                        }
+                    }
+                }
+
+                // Final adjustment: Align time labels and adjust specific lines
+                // This is done after all other positioning to avoid affecting session layout
+                daySections.forEach(daySection => {
+                    const hLines = daySection.querySelectorAll('.h-line');
+                    const timeLabels = daySection.querySelectorAll('.time-label');
+
+                    // Collect h-line positions and elements (sorted by top)
+                    const hLineData = [];
+                    hLines.forEach(line => {
+                        const style = line.getAttribute('style');
+                        const topMatch = style.match(/top:\s*(\d+)px/);
+                        if (topMatch) {
+                            hLineData.push({
+                                element: line,
+                                top: parseInt(topMatch[1])
+                            });
+                        }
+                    });
+                    hLineData.sort((a, b) => a.top - b.top);
+
+                    // Adjust 12th and 13th lines for Day 2 (1/19)
+                    const isDayTwo = daySection.id === 'day2';
+                    if (isDayTwo && hLineData.length >= 13) {
+                        // Move 12th line to where 13th line was
+                        const line12 = hLineData[11];
+                        const line13Original = hLineData[12];
+                        const currentStyle12 = line12.element.getAttribute('style');
+                        const newStyle12 = currentStyle12.replace(/top:\s*\d+px/, `top: ${line13Original.top}px`);
+                        line12.element.setAttribute('style', newStyle12);
+                        hLineData[11].top = line13Original.top;
+
+                        // Move 13th line to after Forum 4 (closer to it)
+                        const sessions = daySection.querySelectorAll('.session-forum');
+                        let forum4Bottom = null;
+                        sessions.forEach(session => {
+                            const title = session.querySelector('.session-title');
+                            if (title && title.textContent.includes('數位實驗高中在實驗教育發展脈絡中的定位與展望')) {
+                                const style = session.getAttribute('style');
+                                const topMatch = style.match(/top:\s*(\d+)px/);
+                                const heightMatch = style.match(/height:\s*(\d+)px/);
+                                if (topMatch && heightMatch) {
+                                    forum4Bottom = parseInt(topMatch[1]) + parseInt(heightMatch[1]) + 3; // Slightly below forum 4
+                                }
+                            }
+                        });
+
+                        if (forum4Bottom !== null) {
+                            const line13 = hLineData[12];
+                            const currentStyle13 = line13.element.getAttribute('style');
+                            const newStyle13 = currentStyle13.replace(/top:\s*\d+px/, `top: ${forum4Bottom}px`);
+                            line13.element.setAttribute('style', newStyle13);
+                            hLineData[12].top = forum4Bottom;
+                        }
+                    }
+
+                    // Swap 14:45 and 15:00 time labels for Day 2
+                    if (isDayTwo) {
+                        let label1445 = null;
+                        let label1500 = null;
+                        timeLabels.forEach(label => {
+                            const text = label.textContent.trim();
+                            if (text === '14:45') label1445 = label;
+                            else if (text === '15:00') label1500 = label;
+                        });
+
+                        if (label1445 && label1500) {
+                            const style1445 = label1445.getAttribute('style');
+                            const style1500 = label1500.getAttribute('style');
+                            const top1445Match = style1445.match(/top:\s*(\d+)px/);
+                            const top1500Match = style1500.match(/top:\s*(\d+)px/);
+
+                            if (top1445Match && top1500Match) {
+                                const top1445 = top1445Match[1];
+                                const top1500 = top1500Match[1];
+
+                                // Swap positions
+                                const newStyle1445 = style1445.replace(/top:\s*\d+px/, `top: ${top1500}px`);
+                                const newStyle1500 = style1500.replace(/top:\s*\d+px/, `top: ${top1445}px`);
+                                label1445.setAttribute('style', newStyle1445);
+                                label1500.setAttribute('style', newStyle1500);
+                            }
+                        }
+                    }
+
+                    // Align time labels slightly above specific horizontal lines
+                    // Day 1: 11:00 → 3rd line, 12:00 → 7th line, 14:45 → 13th line
+                    // Day 2: 11:00 → 2nd line, 12:00 → 6th line, 14:45 → 12th line, 15:00 → 13th line
+                    const hLinePositions = hLineData.map(d => d.top);
+                    timeLabels.forEach(label => {
+                        const text = label.textContent.trim();
+                        let targetLineIndex = -1;
+
+                        if (text === '11:00') {
+                            targetLineIndex = isDayTwo ? 1 : 2; // 2nd line (Day 2) or 3rd line (Day 1)
+                        }
+                        else if (text === '12:00') {
+                            targetLineIndex = isDayTwo ? 5 : 6; // 6th line (Day 2) or 7th line (Day 1)
+                        }
+                        else if (text === '14:45') {
+                            // For Day 2, 14:45 goes to 12th line (after swap)
+                            targetLineIndex = isDayTwo ? 11 : 12; // 12th or 13th line
+                        }
+                        else if (text === '15:00' && isDayTwo) {
+                            targetLineIndex = 12; // 13th line (index 12) for Day 2
+                        }
+
+                        if (targetLineIndex >= 0 && targetLineIndex < hLinePositions.length) {
+                            const targetLineTop = hLinePositions[targetLineIndex];
+                            // For 15:00 on Day 2, use smaller offset
+                            const offset = (text === '15:00' && isDayTwo) ? 5 : 15;
+                            const adjustedTop = targetLineTop - offset; // Move up from target line
+                            const currentStyle = label.getAttribute('style');
+                            const newStyle = currentStyle.replace(/top:\s*\d+px/, `top: ${adjustedTop}px`);
+                            label.setAttribute('style', newStyle);
+                        }
+                    });
+
+                    // Position grid-pattern in the middle of 12:00~13:30 break
+                    const gridPattern = daySection.querySelector('.grid-pattern');
+                    if (gridPattern) {
+                        const time1200 = Array.from(timeLabels).find(label => label.textContent.trim() === '12:00');
+                        const time1330 = Array.from(timeLabels).find(label => label.textContent.trim() === '13:30');
+
+                        if (time1200 && time1330) {
+                            const top1200 = parseFloat(time1200.style.top);
+                            const top1330 = parseFloat(time1330.style.top);
+                            const middleTop = (top1200 + top1330) / 2;
+
+                            // Set position: centered + 100px to the right
+                            // Original: calc(50% - 24px), adding 100px: calc(50% + 76px)
+                            gridPattern.style.top = middleTop + 'px';
+                            gridPattern.style.left = 'calc(50% + 76px)';
+                        }
+                    }
+                });
+            } else {
+                // Restore original positions for desktop
+                sessions.forEach(session => {
+                    const originalStyle = originalPositions.get(session);
+                    if (originalStyle) {
+                        session.setAttribute('style', originalStyle);
+                    }
+                });
+
+                // Restore original time labels
+                const timeLabels = document.querySelectorAll('.time-label');
+                timeLabels.forEach(label => {
+                    const originalStyle = originalTimeLabels.get(label);
+                    if (originalStyle) {
+                        label.setAttribute('style', originalStyle);
+                    }
+                });
+
+                // Restore original horizontal lines
+                const hLines = document.querySelectorAll('.h-line');
+                hLines.forEach(line => {
+                    const originalStyle = originalHLines.get(line);
+                    if (originalStyle) {
+                        line.setAttribute('style', originalStyle);
+                    }
+                });
+
+                // Restore original heights
+                const agendaWrapper = document.querySelector('.agenda-wrapper');
+                const daysContainer = document.querySelector('.days-container');
+                const daySections = document.querySelectorAll('.day-section');
+                if (agendaWrapper) agendaWrapper.style.height = '';
+                if (daysContainer) daysContainer.style.height = '';
+                daySections.forEach(section => {
+                    section.style.height = '';
+                });
+
+                // Desktop: Set rect-191 and main-container based on bottom-tab-navigation
+                const bottomTabNav = document.querySelector('.bottom-tab-navigation');
+                if (bottomTabNav) {
+                    const rect191 = document.querySelector('.rect-191');
+                    if (rect191) {
+                        const bottomTabTop = bottomTabNav.offsetTop;
+                        const bottomTabHeight = bottomTabNav.offsetHeight;
+                        const rect191Top = bottomTabTop + bottomTabHeight;
+                        rect191.style.top = rect191Top + 'px';
+
+                        // Set main-container height to rect-191's position + 1px
+                        const mainContainer = document.querySelector('.main-container');
+                        if (mainContainer) {
+                            mainContainer.style.minHeight = (rect191Top + 1) + 'px';
+                        }
+                    }
+                }
+            }
+        }
+
+        // Run on page load
+        saveOriginalPositions();
+        rearrangeSessionsVertically();
+
+        // Run when window is resized
+        window.addEventListener('resize', () => {
+            rearrangeSessionsVertically();
+        });
+    </script>
 </body>
 </html>

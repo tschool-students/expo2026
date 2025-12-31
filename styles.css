@@ -1,0 +1,498 @@
+/* ====================================
+   CSS Reset & Base Styles
+   ==================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ====================================
+   Font Face Declarations
+   ==================================== */
+@font-face {
+    font-family: 'Cubic 11';
+    src: url('Cubic-11-1.430/fonts/web/Cubic_11.woff2') format('woff2'),
+         url('Cubic-11-1.430/fonts/web/Cubic_11.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* ====================================
+   Body & Main Container
+   ==================================== */
+body {
+    font-family: 'Noto Sans TC', sans-serif;
+    background: #E3DFDC;
+    width: 1440px;
+    height: 2325px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.main-container {
+    position: relative;
+    width: 100%;
+}
+
+/* ====================================
+   Header Navigation
+   ==================================== */
+.header {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    width: 1440px;
+    height: 70px;
+    background: #F2F1F1;
+    border-bottom: 1px solid #604F37;
+    z-index: 1000;
+}
+
+.header-logo {
+    position: absolute;
+    width: 106.65px;
+    height: 49.06px;
+    left: 28px;
+    top: 10px;
+}
+
+.header-logo img {
+    width: 100%;
+    height: 100%;
+}
+
+.header-nav {
+    position: absolute;
+    left: 456px;
+    top: 17px;
+    display: flex;
+    gap: 0;
+}
+
+.nav-item {
+    font-family: 'Noto Sans TC';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 35px;
+    text-align: center;
+    color: #000000;
+    text-decoration: none;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+}
+
+.nav-item:nth-child(1) {
+    left: 31.67%;
+}
+
+.nav-item:nth-child(2) {
+    left: 43.89%;
+}
+
+.nav-item:nth-child(3) {
+    left: 56.11%;
+}
+
+.nav-item:nth-child(4) {
+    left: 65%;
+}
+
+/* ====================================
+   Hero Section
+   ==================================== */
+.hero-section {
+    position: absolute;
+    width: 1440px;
+    height: 808px;
+    left: 0;
+    top: 70px;
+}
+
+.hero-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-animation-text {
+    position: absolute;
+    width: 56px;
+    height: 41px;
+    left: calc(50% - 56px/2);
+    top: 458px;
+    font-family: 'Noto Sans TC';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 34px;
+    text-align: center;
+    color: #FFFFFF;
+    opacity: 0.5;
+}
+
+/* ====================================
+   Event Info Section
+   ==================================== */
+.event-info-section {
+    position: absolute;
+    width: 1440px;
+    height: 509px;
+    left: 0;
+    top: 878px;
+}
+
+.event-lines {
+    position: absolute;
+    width: 1440px;
+    height: 1109px;
+    left: 0;
+    top: 0;
+}
+
+.event-content-left {
+    position: absolute;
+    height: 264px;
+    left: 0;
+    right: 408px;
+    top: 0;
+    background: #F2F1F1;
+    border-right: 1px solid #604F37;
+}
+
+.event-content-right {
+    position: absolute;
+    width: 405px;
+    height: 205px;
+    left: 1035px;
+    top: 30px;
+}
+
+.main-title {
+    font-family: 'Noto Sans TC';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 34px;
+    color: #000000;
+}
+
+.time-info {
+    position: absolute;
+    height: 128px;
+    left: 80px;
+    right: 736px;
+    top: 324px;
+}
+
+.time-info-img {
+    width: 100%;
+    height: 100%;
+}
+
+/* ====================================
+   Decorative Pixel Art Text
+   ==================================== */
+.event-title-decorative {
+    position: absolute;
+    height: 98px;
+    left: 131px;
+    top: 88px;
+    display: flex;
+    align-items: center;
+    gap: 0;
+}
+
+.pixel-group {
+    position: relative;
+    height: 80px;
+}
+
+.group-42 {
+    width: 174.55px;
+}
+
+.group-39 {
+    width: 181.82px;
+}
+
+.group-38 {
+    width: 181.82px;
+}
+
+.multiply-symbol {
+    height: 98px;
+    font-family: 'Cubic 11';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 84px;
+    line-height: 98px;
+    text-align: center;
+    color: #E1801F;
+    margin: 0 10px;
+}
+
+/* ====================================
+   More Buttons
+   ==================================== */
+.more-button {
+    position: absolute;
+    height: 29px;
+    width: 67px;
+}
+
+.more-button-1 {
+    left: 746px;
+    top: 460px;
+}
+
+.more-button-2 {
+    left: 1295px;
+    top: 460px;
+}
+
+.more-text {
+    position: absolute;
+    left: 0;
+    right: 29.85%;
+    top: 6.9%;
+    font-family: 'Noto Sans TC';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #000000;
+}
+
+.arrow {
+    position: absolute;
+    left: 85.07%;
+    right: 0%;
+    top: 27.59%;
+    bottom: 20.69%;
+}
+
+.arrow-rect {
+    position: absolute;
+    background: #000000;
+}
+
+.rect-1 {
+    left: 0%;
+    right: 50%;
+    top: 0%;
+    bottom: 62.07%;
+}
+
+.rect-2 {
+    left: 25%;
+    right: 25%;
+    top: 37.93%;
+    bottom: 51.72%;
+}
+
+.rect-3 {
+    left: 50%;
+    right: 0%;
+    top: 48.28%;
+    bottom: 41.38%;
+}
+
+.rect-4 {
+    left: 25%;
+    right: 25%;
+    top: 58.62%;
+    bottom: 31.03%;
+}
+
+.rect-5 {
+    left: 0%;
+    right: 50%;
+    top: 68.97%;
+    bottom: 20.69%;
+}
+
+/* ====================================
+   Location Section
+   ==================================== */
+.location-section {
+    position: absolute;
+    height: 264px;
+    left: 0;
+    right: 0;
+    top: 1142px;
+    border-bottom: 1px solid #604F37;
+}
+
+.location-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.location-text {
+    position: absolute;
+    height: 105px;
+    left: 923px;
+    right: 112px;
+    top: 71px;
+    font-family: 'Noto Sans TC';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    color: #000000;
+}
+
+/* ====================================
+   Map Section
+   ==================================== */
+.map-section {
+    position: absolute;
+    height: 600px;
+    left: 0;
+    right: 0;
+    top: 1387px;
+    background: #F2F1F1;
+    border-width: 1px 0px;
+    border-style: solid;
+    border-color: #604F37;
+}
+
+.map-frame {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 273px 712px;
+    position: absolute;
+    width: 1440px;
+    height: 600px;
+    left: 0;
+    top: 0;
+}
+
+.map-bg {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* ====================================
+   Spacing Section
+   ==================================== */
+.spacing-section {
+    position: absolute;
+    width: 1279px;
+    height: 338px;
+    left: 81px;
+    top: 1987px;
+}
+
+.spacing-box {
+    position: absolute;
+    background: rgba(188, 178, 255, 0.5);
+}
+
+.spacing-box-1 {
+    width: 108px;
+    height: 100px;
+    left: 0;
+    top: 0;
+}
+
+.spacing-box-2 {
+    width: 657px;
+    height: 100px;
+    left: 622px;
+    top: 0;
+}
+
+.spacing-box-3 {
+    width: 656px;
+    height: 100px;
+    left: 623px;
+    top: 238px;
+}
+
+.spacing-box-4 {
+    width: 108px;
+    height: 100px;
+    left: 0;
+    top: 238px;
+}
+
+/* ====================================
+   Footer
+   ==================================== */
+.footer {
+    position: absolute;
+    width: 624px;
+    height: 138px;
+    left: 189px;
+    top: 2087px;
+}
+
+.footer-row {
+    position: relative;
+    height: 26px;
+    margin-bottom: 30px;
+}
+
+.footer-row:nth-child(1) {
+    top: 0;
+}
+
+.footer-row:nth-child(2) {
+    top: 56px;
+}
+
+.footer-label {
+    position: absolute;
+    left: 0;
+    font-family: 'Noto Sans TC';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    color: #000000;
+}
+
+.footer-content {
+    position: absolute;
+    left: 219px;
+    font-family: 'Noto Sans TC';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: #000000;
+}
+
+.footer-address {
+    position: absolute;
+    height: 26px;
+    left: 0;
+    top: 112px;
+    font-family: 'Noto Sans TC';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: #000000;
+}
+
+/* ====================================
+   Utility Classes
+   ==================================== */
+.hidden {
+    visibility: hidden;
+}
