@@ -1,11 +1,1700 @@
+
 <!DOCTYPE html>
 <html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>關於我們-2026學習分享會｜臺北市數位實驗高中</title>
+    <title>關於我們 - T-SCHOOL STUDENTS EXPO'26</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Cubic 11 Font */
+        @font-face {
+            font-family: 'Cubic 11';
+            src: url('Cubic-11-1.430/fonts/web/Cubic_11.woff2') format('woff2'),
+                 url('Cubic-11-1.430/fonts/web/Cubic_11.woff') format('woff');
+            font-weight: 400;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-primary: #E3DFDC;
+            --bg-secondary: #F2F1F1;
+            --text-primary: #000000;
+            --border-color: #604F37;
+        }
+
+        html {
+            overflow-x: hidden;
+            width: 100%;
+        }
+
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            overflow-x: hidden;
+            line-height: 1.6;
+            position: relative;
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+        }
+
+        .main-container {
+            animation: fadeIn 1s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .main-container {
+            position: relative;
+            width: 100%;
+            max-width: 1440px;
+            margin: 0 auto;
+            min-height: 2983px;
+            overflow: visible;
+        }
+
+        /* Header */
+        header {
+            position: relative;
+            top: 0;
+            z-index: 1000;
+            background-color: #F2F1F1;
+            border-bottom: 1px solid #000000;
+            height: 100px;
+            width: 100%;
+        }
+
+        .header-content {
+            max-width: 1440px;
+            margin: 0 auto;
+            height: 100%;
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            position: absolute;
+            left: 31px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 126px;
+            height: 58px;
+        }
+
+        .logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        nav {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 80px;
+            align-items: center;
+        }
+
+        nav a {
+            color: #000000;
+            text-decoration: none;
+            font-size: 24px;
+            font-weight: 400;
+            font-family: 'Noto Sans TC', sans-serif;
+            text-align: center;
+            line-height: 1.2;
+            transition: color 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 35px;
+        }
+
+        nav a:hover {
+            color: #E1801F;
+        }
+
+        .menu-toggle {
+            display: none;
+        }
+
+        .header-bg {
+            display: none;
+        }
+
+        /* Title Section */
+        .title-main {
+            position: absolute;
+            width: 278px;
+            height: 75px;
+            left: 79px;
+            top: 120px;
+            font-family: 'Cubic 11';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 64px;
+            line-height: 75px;
+            display: flex;
+            align-items: center;
+            color: #000000;
+        }
+
+        .title-sub {
+            position: absolute;
+            width: 310px;
+            height: 47px;
+            left: 376px;
+            top: 146px;
+            font-family: 'Cubic 11';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 40px;
+            line-height: 47px;
+            display: flex;
+            align-items: center;
+            color: #000000;
+        }
+
+        /* Map Section */
+        .map-section {
+            position: absolute;
+            width: 100vw;
+            height: 800px;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 305px;
+            background: var(--bg-secondary);
+            border-top: 1px solid var(--border-color);
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .map-slider {
+            position: absolute;
+            width: 400%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .map-slider.show-floor1 {
+            transform: translateX(0);
+        }
+
+        .map-slider.show-floor4 {
+            transform: translateX(-25%);
+        }
+
+        .map-slider.show-floor5 {
+            transform: translateX(-50%);
+        }
+
+        .map-slider.show-floor6 {
+            transform: translateX(-75%);
+        }
+
+        .map-slide {
+            position: relative;
+            width: 25%;
+            height: 800px;
+            flex-shrink: 0;
+            background: #F2F1F1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .map-slide-inner {
+            position: relative;
+            width: 100%;
+            max-width: 1440px;
+            height: 100%;
+        }
+
+        .map-slide img {
+            position: absolute;
+            max-width: 100%;
+            max-height: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 0;
+            object-fit: contain;
+        }
+
+        /* Map Navigation */
+        .map-nav {
+            position: absolute;
+            width: 100vw;
+            height: 100px;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 1105px;
+            background: #FFFFFF;
+            border-top: 1px solid #000000;
+            border-bottom: 1px solid #000000;
+        }
+
+        .map-nav-buttons {
+            position: absolute;
+            width: 366px;
+            height: 35px;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 50%;
+            margin-top: -17.5px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .map-nav-btn {
+            font-family: 'Noto Sans TC';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 29px;
+            text-align: center;
+            color: #000000;
+            cursor: pointer;
+            transition: color 0.3s;
+            height: 29px;
+            display: flex;
+            align-items: center;
+        }
+
+        .map-nav-btn.active {
+            color: #E1801F;
+        }
+
+        /* Left Arrow Decoration for Map */
+        .arrow-left-map {
+            position: absolute;
+            width: 43px;
+            height: 75px;
+            left: 20px;
+            top: 50%;
+            margin-top: -37.5px;
+            transform: rotate(180deg);
+            cursor: pointer;
+            z-index: 100;
+            transition: opacity 0.3s;
+        }
+
+        .arrow-left-map:hover {
+            opacity: 0.7;
+        }
+
+        .arrow-left-map .rect {
+            position: absolute;
+            background: #E1801F;
+        }
+
+        .arrow-left-map .rect-1 {
+            position: absolute;
+            left: 0%;
+            right: 75%;
+            top: 0%;
+            bottom: 85.71%;
+            background: #E1801F;
+        }
+
+        .arrow-left-map .rect-2 {
+            position: absolute;
+            left: 25%;
+            right: 50%;
+            top: 14.29%;
+            bottom: 71.43%;
+            background: #E1801F;
+        }
+
+        .arrow-left-map .rect-3 {
+            position: absolute;
+            left: 50%;
+            right: 25%;
+            top: 28.57%;
+            bottom: 57.14%;
+            background: #E1801F;
+        }
+
+        .arrow-left-map .rect-4 {
+            position: absolute;
+            left: 75%;
+            right: 0%;
+            top: 42.86%;
+            bottom: 42.86%;
+            background: #E1801F;
+        }
+
+        .arrow-left-map .rect-5 {
+            position: absolute;
+            left: 50%;
+            right: 25%;
+            top: 57.14%;
+            bottom: 28.57%;
+            background: #E1801F;
+        }
+
+        .arrow-left-map .rect-6 {
+            position: absolute;
+            left: 25%;
+            right: 50%;
+            top: 71.43%;
+            bottom: 14.29%;
+            background: #E1801F;
+        }
+
+        .arrow-left-map .rect-7 {
+            position: absolute;
+            left: 0%;
+            right: 75%;
+            top: 85.71%;
+            bottom: 0%;
+            background: #E1801F;
+        }
+
+        /* Right Arrow Decoration for Map */
+        .arrow-right-map {
+            position: absolute;
+            width: 43px;
+            height: 75px;
+            right: 20px;
+            top: 50%;
+            margin-top: -37.5px;
+            cursor: pointer;
+            z-index: 100;
+            transition: opacity 0.3s;
+        }
+
+        .arrow-right-map:hover {
+            opacity: 0.7;
+        }
+
+        .arrow-right-map .rect {
+            position: absolute;
+            background: #E1801F;
+        }
+
+        .arrow-right-map .rect-1 {
+            position: absolute;
+            left: 0%;
+            right: 75%;
+            top: 0%;
+            bottom: 85.71%;
+            background: #E1801F;
+        }
+
+        .arrow-right-map .rect-2 {
+            position: absolute;
+            left: 25%;
+            right: 50%;
+            top: 14.29%;
+            bottom: 71.43%;
+            background: #E1801F;
+        }
+
+        .arrow-right-map .rect-3 {
+            position: absolute;
+            left: 50%;
+            right: 25%;
+            top: 28.57%;
+            bottom: 57.14%;
+            background: #E1801F;
+        }
+
+        .arrow-right-map .rect-4 {
+            position: absolute;
+            left: 75%;
+            right: 0%;
+            top: 42.86%;
+            bottom: 42.86%;
+            background: #E1801F;
+        }
+
+        .arrow-right-map .rect-5 {
+            position: absolute;
+            left: 50%;
+            right: 25%;
+            top: 57.14%;
+            bottom: 28.57%;
+            background: #E1801F;
+        }
+
+        .arrow-right-map .rect-6 {
+            position: absolute;
+            left: 25%;
+            right: 50%;
+            top: 71.43%;
+            bottom: 14.29%;
+            background: #E1801F;
+        }
+
+        .arrow-right-map .rect-7 {
+            position: absolute;
+            left: 0%;
+            right: 75%;
+            top: 85.71%;
+            bottom: 0%;
+            background: #E1801F;
+        }
+
+        .arrow-left-map.hidden,
+        .arrow-right-map.hidden {
+            display: none;
+        }
+
+        .arrow-left-poster.hidden,
+        .arrow-right-poster.hidden {
+            display: none;
+        }
+
+        /* Poster Section */
+        .poster-section {
+            position: absolute;
+            width: 100vw;
+            height: 1340px;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 1205px;
+            overflow: hidden;
+        }
+
+        .poster-slider {
+            position: absolute;
+            width: 600%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .poster-slider.show-page1 {
+            transform: translateX(0);
+        }
+
+        .poster-slider.show-page2 {
+            transform: translateX(-16.666%);
+        }
+
+        .poster-slider.show-page3 {
+            transform: translateX(-33.333%);
+        }
+
+        .poster-slider.show-page4 {
+            transform: translateX(-50%);
+        }
+
+        .poster-slider.show-page5 {
+            transform: translateX(-66.666%);
+        }
+
+        .poster-slider.show-page6 {
+            transform: translateX(-83.333%);
+        }
+
+        .poster-slide {
+            position: relative;
+            width: 16.666%;
+            height: 1340px;
+            flex-shrink: 0;
+            background: #F2F1F1;
+            display: flex;
+            justify-content: center;
+        }
+
+        .poster-slide-inner {
+            position: relative;
+            width: 100%;
+            max-width: 1440px;
+            height: 100%;
+        }
+
+        /* Poster Frame */
+        .poster-frame {
+            position: absolute;
+            width: 300px;
+            height: 424px;
+        }
+
+        .poster-frame img {
+            width: 306px;
+            height: 424px;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        .poster-title {
+            position: absolute;
+            width: 300px;
+            font-family: 'Noto Sans TC';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 22px;
+            color: #000000;
+        }
+
+        .poster-desc {
+            position: absolute;
+            width: 300px;
+            height: 78px;
+            font-family: 'Noto Sans TC';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 22px;
+            color: #000000;
+        }
+
+        /* Poster Navigation */
+        .poster-nav {
+            position: absolute;
+            width: 100vw;
+            height: 100px;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 2545px;
+            background: #FFFFFF;
+            border-top: 1px solid #000000;
+            border-bottom: 1px solid #000000;
+        }
+
+        .poster-nav-buttons {
+            position: absolute;
+            width: 365px;
+            height: 35px;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 50%;
+            margin-top: -17.5px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .poster-nav-btn {
+            font-family: 'Noto Sans TC';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 29px;
+            text-align: center;
+            color: #000000;
+            cursor: pointer;
+            transition: color 0.3s;
+            height: 29px;
+            display: flex;
+            align-items: center;
+        }
+
+        .poster-nav-btn.active {
+            color: #E1801F;
+        }
+
+        /* Arrow Decorations for Poster Section */
+        .arrow-left-poster {
+            position: absolute;
+            width: 43px;
+            height: 75px;
+            left: 20px;
+            top: 50%;
+            margin-top: -37.5px;
+            transform: rotate(180deg);
+            cursor: pointer;
+            z-index: 100;
+            transition: opacity 0.3s;
+        }
+
+        .arrow-left-poster:hover {
+            opacity: 0.7;
+        }
+
+        .arrow-left-poster .rect {
+            position: absolute;
+            background: #E1801F;
+        }
+
+        .arrow-left-poster .rect-1 {
+            left: 0%;
+            right: 75%;
+            top: 0%;
+            bottom: 85.71%;
+        }
+
+        .arrow-left-poster .rect-2 {
+            left: 25%;
+            right: 50%;
+            top: 14.29%;
+            bottom: 71.43%;
+        }
+
+        .arrow-left-poster .rect-3 {
+            left: 50%;
+            right: 25%;
+            top: 28.57%;
+            bottom: 57.14%;
+        }
+
+        .arrow-left-poster .rect-4 {
+            left: 75%;
+            right: 0%;
+            top: 42.86%;
+            bottom: 42.86%;
+        }
+
+        .arrow-left-poster .rect-5 {
+            left: 50%;
+            right: 25%;
+            top: 57.14%;
+            bottom: 28.57%;
+        }
+
+        .arrow-left-poster .rect-6 {
+            left: 25%;
+            right: 50%;
+            top: 71.43%;
+            bottom: 14.29%;
+        }
+
+        .arrow-left-poster .rect-7 {
+            left: 0%;
+            right: 75%;
+            top: 85.71%;
+            bottom: 0%;
+        }
+
+        .arrow-right-poster {
+            position: absolute;
+            width: 43px;
+            height: 75px;
+            right: 20px;
+            top: 50%;
+            margin-top: -37.5px;
+            cursor: pointer;
+            z-index: 100;
+            transition: opacity 0.3s;
+        }
+
+        .arrow-right-poster:hover {
+            opacity: 0.7;
+        }
+
+        .arrow-right-poster .rect {
+            position: absolute;
+            background: #E1801F;
+        }
+
+        .arrow-right-poster .rect-1 {
+            left: 0%;
+            right: 75%;
+            top: 0%;
+            bottom: 85.71%;
+        }
+
+        .arrow-right-poster .rect-2 {
+            left: 25%;
+            right: 50%;
+            top: 14.29%;
+            bottom: 71.43%;
+        }
+
+        .arrow-right-poster .rect-3 {
+            left: 50%;
+            right: 25%;
+            top: 28.57%;
+            bottom: 57.14%;
+        }
+
+        .arrow-right-poster .rect-4 {
+            left: 75%;
+            right: 0%;
+            top: 42.86%;
+            bottom: 42.86%;
+        }
+
+        .arrow-right-poster .rect-5 {
+            left: 50%;
+            right: 25%;
+            top: 57.14%;
+            bottom: 28.57%;
+        }
+
+        .arrow-right-poster .rect-6 {
+            left: 25%;
+            right: 50%;
+            top: 71.43%;
+            bottom: 14.29%;
+        }
+
+        .arrow-right-poster .rect-7 {
+            left: 0%;
+            right: 75%;
+            top: 85.71%;
+            bottom: 0%;
+        }
+
+        /* Footer */
+        /* Rectangle 191 - Footer Top Line */
+        .rect-191 {
+            position: absolute;
+            width: 100vw;
+            height: 1px;
+            left: calc(-50vw + 50%);
+            top: 2645px;
+            background: #604F37;
+            margin: 0;
+            display: none;
+        }
+
+        .footer-container {
+            position: absolute;
+            width: 100%;
+            max-width: 1440px;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 2646px;
+            background: var(--bg-primary);
+            padding: 60px 188px 40px;
+            margin: 0;
+            z-index: 2;
+            box-sizing: border-box;
+        }
+
+        .footer-content {
+            position: relative;
+            width: 100%;
+            height: 220px;
+            margin: 0;
+        }
+
+        /* Hide mobile footer elements on desktop */
+        body > .footer-label-1,
+        body > .footer-label-2,
+        body > .footer-label-3,
+        body > .footer-content-1,
+        body > .footer-content-2,
+        body > .footer-address-mobile,
+        .footer-instagram,
+        .footer-facebook,
+        .footer-feedback-mobile,
+        .footer-lost-found-mobile {
+            display: none;
+        }
+
+        /* 主辦單位 */
+        .footer-title-organizer {
+            position: absolute;
+            height: 29px;
+            left: 0px;
+            top: 0px;
+            font-family: 'Noto Sans TC';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 24px;
+            color: #000000;
+            margin: 0;
+        }
+
+        /* 臺北市數位實驗高中學生 */
+        .footer-text-organizer {
+            position: absolute;
+            height: 29px;
+            left: 219px;
+            top: 0px;
+            font-family: 'Noto Sans TC';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 24px;
+            color: #000000;
+            margin: 0;
+        }
+
+        /* 聯絡方式 */
+        .footer-title-contact {
+            position: absolute;
+            height: 29px;
+            left: 0px;
+            top: 59px;
+            font-family: 'Noto Sans TC';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 24px;
+            color: #000000;
+            margin: 0;
+        }
+
+        /* 聯絡方式內容 */
+        .footer-text-contact {
+            position: absolute;
+            left: 219px;
+            top: 59px;
+            font-family: 'Noto Sans TC';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 28px;
+            color: #000000;
+            margin: 0;
+        }
+
+        .footer-text-contact a {
+            color: #000000;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-text-contact a:hover {
+            color: #E1801F;
+        }
+
+        /* 學校地址標題 */
+        .footer-title-address {
+            position: absolute;
+            height: 29px;
+            left: 0px;
+            top: 191px;
+            font-family: 'Noto Sans TC';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 24px;
+            color: #000000;
+            margin: 0;
+        }
+
+        /* 學校地址內容 */
+        .footer-address {
+            position: absolute;
+            height: 29px;
+            left: 219px;
+            top: 191px;
+            font-family: 'Noto Sans TC';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 24px;
+            color: #000000;
+            margin: 0;
+        }
+
+        .footer-address a {
+            color: #000000;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-address a:hover {
+            color: #E1801F;
+        }
+
+        /* 活動回饋 */
+        .footer-feedback {
+            position: absolute;
+            width: 72px;
+            height: 26px;
+            right: 0;
+            bottom: 128px;
+            font-family: 'Noto Sans TC';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 22px;
+            text-decoration-line: underline;
+            color: #000000;
+            transition: color 0.3s;
+        }
+
+        .footer-feedback:hover {
+            color: #E1801F;
+        }
+
+        /* 失物招領 */
+        .footer-lost-found {
+            position: absolute;
+            width: 72px;
+            height: 26px;
+            right: 0;
+            bottom: 82px;
+            font-family: 'Noto Sans TC';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 22px;
+            text-decoration-line: underline;
+            color: #000000;
+            transition: color 0.3s;
+        }
+
+        .footer-lost-found:hover {
+            color: #E1801F;
+        }
+
+        /* ====================================
+           Mobile Styles
+           ==================================== */
+        @media (max-width: 1024px) {
+            body {
+                width: 100%;
+                max-width: 412px;
+                margin: 0 auto;
+                background: #E3DFDC;
+                min-height: 18000px;
+            }
+
+            .main-container {
+                max-width: 412px;
+                min-height: 18000px;
+            }
+
+            /* Hide desktop navigation */
+            nav {
+                display: none;
+            }
+
+            /* Mobile Header */
+            header {
+                position: sticky;
+                width: 100%;
+                height: 72px;
+                left: 0;
+                top: 0;
+                z-index: 1000;
+            }
+
+            .header-content {
+                background: #F2F1F1;
+                border-bottom: 0.5px solid #000000;
+                height: 72px;
+            }
+
+            /* Mobile Logo */
+            .logo {
+                position: absolute;
+                width: 76.84px;
+                height: 35.35px;
+                left: 20px;
+                top: 18px;
+                transform: none;
+            }
+
+            /* Mobile Menu Toggle */
+            .menu-toggle {
+                display: block;
+                position: absolute;
+                width: 40px;
+                height: 40px;
+                right: 20px;
+                top: 16px;
+                background: #F2F1F1;
+                border: none;
+                cursor: pointer;
+                padding: 0;
+                z-index: 1001;
+            }
+
+            .menu-toggle::before {
+                content: '';
+                position: absolute;
+                height: 2px;
+                left: 5px;
+                right: 5px;
+                top: calc(50% - 8px);
+                background: #1C1B1F;
+            }
+
+            .menu-toggle::after {
+                content: '';
+                position: absolute;
+                height: 2px;
+                left: 5px;
+                right: 5px;
+                top: calc(50% + 8px);
+                background: #1C1B1F;
+            }
+
+            .menu-icon {
+                position: absolute;
+                height: 2px;
+                left: 5px;
+                right: 5px;
+                top: 50%;
+                transform: translateY(-50%);
+                background: #1C1B1F;
+            }
+
+            /* Menu Expanded State */
+            header.menu-open {
+                height: 395px;
+                z-index: 2000;
+            }
+
+            header.menu-open .header-content {
+                height: 395px;
+            }
+
+            header.menu-open .menu-toggle::before {
+                top: 50%;
+                transform: translateY(-50%) rotate(45deg);
+            }
+
+            header.menu-open .menu-toggle::after {
+                top: 50%;
+                transform: translateY(-50%) rotate(-45deg);
+            }
+
+            header.menu-open .menu-icon {
+                opacity: 0;
+            }
+
+            header.menu-open nav {
+                display: block;
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                transform: none;
+            }
+
+            header.menu-open nav a {
+                position: absolute;
+                left: 20px;
+                font-size: 20px;
+                line-height: 24px;
+                height: 35px;
+                width: auto;
+            }
+
+            header.menu-open nav a:nth-child(1) { top: 86px; }
+            header.menu-open nav a:nth-child(2) { top: 142px; }
+            header.menu-open nav a:nth-child(3) { top: 198px; }
+            header.menu-open nav a:nth-child(4) { top: 254px; }
+
+            /* Mobile Title Section */
+            .title-main {
+                position: absolute;
+                height: 42px;
+                left: 20px;
+                right: 236px;
+                top: 30px;
+                width: auto;
+                font-family: 'Cubic 11';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 36px;
+                line-height: 42px;
+                display: flex;
+                align-items: center;
+                color: #000000;
+                transform: none;
+            }
+
+            .title-sub {
+                position: absolute;
+                height: 28px;
+                left: 186px;
+                right: 40px;
+                top: 37px;
+                width: auto;
+                font-family: 'Cubic 11';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 24px;
+                line-height: 28px;
+                display: flex;
+                align-items: center;
+                color: #000000;
+            }
+
+            /* Mobile Footer */
+            .rect-191 {
+                position: absolute;
+                width: 100%;
+                height: 1px;
+                left: 0;
+                top: 17250px;
+                background: #000000;
+                margin: 0;
+                display: block;
+                z-index: 10;
+            }
+
+            .footer-container {
+                display: none !important;
+            }
+
+            /* Show Mobile Footer Elements */
+            body > .footer-label-1,
+            body > .footer-label-2,
+            body > .footer-label-3,
+            body > .footer-content-1,
+            body > .footer-content-2,
+            body > .footer-address-mobile,
+            .footer-instagram,
+            .footer-facebook,
+            .footer-feedback-mobile,
+            .footer-lost-found-mobile {
+                display: block !important;
+            }
+
+            /* Mobile Footer Container */
+            footer {
+                position: absolute;
+                width: 412px;
+                height: 400px;
+                left: 0px;
+                background: #E3DFDC;
+            }
+
+            /* Mobile Footer Container */
+            footer {
+                position: absolute;
+                width: 412px;
+                height: 400px;
+                left: 0px;
+                top: 17251px;
+                background: #E3DFDC;
+                z-index: 10;
+            }
+
+            /* 主辦單位 */
+            .footer-label-1 {
+                position: absolute;
+                height: 26px;
+                left: 20px;
+                right: 153.15px;
+                top: 17280px;
+                font-family: 'Noto Sans TC';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 18px;
+                line-height: 22px;
+                color: #000000;
+            }
+
+            /* 聯絡方式 */
+            .footer-label-2 {
+                position: absolute;
+                height: 26px;
+                left: 20px;
+                right: 153.15px;
+                top: 17352px;
+                font-family: 'Noto Sans TC';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 18px;
+                line-height: 22px;
+                color: #000000;
+            }
+
+            /* 學校地址 */
+            .footer-label-3 {
+                position: absolute;
+                width: 72px;
+                height: 26px;
+                left: 20px;
+                top: 17473px;
+                font-family: 'Noto Sans TC';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 18px;
+                line-height: 22px;
+                color: #000000;
+            }
+
+            /* 臺北市數位實驗高級中等學校學生自治會 */
+            .footer-content-1 {
+                position: absolute;
+                height: 52px;
+                left: 117px;
+                right: 56.15px;
+                top: 17280px;
+                font-family: 'Noto Sans TC';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 22px;
+                color: #000000;
+            }
+
+            /* 聯絡方式內容 */
+            .footer-content-2 {
+                position: absolute;
+                height: 104px;
+                left: 117px;
+                right: 56.15px;
+                top: 17352px;
+                font-family: 'Noto Sans TC';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 22px;
+                color: #000000;
+            }
+
+            .footer-content-2 a {
+                color: #000000;
+                text-decoration: none;
+                transition: color 0.3s;
+            }
+
+            .footer-content-2 a:hover {
+                color: #E1801F;
+            }
+
+            /* 學校地址內容 */
+            .footer-address-mobile {
+                position: absolute;
+                height: 52px;
+                left: 117px;
+                right: 6.03px;
+                top: 17473px;
+                font-family: 'Noto Sans TC';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 22px;
+                color: #000000;
+            }
+
+            .footer-address-mobile a {
+                color: #000000;
+                text-decoration: none;
+                transition: color 0.3s;
+            }
+
+            .footer-address-mobile a:hover {
+                color: #E1801F;
+            }
+
+            /* Instagram Icon */
+            .footer-instagram {
+                position: absolute;
+                width: 44px;
+                height: 44px;
+                left: 348px;
+                top: 17623px;
+                background: url('images/Instagram_Glyph_Black.png') center / contain no-repeat;
+                z-index: 10;
+            }
+
+            /* Facebook Icon */
+            .footer-facebook {
+                position: absolute;
+                height: 44px;
+                width: 44px;
+                left: 64.81%;
+                top: 17623px;
+                background: url('images/Facebook_Logo_Secondary.png') center / contain no-repeat;
+                z-index: 10;
+            }
+
+            /* 活動回饋 */
+            .footer-feedback-mobile {
+                position: absolute;
+                width: 72px;
+                height: 26px;
+                left: 20px;
+                top: 17605px;
+                font-family: 'Noto Sans TC';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 22px;
+                text-decoration-line: underline;
+                color: #000000;
+                transition: color 0.3s;
+                z-index: 10;
+            }
+
+            .footer-feedback-mobile:hover {
+                color: #E1801F;
+            }
+
+            /* 失物招領 */
+            .footer-lost-found-mobile {
+                position: absolute;
+                width: 72px;
+                height: 26px;
+                left: 20px;
+                top: 17641px;
+                font-family: 'Noto Sans TC';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 22px;
+                text-decoration-line: underline;
+                color: #000000;
+                transition: color 0.3s;
+                z-index: 10;
+            }
+
+            .footer-lost-found-mobile:hover {
+                color: #E1801F;
+            }
+        }
+    </style>
 </head>
 <body>
-    
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <a href="index.html" class="logo">
+                <img src="images/header-logo.svg" alt="T-School Logo">
+            </a>
+            <nav id="mainNav">
+                <a href="#">關於我們</a>
+                <a href="map.html">展區資訊</a>
+                <a href="agenda.html">議程</a>
+                <a href="vision.html">理念</a>
+            </nav>
+            <button class="menu-toggle" id="menuToggle" aria-label="開啟選單">
+                <span class="menu-icon"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- Title Section -->
+        <h1 class="title-main">開發中</h1>
+        <div class="title-sub">Page Developing</div>
+
+        <!-- Footer Line -->
+        <div class="rect-191"></div>
+
+        <!-- Footer -->
+        <footer class="footer-container">
+            <div class="footer-content">
+                <h4 class="footer-title-organizer">主辦單位</h4>
+                <p class="footer-text-organizer">臺北市數位實驗高級中等學校學生自治會</p>
+
+                <h4 class="footer-title-contact">聯絡方式</h4>
+                <div class="footer-text-contact">
+                    電子郵件信箱：studentcouncil@tschool.tp.edu.tw<br>
+                    IG：<a href="https://www.instagram.com/tschool_student_council/" target="_blank">tschool_student_council</a><br>
+                    FB：<a href="https://www.facebook.com/people/%E6%95%B8%E4%BD%8D%E5%AF%A6%E4%B8%AD%E5%AD%B8%E7%94%9F%E6%9C%83/61579395212418/" target="_blank">數位實中學生會</a><br>
+                    官方網站：<a href="https://tschool-students.github.io" target="_blank">https://tschool-students.github.io</a>
+                </div>
+
+                <h4 class="footer-title-address">學校地址</h4>
+                <p class="footer-address"><a href="https://maps.app.goo.gl/8FggNvviVhifgD6C7" target="_blank">104089臺北市中山區吉林路110號5樓（吉林學習基地）</a></p>
+
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLScMHmr5TmUeqXqNsf0M4Y40MVV-y_LDF8sG_AB4vsEXami71A/viewform" target="_blank" class="footer-feedback">活動回饋</a>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLScX5hgfnTpRZsmjDNoy6aGTDNoL1Pd0Szrnmc54No2zcE_H2A/viewform" target="_blank" class="footer-lost-found">失物招領</a>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Mobile Footer Elements -->
+    <div class="footer-label-1">主辦單位</div>
+    <div class="footer-content-1">臺北市數位實驗高級中等學校學生自治會</div>
+
+    <div class="footer-label-2">聯絡方式</div>
+    <div class="footer-content-2">
+        電子郵件信箱：studentcouncil@tschool.tp.edu.tw<br>
+        官方網站：<a href="https://tschool-students.github.io" target="_blank">https://tschool-students.github.io</a>
+    </div>
+
+    <div class="footer-label-3">學校地址</div>
+    <div class="footer-address-mobile"><a href="https://maps.app.goo.gl/8FggNvviVhifgD6C7" target="_blank">104089臺北市中山區吉林路110號5樓（吉林學習基地）</a></div>
+
+    <!-- Mobile Footer Social Icons -->
+    <a href="https://www.instagram.com/tschool_student_council/" target="_blank" class="footer-instagram" aria-label="Instagram"></a>
+    <a href="https://www.facebook.com/people/%E6%95%B8%E4%BD%8D%E5%AF%A6%E4%B8%AD%E5%AD%B8%E7%94%9F%E6%9C%83/61579395212418/" target="_blank" class="footer-facebook" aria-label="Facebook"></a>
+
+    <!-- Mobile Footer Links -->
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLScMHmr5TmUeqXqNsf0M4Y40MVV-y_LDF8sG_AB4vsEXami71A/viewform" target="_blank" class="footer-feedback-mobile">活動回饋</a>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLScX5hgfnTpRZsmjDNoy6aGTDNoL1Pd0Szrnmc54No2zcE_H2A/viewform" target="_blank" class="footer-lost-found-mobile">失物招領</a>
+
+    <script>
+        // Map slider
+        let currentMapSlide = 0;
+        const mapSlider = document.getElementById('mapSlider');
+        const mapNavBtns = document.querySelectorAll('.map-nav-btn');
+        const arrowLeftMap = document.querySelector('.arrow-left-map');
+        const arrowRightMap = document.querySelector('.arrow-right-map');
+        const floorClasses = ['show-floor1', 'show-floor4', 'show-floor5', 'show-floor6'];
+
+        mapNavBtns.forEach((btn, index) => {
+            btn.addEventListener('click', () => {
+                currentMapSlide = index;
+                updateMapSlider();
+            });
+        });
+
+        // Arrow click handlers for map
+        arrowLeftMap.addEventListener('click', () => {
+            if (currentMapSlide > 0) {
+                currentMapSlide--;
+                updateMapSlider();
+            }
+        });
+
+        arrowRightMap.addEventListener('click', () => {
+            if (currentMapSlide < 3) {
+                currentMapSlide++;
+                updateMapSlider();
+            }
+        });
+
+        function updateMapSlider() {
+            // Remove all floor classes
+            floorClasses.forEach(cls => mapSlider.classList.remove(cls));
+            // Add current floor class
+            mapSlider.classList.add(floorClasses[currentMapSlide]);
+
+            mapNavBtns.forEach((btn, index) => {
+                if (index === currentMapSlide) {
+                    btn.classList.add('active');
+                } else {
+                    btn.classList.remove('active');
+                }
+            });
+
+            // Hide/show arrows based on current slide
+            if (currentMapSlide === 0) {
+                arrowLeftMap.classList.add('hidden');
+            } else {
+                arrowLeftMap.classList.remove('hidden');
+            }
+
+            if (currentMapSlide === 3) {
+                arrowRightMap.classList.add('hidden');
+            } else {
+                arrowRightMap.classList.remove('hidden');
+            }
+        }
+
+        // Initialize map arrows visibility
+        updateMapSlider();
+
+        // Poster slider
+        let currentPosterPage = 0; // 0-5 for pages 1-6
+        const posterSlider = document.getElementById('posterSlider');
+        const posterNavBtns = document.querySelectorAll('.poster-nav .poster-nav-btn');
+        const arrowLeftPoster = document.querySelector('.arrow-left-poster');
+        const arrowRightPoster = document.querySelector('.arrow-right-poster');
+        const pageClasses = ['show-page1', 'show-page2', 'show-page3', 'show-page4', 'show-page5', 'show-page6'];
+        const mobileClasses = ['show-learning', 'show-movement', 'show-influence', 'show-club'];
+
+        // Map button index to page: 學習->page1, 移動->page3, 影響->page5, 社團->page6
+        const buttonToPage = [0, 2, 4, 5]; // index 0->page1, 1->page3, 2->page5, 3->page6
+
+        // Map button index to poster index for mobile scroll
+        const buttonToPosterIndex = [0, 11, 19, 25]; // 學習->poster#1(idx 0), 移動->poster#12(idx 11), 影響->poster#20(idx 19), 社團->poster#26(idx 25)
+
+        posterNavBtns.forEach((btn, index) => {
+            btn.addEventListener('click', () => {
+                // Check if mobile view
+                if (window.innerWidth <= 1024) {
+                    // Mobile: scroll to specific poster
+                    const allPosters = document.querySelectorAll('.poster-frame');
+                    const targetPosterIndex = buttonToPosterIndex[index];
+
+                    if (allPosters[targetPosterIndex]) {
+                        const targetPoster = allPosters[targetPosterIndex];
+
+                        // Use scrollIntoView with offset for header and nav
+                        setTimeout(() => {
+                            targetPoster.scrollIntoView({
+                                behavior: 'smooth',
+                                block: 'start'
+                            });
+
+                            // Adjust for sticky header and nav
+                            setTimeout(() => {
+                                const headerHeight = 72;
+                                const posterNavHeight = 58.82;
+                                const offset = headerHeight + posterNavHeight + 20;
+                                window.scrollBy({
+                                    top: -offset,
+                                    behavior: 'smooth'
+                                });
+                            }, 100);
+                        }, 100);
+                    }
+
+                    // Update active button
+                    posterNavBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                } else {
+                    // Desktop: switch page
+                    currentPosterPage = buttonToPage[index];
+                    updatePosterSlider();
+                }
+            });
+        });
+
+        // Arrow click handlers for poster
+        arrowLeftPoster.addEventListener('click', () => {
+            if (currentPosterPage > 0) {
+                currentPosterPage--;
+                updatePosterSlider();
+            }
+        });
+
+        arrowRightPoster.addEventListener('click', () => {
+            if (currentPosterPage < 5) {
+                currentPosterPage++;
+                updatePosterSlider();
+            }
+        });
+
+        function updatePosterSlider() {
+            // Remove all page classes
+            pageClasses.forEach(cls => posterSlider.classList.remove(cls));
+            // Add current page class
+            posterSlider.classList.add(pageClasses[currentPosterPage]);
+
+            // Update active button based on current page range
+            // 學習: page 0-1, 移動: page 2-3, 影響: page 4, 社團: page 5
+            posterNavBtns.forEach((btn, index) => {
+                btn.classList.remove('active');
+            });
+
+            if (currentPosterPage <= 1) {
+                // Page 1-2: 學習 active
+                posterNavBtns[0].classList.add('active');
+            } else if (currentPosterPage <= 3) {
+                // Page 3-4: 移動 active
+                posterNavBtns[1].classList.add('active');
+            } else if (currentPosterPage === 4) {
+                // Page 5: 影響 active
+                posterNavBtns[2].classList.add('active');
+            } else {
+                // Page 6: 社團 active
+                posterNavBtns[3].classList.add('active');
+            }
+
+            // Hide/show arrows based on current page
+            if (currentPosterPage === 0) {
+                arrowLeftPoster.classList.add('hidden');
+            } else {
+                arrowLeftPoster.classList.remove('hidden');
+            }
+
+            if (currentPosterPage === 5) {
+                arrowRightPoster.classList.add('hidden');
+            } else {
+                arrowRightPoster.classList.remove('hidden');
+            }
+        }
+
+        // Initialize poster arrows visibility
+        updatePosterSlider();
+
+        // Initialize mobile view with first category
+        if (window.innerWidth <= 1024) {
+            // Remove desktop page classes
+            pageClasses.forEach(cls => posterSlider.classList.remove(cls));
+            // Add mobile category class
+            posterSlider.classList.add('show-learning');
+        }
+
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const mainNav = document.getElementById('mainNav');
+        const header = document.querySelector('header');
+
+        if (menuToggle && mainNav && header) {
+            menuToggle.addEventListener('click', (e) => {
+                e.stopPropagation();
+                header.classList.toggle('menu-open');
+            });
+
+            // Close menu when clicking on a link
+            const navLinks = mainNav.querySelectorAll('a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    header.classList.remove('menu-open');
+                });
+            });
+
+            // Close menu when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!header.contains(e.target) || (!mainNav.contains(e.target) && !menuToggle.contains(e.target))) {
+                    if (window.innerWidth <= 1024) {
+                        header.classList.remove('menu-open');
+                    }
+                }
+            });
+        }
+
+        // Position rect-191 and footer elements based on poster-section bottom in mobile view
+        function positionMobileFooter() {
+            if (window.innerWidth <= 1024) {
+                const posterSection = document.querySelector('.poster-section');
+                const rect191 = document.querySelector('.rect-191');
+                const footerContainer = document.querySelector('footer');
+
+                if (posterSection && rect191 && footerContainer) {
+                    // Calculate the position after poster-section
+                    const posterBottom = posterSection.offsetTop + posterSection.offsetHeight;
+
+                    // Position rect-191 at poster-section's bottom edge
+                    rect191.style.top = posterBottom + 'px';
+
+                    // Position footer container right after rect-191 (1px line)
+                    footerContainer.style.top = (posterBottom + 1) + 'px';
+
+                    // Position all footer elements with proper spacing
+                    const baseTop = posterBottom + 120; // 120px gap from rect-191
+
+                    const footerLabel1 = document.querySelector('.footer-label-1');
+                    const footerContent1 = document.querySelector('.footer-content-1');
+                    const footerLabel2 = document.querySelector('.footer-label-2');
+                    const footerContent2 = document.querySelector('.footer-content-2');
+                    const footerLabel3 = document.querySelector('.footer-label-3');
+                    const footerAddressMobile = document.querySelector('.footer-address-mobile');
+                    const footerInstagram = document.querySelector('.footer-instagram');
+                    const footerFacebook = document.querySelector('.footer-facebook');
+                    const footerFeedback = document.querySelector('.footer-feedback-mobile');
+                    const footerLostFound = document.querySelector('.footer-lost-found-mobile');
+
+                    if (footerLabel1) footerLabel1.style.top = baseTop + 'px';
+                    if (footerContent1) footerContent1.style.top = baseTop + 'px';
+                    if (footerLabel2) footerLabel2.style.top = (baseTop + 72) + 'px';
+                    if (footerContent2) footerContent2.style.top = (baseTop + 72) + 'px';
+                    if (footerLabel3) footerLabel3.style.top = (baseTop + 193) + 'px';
+                    if (footerAddressMobile) footerAddressMobile.style.top = (baseTop + 193) + 'px';
+                    if (footerFeedback) footerFeedback.style.top = (baseTop + 325) + 'px';
+                    if (footerInstagram) footerInstagram.style.top = (baseTop + 343) + 'px';
+                    if (footerFacebook) footerFacebook.style.top = (baseTop + 343) + 'px';
+                    if (footerLostFound) footerLostFound.style.top = (baseTop + 361) + 'px';
+                }
+            }
+        }
+
+        // Run on load and resize
+        window.addEventListener('load', positionMobileFooter);
+        window.addEventListener('resize', positionMobileFooter);
+
+    </script>
 </body>
 </html>
