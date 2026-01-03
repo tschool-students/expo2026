@@ -1366,10 +1366,6 @@
 
             /* Mobile Poster Navigation */
             .poster-nav {
-
-                /*關閉海報導覽列顯示*/
-                display: none;
-                
                 position: absolute;
                 width: 100%;
                 max-width: 100%;
@@ -1385,10 +1381,6 @@
             }
 
             .poster-nav-buttons {
-                
-                /*關閉海報導覽列顯示*/
-                display: none;
-                
                 position: absolute;
                 width: 338.62px;
                 height: 40px;
@@ -1402,10 +1394,6 @@
             }
 
             .poster-nav-btn {
-                
-                /*關閉海報導覽列顯示*/
-                display: none;
-                
                 height: 36px;
                 font-family: 'Noto Sans TC';
                 font-style: normal;
@@ -2105,24 +2093,17 @@
                     if (allPosters[targetPosterIndex]) {
                         const targetPoster = allPosters[targetPosterIndex];
 
-                        // Use scrollIntoView with offset for header and nav
-                        setTimeout(() => {
-                            targetPoster.scrollIntoView({
-                                behavior: 'smooth',
-                                block: 'start'
-                            });
+                        // Scroll to poster with proper offset
+                        const header = document.querySelector('header');
+                        const headerHeight = header ? header.offsetHeight : 72;
+                        const additionalOffset = 30; // Extra spacing for better visibility
 
-                            // Adjust for sticky header and nav
-                            setTimeout(() => {
-                                const headerHeight = 72;
-                                const posterNavHeight = 58.82;
-                                const offset = headerHeight + posterNavHeight + 20;
-                                window.scrollBy({
-                                    top: -offset,
-                                    behavior: 'smooth'
-                                });
-                            }, 100);
-                        }, 100);
+                        const targetPosition = targetPoster.getBoundingClientRect().top + window.pageYOffset - headerHeight - additionalOffset;
+
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
                     }
 
                     // Update active button
