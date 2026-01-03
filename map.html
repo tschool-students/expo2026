@@ -1951,8 +1951,8 @@
         <div class="poster-nav">
             <div class="poster-nav-buttons">
                 <div class="poster-nav-btn active" data-track="0">學習</div>
-                <div class="poster-nav-btn" data-track="1">移動</div>
-                <div class="poster-nav-btn" data-track="2">影響</div>
+                <div class="poster-nav-btn" data-track="1">影響</div>
+                <div class="poster-nav-btn" data-track="2">移動</div>
                 <div class="poster-nav-btn" data-track="3">社團</div>
             </div>
         </div>
@@ -2076,11 +2076,11 @@
         const pageClasses = ['show-page1', 'show-page2', 'show-page3', 'show-page4', 'show-page5', 'show-page6'];
         const mobileClasses = ['show-learning', 'show-movement', 'show-influence', 'show-club'];
 
-        // Map button index to page: 學習->page1, 移動->page3, 影響->page5, 社團->page6
+        // Map button index to page: 學習->page1, 影響->page3, 移動->page5, 社團->page6
         const buttonToPage = [0, 2, 4, 5]; // index 0->page1, 1->page3, 2->page5, 3->page6
 
         // Map button index to poster index for mobile scroll
-        const buttonToPosterIndex = [0, 11, 19, 25]; // 學習->poster#1(idx 0), 移動->poster#12(idx 11), 影響->poster#20(idx 19), 社團->poster#26(idx 25)
+        const buttonToPosterIndex = [0, 11, 19, 25]; // 學習->poster#1(idx 0), 影響->poster#12(idx 11), 移動->poster#20(idx 19), 社團->poster#26(idx 25)
 
         posterNavBtns.forEach((btn, index) => {
             btn.addEventListener('click', () => {
@@ -2146,7 +2146,7 @@
             posterSlider.classList.add(pageClasses[currentPosterPage]);
 
             // Update active button based on current page range
-            // 學習: page 0-1, 移動: page 2-3, 影響: page 4, 社團: page 5
+            // 學習: page 0-1,影響: page 2-3, 移動: page 4, 社團: page 5
             posterNavBtns.forEach((btn, index) => {
                 btn.classList.remove('active');
             });
@@ -2155,10 +2155,10 @@
                 // Page 1-2: 學習 active
                 posterNavBtns[0].classList.add('active');
             } else if (currentPosterPage <= 3) {
-                // Page 3-4: 移動 active
+                // Page 3-4: 影響 active
                 posterNavBtns[1].classList.add('active');
             } else if (currentPosterPage === 4) {
-                // Page 5: 影響 active
+                // Page 5: 移動 active
                 posterNavBtns[2].classList.add('active');
             } else {
                 // Page 6: 社團 active
